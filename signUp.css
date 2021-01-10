@@ -1,0 +1,75 @@
+.table{
+    border: 6px solid rgb(50, 99, 86);
+    margin: 200px 100px;
+    padding: 20px 20px;
+    background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg");
+    color: rgb(253, 252, 252);
+    width: 500px;
+    height: 550px;
+}
+.div1{
+    border-bottom: 1px solid white;
+    color:rgb(235, 197, 93);
+}
+.container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.text {
+    width: 225px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px ;
+}
+.text1 {
+    width: 500px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px ;
+}
+.text2 {
+    width: 142px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px ;
+}
+
+.text:hover{
+    background: rgb(226, 200, 176);
+    color:white'
+}
+.text1:hover{
+    background: rgb(226, 200, 176);
+    color:white'
+}
+.text2:hover{
+    background: rgb(226, 200, 176);
+    color:white'
+}
+
+.icon {
+    padding: 4px;
+    font-size: 30px;
+    background: white;
+    color: rgb(64, 119, 190);
+    min-width: 35px;
+    height:30px;
+    text-align: center;
+}
+.icon:hover{
+    background: dimgrey;
+    color:white;
+}
+button:hover{
+    background: 6px solid rgb(50, 99, 86);
+}
+.signUp{
+    border-radius: 5px;
+    left: 50px;
+    width: 100px;
+    height: 30px;
+}
+.signUp:hover{
+    background-color: rgb(235, 197, 93);
+}

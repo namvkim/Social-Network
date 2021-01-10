@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="signUp.css">
+        <link rel ="stylesheet" type="text/css" href="baiTap3.css">
+    </head>
+<body>
+    <form action="/action_page.php" style="max-width:500px;margin:auto">
+        <div class="table">
+        <div class="div1"><h1>Sign Up</h1>
+        <a style="color:whitesmoke">Please fill in this form to create an account!</a></div></br>
+        <div class="container" >
+            <div ><input class="text" type="text" placeholder= "Last name" name="lastname"></div>
+            <div ><input class ="text" type ="text" placeholder = "Fist name" name="firstname"></div>
+        </div>  
+        <div class="container" >
+            <input class="text1" type="password" placeholder="Phone number or email" name="psw">
+        </div>  
+        <div class="container" >
+            <input class="text1" type="password" placeholder="Password" name="psw">
+        </div> 
+            <div class="container" >
+                <input class="text1" type="password" placeholder="Confirm Password" name="psw">
+            </div> 
+        <div>
+            <div style="color: rgb(235, 197, 93)">Date of birth:</div>
+            <div class="container">
+                <div ><input class="text2" type="number" placeholder="Date" name="date" min ="1" max="31" > </div> 
+                <div ><input class="text2" type="number" placeholder="Month" name="date" min ="1" max="12" ></div>
+                <div ><input class="text2" type="number" placeholder="Year" name="date" min ="1950" max="3000" ></div>
+            </div>
+        </div>
+            <div>
+            <div style="color: rgb(235, 197, 93)">Gender:</div>
+            <div class="container">
+                <div ><input type="radio" name ="status" value="Male">Male </div> 
+                <div ><input type="radio" name ="status" value="Female">Female</div>
+            </div>
+          </div>
+          <div >
+            <input type="checkbox" id="accept" name="accept" value="accept">
+            <label for="vehicle1"> I accept the Term of Use & Privacy Policy</label><br>
+          </div>
+        </br>
+        <button type="submit"class ="signUp" ><Center>Sign Up</Center> </button>
+      </form>
+    </div>
+</body>
+</html>
