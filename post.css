@@ -1,32 +1,6 @@
-
-.divcontainer{
-    width: auto;
-    height: auto;
-    border: 1px solid black;
-}
-
-.container{
-    margin: 20px;
-}
-
-.rounded-corners{
-    margin: 50px;
-    width: 200px;
-    height: 200px;
-    border: solid 2px blue;
-    background: #999;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-}
-.display{
-    display: flex;
-}
-.textagline{
+.title {
     text-align: center;
+    font-weight: bold;
+    color:blue;
+    font-size: x-large;
 }
-#posi{
-    position:relative;
-    left: 1150px;
-    bottom: 35px;
-} 
