@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
+<html lang="vi">
 
-        </style>
-        <link rel="stylesheet" href="loginIn.css">
-    </head>
-<body>
-    <form action="/action_page.php" style="max-width:500px;margin:auto">
-        <div class ="table">
-        <div class="div1"><h1>Đăng Nhập</h1>
-        <a style="color:rgb(230, 179, 132);">Vui lòng điền vào biểu mẫu này để vào tài khoản!</a></div></br>
-        <div class="container" >
-            <i class="fa fa-user icon"></i>
-            <input class="text" type="password" placeholder="Số điện thoại hoặc Email" name="phone">
-        </div>  
-        <div class="container" >
-            <i class="fa fa-key icon"></i>
-            <input class="text" type="password" placeholder="Mật khẩu" name="psw">
-        </div> 
-        </br>
-        <Center><button type="submit"class ="login" >Đăng Nhập</button></Center><br>
-        <center><small>Chưa đăng ký?<a style="color:white"> Tạo một tài khoản</a></small></center>
-      </form>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <title>Document</title>
+    <link rel="stylesheet" href="loginIn.css">
+</head>
+
+<body class="text-center">
+    <div class="container-fluid mt-3">
+        <h2>Đăng Nhập</h2>
+        <hr>
+        <form class="form-signin">
+            <p class="h4 mb-3 font-weight-normal">Vui lòng đăng nhập!</p>
+            <input type="email" id="inputEmail" class="form-control " placeholder="Nhập số điện thoại hoặc Email" required>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Nhập mật khẩu" required>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> Kiểm tra lại xem nào
+                </label>
+            </div>
+            <button class="btn btn-lg btn-info btn-block mb-3" type="submit">Đăng nhập</button>
+            <a class="mb-9 text-muted"> Quên mật khẩu?</a>
+            <hr>
+            <div><p class="float-left ">Chưa có tài khoản?<a style="color:white"> <button class=" btn btn-sm btn-info" type="submit">Đăng kí</button>
+        </form>
 </body>
+
 </html>

@@ -1,49 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="signUp.css">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="signUp.css">
+</head>
+
 <body>
     <form action="/action_page.php" style="max-width:500px;margin:auto">
         <div class="table">
-        <div class="div1"><h1>Đăng Ký</h1>
-        <a style="color:rgb(230, 179, 132);">Hãy thiết lập tài khoản của bạn</a></div></br>
-        <div class="container">
-            <div class="name"><input class="text" type="text" placeholder= "Họ" name="lastname"></div>
-            <div class="name"><input class ="text" type ="text" placeholder = "Tên" name="firstname"></div>
-        </div>  
-        <div class="container" >
-            <input class="text1" type="phoneEmail" placeholder="Số điện thoại hoặc Email" name="phone">
-        </div>  
-        <div class="container" >
-            <input class="text1" type="password" placeholder="Mật khẩu" name="psw">
-        </div> 
-            <div class="container" >
+            <div class="div1">
+                <h1>Đăng Ký</h1>
+                <a style="color:rgb(230, 179, 132);">Hãy thiết lập tài khoản của bạn</a>
+            </div></br>
+            <div class="container">
+                <div class="name"><input class="text" type="text" placeholder="Họ" name="lastname"></div>
+                <div class="name"><input class="text" type="text" placeholder="Tên" name="firstname"></div>
+            </div>
+            <div class="container">
+                <input class="text1" type="phoneEmail" placeholder="Số điện thoại hoặc Email" name="phone">
+            </div>
+            <div class="container">
+                <input class="text1" type="password" placeholder="Mật khẩu" name="psw">
+            </div>
+            <div class="container">
                 <input class="text1" type="password" placeholder="Xác nhận mật khẩu" name="cps">
-            </div> 
-        <div>
-            <div >Ngày sinh</div>
-            <div class="container">
-                <div class="name1"><input class="text2" type="number" placeholder="Ngày" name="date" min ="1" max="31" > </div> 
-                <div class="name1"><input class="text2" type="number" placeholder="Tháng" name="date" min ="1" max="12" ></div>
-                <div class="name1"><input class="text2" type="number" placeholder="Năm" name="date" min ="1950" max="3000" ></div>
             </div>
-        </div>
             <div>
-            <div ">Giới tính</div>
-            <div class="container">
-                <div ><input type="radio" name ="status" value="Male">Nam </div> 
-                <div ><input type="radio" name ="status" value="Female">Nữ</div>
+                <div>Ngày sinh</div>
+                <div class="container">
+                    <div class="name1"><input class="text2" type="number" placeholder="Ngày" name="date" min="1"
+                            max="31"> </div>
+                    <div class="name1"><input class="text2" type="number" placeholder="Tháng" name="date" min="1"
+                            max="12"></div>
+                    <div class="name1"><input class="text2" type="number" placeholder="Năm" name="date" min="1950"
+                            max="3000"></div>
+                </div>
             </div>
-          </div>
-          <div >
-            <input type="checkbox" id="accept" name="accept" value="accept">
-            <label for="vehicle1"><small> Tôi chấp nhận Điều khoản Sử dụng & Chính sách Bảo mật</small></label><br>
-          </div>
-        </br>
-        <Center><button type="submit"class ="signUp" >Đăng ký</button></Center>
-      </form>
+            <div>
+                <div ">Giới tính</div>
+            <div class=" container">
+                    <div><input type="radio" name="status" value="Male">Nam </div>
+                    <div><input type="radio" name="status" value="Female">Nữ</div>
+                </div>
+            </div>
+            <div>
+                <input type="checkbox" id="accept" name="accept" value="accept">
+                <label for="vehicle1"><small> Tôi chấp nhận Điều khoản Sử dụng & Chính sách Bảo mật</small></label><br>
+            </div>
+            </br>
+            <Center><button type="submit" class="signUp">Đăng ký</button></Center>
+    </form>
     </div>
 </body>
+
 </html>
