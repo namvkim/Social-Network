@@ -1,16 +1,11 @@
 var listFriendd = [
     {
         id: "SP1",
-        name: "Áo dài thuê họa tiết ",
-        img: "https://webmuasam.com.vn/data/News/al20_1605660327.jpg",
+        name: "AB ",
+        img: "https://znews-photo.zadn.vn/w660/Uploaded/kbd_pilk/2020_11_17/ava_1.jpg",
         price: 120000
     },
-    {
-        id: "SP2",
-        name: "Áo dài truyền thống",
-        img: "https://quyennguyen.vn/wp-content/uploads/2018/11/ao-dai-do-AD-D57-10-QuyenNguyenBridal.jpg",
-        price: 200000
-    },
+    
     ];
 var Admin = function() {
 var post1 = "";
