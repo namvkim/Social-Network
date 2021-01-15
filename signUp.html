@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
@@ -13,55 +13,79 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <title>Document</title>
     <link rel="stylesheet" href="signUp.css">
 </head>
-
-<body>
-    <form action="/action_page.php" style="max-width:500px;margin:auto">
-        <div class="table">
-            <div class="div1">
-                <h1>Đăng Ký</h1>
-                <a style="color:rgb(230, 179, 132);">Hãy thiết lập tài khoản của bạn</a>
-            </div></br>
-            <div class="container">
-                <div class="name"><input class="text" type="text" placeholder="Họ" name="lastname"></div>
-                <div class="name"><input class="text" type="text" placeholder="Tên" name="firstname"></div>
+<body >
+        <div class="container-fluid mb-9">
+            <h2 class="text-center">Đăng Ký</h2>
+                <form class="form-signin">
+                <p class="h4 mb-3 font-weight-normal">Hãy thiết lập tài khoản của bạn!</p>
+                <div class="row ">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="first_name" id="first_name" class="form-control " placeholder="First Name" required>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="last_name" id="last_name" class="form-control " placeholder="Last Name" required>
+                        </div>
+                    </div>
+                </div>
+            <div class="form-group">
+                <input class="form-control" type="phoneEmail" placeholder="Số điện thoại hoặc Email" name="phone" required>
             </div>
-            <div class="container">
-                <input class="text1" type="phoneEmail" placeholder="Số điện thoại hoặc Email" name="phone">
+            <div class="form-group">
+                <input class="form-control" type="password" placeholder="Mật khẩu" name="psw" required>
             </div>
-            <div class="container">
-                <input class="text1" type="password" placeholder="Mật khẩu" name="psw">
+            <div class="form-group">
+                <input class="form-control" type="password" placeholder="Xác nhận mật khẩu" name="cps" required>
             </div>
-            <div class="container">
-                <input class="text1" type="password" placeholder="Xác nhận mật khẩu" name="cps">
-            </div>
-            <div>
-                <div>Ngày sinh</div>
-                <div class="container">
-                    <div class="name1"><input class="text2" type="number" placeholder="Ngày" name="date" min="1"
-                            max="31"> </div>
-                    <div class="name1"><input class="text2" type="number" placeholder="Tháng" name="date" min="1"
-                            max="12"></div>
-                    <div class="name1"><input class="text2" type="number" placeholder="Năm" name="date" min="1950"
-                            max="3000"></div>
+            <div class="form-group">
+                Ngày sinh: 
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <input class="form-control" type="number" placeholder="Ngày" name="date" min="1"max="31"> 
+                    </div>
+                </div>    
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <input class="form-control" type="number" placeholder="Tháng" name="date" min="1"max="12">
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <input class="form-control" type="number" placeholder="Năm" name="date" min="1950"max="3000">
+                    </div>
                 </div>
             </div>
-            <div>
-                <div ">Giới tính</div>
-            <div class=" container">
-                    <div><input type="radio" name="status" value="Male">Nam </div>
-                    <div><input type="radio" name="status" value="Female">Nữ</div>
+            </div>
+            <div class="form-group">
+                Giới tính:
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <input type="radio" name="status" value="Male">Nam</input>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <input type="radio" name="status" value="Female">Nữ</input>
+                    </div>
                 </div>
             </div>
-            <div>
+            </div>
+            <div class="form-group">
                 <input type="checkbox" id="accept" name="accept" value="accept">
                 <label for="vehicle1"><small> Tôi chấp nhận Điều khoản Sử dụng & Chính sách Bảo mật</small></label><br>
             </div>
-            </br>
-            <Center><button type="submit" class="signUp">Đăng ký</button></Center>
-    </form>
+            <div class="border-top"><br>
+                <button class=" btn btn-md btn-info float-right" type="submit" >Đăng ký</button>
+            </div>    
+            </form>
     </div>
 </body>
-
 </html>
