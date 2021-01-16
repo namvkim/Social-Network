@@ -33,7 +33,7 @@
                     </tr>
                 </thead>
                 <tbody class="text-center" id="product-admin">
-                    <script src=".js"></script>
+                    <script src="post.js"></script>
                 </tbody>
             </table>
         </div>
@@ -58,8 +58,25 @@
                         <!-- <div class="col-12">
                         <input class="form-control" type="text" id="id" placehoder="id">
                     </div> -->
+
+                    <div class="modal-body">
+                        <div class="d-inline-block " >
+                            <img src="https://i.pinimg.com/originals/78/eb/fb/78ebfbbeea819d5a732101f5608d5edb.png" style="width:20%">
+                        </div>
+                        <div class="d-inline-block ">
+                            <div  id="name">Name</div>
+                            <div >
+                                <button type="button"  class="btn  " data-dismiss="modal" style="background-color: #CCCCCC;" >
+                                    <i class="fas fa-globe-americas d-inline-block"></i>
+                                    <span class="d-inline-block ">Công Khai</span>
+                                    <i class="fas fa-caret-down d-inline-block "></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                         <div class="col-12  mt-3">
-                            <input class="form-control" type="text" id="name" placeholder="Bạn đang nghĩ gì?">
+                            <input class="form-control" type="text" id="nghigi" placeholder="Bạn đang nghĩ gì?">
                         </div>
                         <!-- <div  class="col-12 mt-3" >
                             <div  class="form-control" type="text" name="img" id="img" placeholder="Thêm vào bài viết ">
@@ -78,26 +95,24 @@
                                     <i class="fas fa-ellipsis-h mr-3" ></i>
                                 </div>
                             </div>
-                            <div class="col-12 mt-3">
-                                    <i class=" d-inline-block mr-5 fas fa-ad fa-3x " style="color:rgb(19, 235, 206);"></i>
+                            <div class="col-12 mt-3" style="padding-left: 0px; padding-right:0px;">
+                                   <div class="d-inline-block" style="text-align: left; width: 45%;">
+                                        <i class="  fas fa-ad fa-3x " style="color:rgb(19, 235, 206);"></i>
+                                   </div>
                         
-                               
-                                    <i class=" d-inline-block mr-5 far fa-smile fa-3x" ></i>
-                                    
+                                   <div class="d-inline-block ml-3" style="text-align: right; width: 50%;">
+                                        <i class="far fa-smile fa-3x ml-5"  style="color:gray"></i>
+                                   </div>
                                 
                             </div>
-                          
                             
                         </div>
                         
                     </form>
                 </div>
-                <!-- <i class="fa fa-picture-o" aria-hidden="true"></i> -->
 
-                <div  class="modal-footer">
-                    <div class="col-12 mt-3">
-                        <input type="button" class="form-control" style="background-color:rgb(18, 168, 214);" value="Đăng">                    </input>
-                    </div>
+                <div class="modal-footer">
+                    <a class="btn btn-outline-primary  btn-lg btn-block" href="" onclick="Post()">Đăng </a>
                 </div>
             </div>
         </div>
