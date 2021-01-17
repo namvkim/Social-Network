@@ -24,8 +24,8 @@
                
               <input type="text" class="form-control" placeholder="Tìm kiếm cài đặt...">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button"><i class="fa fa-search" style="font-size:24px"></i>
-                  <span class="glyphicon glyphicon-search"></span>
+                <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"><i class="fa fa-search" style="font-size:24px "></i></span>
                 </button>
       
               </span><br>
@@ -35,20 +35,61 @@
         
             <div class="vertical-menu">
                 
-                <a href="#"><i class='fas fa-shield-alt' style='font-size:27px'></i>
+                <a href="#sign" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;"><i class='fas fa-shield-alt' style='font-size:27px'></i>
                   Bảo mật và đăng nhập</a>
-                <a href="#"><i class='far fa-id-card' style='font-size:27px'></i>Thông tin của bạn</a><hr>
-                <a href="#"><i class='fas fa-user-shield' style='font-size:27px'></i>Quyền riêng tư</a>
-                <a href="#"> <i class="material-icons" style="font-size:27px">public</i>Bài viết công khai</a>
-                <a href="#"><i class='fas fa-map-marker-alt' style='font-size:27px'></i>Vị trí</a>
-                <a href="#"><i class='fas fa-bell' style='font-size:27px'></i>Thông báo</a>
-                <a href="#"><i class="fa fa-history" style="font-size:27px"></i>Tin lưu trữ</a>
+                <a href="#infor"class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;"><i class='far fa-id-card' style='font-size:27px'></i>Thông tin của bạn</a><hr>
+                <a href="#secur"class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab"style="border: 0px;"><i class='fas fa-user-shield' style='font-size:27px'></i>Quyền riêng tư</a>
+                <a href="#public"class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab"style="border: 0px;"> <i class="material-icons" style="font-size:27px">public</i>Bài viết công khai</a>
+                <a href="#local"class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab"style="border: 0px;"><i class='fas fa-map-marker-alt' style='font-size:27px'></i>Vị trí</a>
+                <a href="#note"class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab"style="border: 0px;"><i class='fas fa-bell' style='font-size:27px'></i>Thông báo</a>
+                <a href="#story"class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab"style="border: 0px;"><i class="fa fa-history" style="font-size:27px"></i>Tin lưu trữ</a>
             </div>
             
     </div>
       
           <div class="col-sm-9">
-           
+            <div class="tab-content">
+              <div class="tab-pane fade " id="infor">
+
+              </div>
+              <div class="tab-pane fade show active" id="sign">     
+                <h2>Bảo mật và đăng nhập</h2>   
+                <br><hr>
+                  <div><h5>Đề xuất</h5><br><p>Nhận cảnh báo về những lần đăng nhập không nhận ra<button type="button">chỉnh sửa</button></p>
+                  </div>
+                  <br><hr><hr>
+                  <div ><h5>Đăng nhập</h5><br><p>Đổi mật khẩu<button type="button">chỉnh sửa</button></p>
+                   
+                    <p>Lưu thông tin đăng nhập của bạn</p><select id="chose" name="chose">
+                      <option value="on">Bật</option>
+                      <option value="off">Tắt</option>
+                    
+                    </select>
+
+                  </div>
+                  <hr>
+                  <hr>
+                  <div ><h5>Xác thực 2 yếu tố</h5><br><p>Bảo vệ tài khoản cho bạn<i> chúng tôi sẽ yêu 
+                    cầu bạn cung cấp mã nếu phát hiện lần đăng nhập từ thiết bị lạ</i><button type="button">chọn</button></p>
+                  </div>
+              </div>
+              <div class="tab-pane fade " id="secur">
+                <div ></div>
+                  nam
+              </div>
+              <div class="tab-pane fade" id="public">
+                  hsjf
+              </div>
+              <div class="tab-pane fade" id="local">
+                hsjf
+            </div>
+            <div class="tab-pane fade" id="note">
+              hsjf
+          </div>
+          <div class="tab-pane fade" id="story">
+            hsjf
+        </div>
+          </div>
             
             <h4><small>Bài đăng gần đây</small></h4>
             <hr>

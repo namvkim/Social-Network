@@ -16,8 +16,11 @@
   
   .vertical-menu a.active {
     background-color: #4CAF50;
-    color: white;
+    color: olive;
   }
   .dropdown-divider{
       width: 20px;
+  }
+  .col-sm-9{
+    border-left: 1px solid rgb(165, 156, 156);
   }
