@@ -16,30 +16,171 @@
     <link rel="stylesheet" href="homePage.css">
     <title>homePage</title>
 </head>
+
 <body>
     <div class="container-fluid">
-        <div class="menu">
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="">Icon web</i></a></li>
-                <ul class="navbar-nav">
-                    <form class="form-inline" action="somepage">     
-                        <input class="form-control mr-sm-2 rounded-pill " type="text" placeholder="Search">
-                    </form>
+        <div class="menu fixed-top">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <!-- Brand -->
+                <a class="navbar-brand col-sm-3" href="#">Logo</a>
+                <form class="input-group" action="/action_page.php">
+                    <input type="text" class="form-control ml-auto" placeholder="Search..." style="max-width: 500px;">
+                    <div class="input-group-append mr-auto">
+                        <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                <!-- Links -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-sm-5 rounded-circle">
+                        <a class="nav-link" href="#"><i class="fas fa-home fa-2x"></i></a>
+                    </li>
+                    <li class="nav-item mr-sm-5 rounded-circle">
+                        <a class="nav-link" href="#"><i class="far fa-user fa-2x"></i></a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown mr-sm-5 rounded-circle">
+                        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+                            <i class="far fa-comment-dots fa-2x"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link</a>
+                            <center>
+                                <hr width="95%" color="#A9A9A9" />
+                            </center>
+                            <a class="dropdown-item" href="#">Link</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown mr-sm-1 rounded-circle">
+                        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+                            <i class="fas fa-user-friends fa-2x"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link</a>
+                            <center>
+                                <hr width="95%" color="#A9A9A9" />
+                            </center>
+                            <a class="dropdown-item" href="#">Link</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown mr-sm-1 rounded-circle">
+                        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+                            <i class="far fa-bell fa-2x"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link</a>
+                            <center>
+                                <hr width="95%" color="#A9A9A9" />
+                            </center>
+                            <a class="dropdown-item" href="#">Link</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item mr-sm-1 rounded-circle">
+                        <a class="nav-link" href="#"><i class="fas fa-cog fa-2x"></i></a>
+                    </li>
                 </ul>
-                <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-home fa-2x"></i></a></li>
-                
-                <li class="nav-item"><a class="nav-link" href=""><i class="far fa-user fa-2x"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-user-friends fa-2x"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href=""><i class="far fa-comment-dots fa-2x"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href=""><i class="far fa-bell fa-2x"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-cog fa-2x"></i></a></li>
-            </ul>
+            </nav>
             <div class="row">
-                <div class="col-sm-3" style="background-color: rgb(240, 242, 245);">
+                <div class="col-sm-3" style="background-color: rgb(81, 115, 165);">
                     sdajlkfsaj
                 </div>
                 <div class="col-sm-6"></div>
-                <div class="col-sm-3" style="background-color: rgb(240, 242, 245);"></div>
+                <div class="col-sm-3" style="background-color: rgb(81, 115, 165);"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6 pt-lg-5 mt-lg-5">
+                   <div style="border: 1px solid black;" class="p-sm-3">
+                    <p> Zuckerberg đã viết một chương trình gọi là "Facemash" vào năm 2003 trong khi theo học Đại học
+                        Harvard như là một sinh viên năm thứ hai. Theo The Harvard Crimson, trang này có thể so sánh với
+                        Hot or Not và được sử dụng "các bức ảnh được biên soạn từ facebook trực tuyến của chín Houses,
+                        đặt hai bên cạnh nhau và yêu cầu người dùng chọn". Facemash đã thu hút 450 lượt truy cập và
+                        22.000 lượt xem ảnh trong bốn giờ đầu tiên trên mạng. Trang web Facemash nhanh chóng được chuyển
+                        tiếp tới một số máy chủ danh sách nhóm trường, nhưng đã bị đóng cửa một vài ngày sau đó bởi
+                        chính quyền Harvard. Zuckerberg phải đối mặt với trục xuất và bị buộc tội bởi chính quyền với vi
+                        phạm an ninh, vi phạm bản quyền, và vi phạm quyền riêng tư cá nhân. Cuối cùng, các cáo buộc đã
+                        bị bỏ qua. Zuckerberg đã mở rộng dự án ban đầu này vào học kỳ bằng cách tạo ra một công cụ
+                        nghiên cứu xã hội trước kỳ thi cuối cùng về lịch sử nghệ thuật. Anh ấy đã tải tất cả hình ảnh
+                        nghệ thuật lên một trang web, mỗi hình ảnh đều có phần nhận xét tương ứng, sau đó chia sẻ trang
+                        web với bạn học của mình và mọi người bắt đầu chia sẻ ghi chú.
+
+                        Một "face book" là một thư mục sinh viên có ảnh và thông tin cơ bản. Năm 2003, không có facebook
+                        trực tuyến phổ thông tại Harvard, chỉ có các tờ giấy được phân phối và các thư mục trực tuyến
+                        riêng tư. Zuckerberg nói với Crimson rằng "Mọi người đang nói rất nhiều về một face book phổ
+                        quát trong Harvard.... Tôi có thể làm điều đó tốt hơn họ có thể, và tôi có thể làm điều đó trong
+                        một tuần. ” Vào tháng 1 năm 2004, Zuckerberg bắt đầu viết mã cho một trang web mới, được gọi là
+                        "TheFacebook", với nguồn cảm hứng từ một bài xã luận ở Crimson về Facemash, nói rằng "Rõ ràng là
+                        công nghệ cần thiết để tạo ra một trang web tập trung là có sẵn... những lợi ích rất nhiều." Vào
+                        ngày 4 tháng 2 năm 2004, Zuckerberg đã phát hành "TheFacebook", ban đầu được đặt tại
+                        thefacebook.com.
+
+                        Sáu ngày sau khi trang web được giới thiệu, những người cao niên Harvard Cameron Winklevoss,
+                        Tyler Winklevoss và Divya Narendra đã cáo buộc Zuckerberg cố ý gây hiểu nhầm họ tin rằng anh ta
+                        sẽ giúp họ xây dựng một mạng xã hội có tên HarvardConnection.com. Họ tuyên bố rằng anh đã thay
+                        vì sử dụng ý tưởng của họ để xây dựng một sản phẩm cạnh tranh. Ba người than phiền với The
+                        Harvard Crimson và tờ báo bắt đầu một cuộc điều tra. Sau đó, họ đã đệ đơn kiện Zuckerberg, sau
+                        đó đã giải quyết trong năm 2008 cho 1,2 triệu cổ phiếu (trị giá 300 triệu USD tại IPO của
+                        Facebook).
+
+                        Thành viên ban đầu được giới hạn cho sinh viên của Đại học Harvard; trong tháng đầu tiên, hơn
+                        một nửa số sinh viên đại học tại Harvard đã được đăng ký trên dịch vụ Eduardo Saverin, Dustin
+                        Moskovitz, Andrew McCollum và Chris Hughes đã tham gia Zuckerberg để giúp quản lý sự phát triển
+                        của trang web. Vào tháng 3 năm 2004, Facebook đã mở rộng đến các trường đại học Columbia,
+                        Stanford và Yale. Sau đó nó được mở cho tất cả các trường đại học Ivy League, Đại học Boston,
+                        Đại học New York, MIT, Washington và dần dần hầu hết các trường đại học ở Hoa Kỳ và Canada.
+
+                        Vào giữa năm 2004, người đồng sáng lập Napster co-founder và nhà doanh nghiệp Sean Parker - một
+                        cố vấn không chính thức cho Zuckerberg - trở thành chủ tịch của công ty. Vào tháng 6 năm 2004,
+                        Facebook chuyển cơ sở hoạt động sang California. Nó đã nhận được khoản đầu tư đầu tiên vào cuối
+                        tháng đó từ người đồng sáng lập PayPal, Peter Thiel. Năm 2005, công ty đã bỏ "the" khỏi tên của
+                        nó sau khi mua tên miền facebook.com với giá 200.000 đô la Mỹ. Miền facebook.com thuộc về Tập
+                        đoàn AboutFace trước khi mua. Trang web này xuất hiện lần cuối vào ngày 8 tháng 4 năm 2005,từ
+                        ngày 10 tháng 4 năm 2005 đến ngày 4 tháng 8 năm 2005, tên miền này đã đưa ra lỗi 403.
+
+                        Vào tháng 5 năm 2005, Accel Partners đã đầu tư 12,7 triệu đô la vào Facebook và Jim Breyer đã
+                        thêm 1 triệu đô la tiền của mình. Một phiên bản trung học của trang web đã được đưa ra vào tháng
+                        9 năm 2005, mà Zuckerberg gọi là bước hợp lý tiếp theo. Facebook cũng mở rộng tính đủ điều kiện
+                        thành viên cho nhân viên của một số công ty, bao gồm cả Apple và Microsoft.</p>
+                   </div>
+
+                    <div style="border: 1px solid black;" class="mt-sm-3 p-sm-3">
+                        <p>Vào ngày 26 tháng 9 năm 2006, Facebook đã được mở cho tất cả mọi người ít nhất 13 tuổi với một
+                            địa chỉ email hợp lệ. Vào cuối năm 2007, Facebook đã có 100.000 trang kinh doanh (các trang cho
+                            phép các công ty quảng bá bản thân và thu hút khách hàng). Những trang này bắt đầu như các trang
+                            nhóm, nhưng một khái niệm mới được gọi là các trang công ty đã được lên kế hoạch. Trang bắt đầu
+                            triển khai cho các doanh nghiệp vào tháng 5 năm 2009. Vào ngày 24 tháng 10 năm 2007, Microsoft
+                            đã thông báo rằng họ đã mua 1,6% cổ phần của Facebook với giá 240 triệu đô la, cho Facebook tổng
+                            giá trị ngụ ý khoảng 15 tỷ đô la. Việc mua của Microsoft bao gồm quyền đặt quảng cáo quốc tế
+                            trên trang mạng xã hội.
+    
+                            Vào tháng 10 năm 2008, Facebook thông báo sẽ thành lập trụ sở quốc tế tại Dublin, Ireland. Gần
+                            một năm sau, vào tháng 9 năm 2009, Facebook nói rằng lần đầu tiên nó đã biến dòng tiền tích cực.
+                            Một nghiên cứu của Compete.com tháng 1 năm 2009 đã xếp hạng Facebook là dịch vụ mạng xã hội được
+                            sử dụng nhiều nhất bởi người dùng hoạt động hàng tháng trên toàn thế giới. Entertainment Weekly
+                            đã đưa trang web vào danh sách "best-of" của thập niên cuối, nói rằng "Chúng ta đã làm thế nào
+                            để chúng ta theo dõi những ngày xưa của chúng ta, hãy nhớ sinh nhật của đồng nghiệp của chúng
+                            ta, lừa bạn bè của chúng ta, và chơi một trò chơi sôi nổi Scrabulous bằng Facebook?"
+    
+                            Lưu lượng truy cập vào Facebook tăng đều đặn sau năm 2009. Công ty đã công bố 500 triệu người
+                            dùng vào tháng 7 năm 2010, và theo dữ liệu của nó, một nửa số thành viên của trang web sử dụng
+                            Facebook hàng ngày, trung bình 34 phút, trong khi 150 triệu người dùng truy cập trang web bằng
+                            điện thoại di động. Trong tháng 11 năm 2010, dựa trên SecondMarket Inc. (một cuộc trao đổi cổ
+                            phiếu của các công ty tư nhân), giá trị của Facebook là 41 tỷ đô la. Công ty đã vượt qua eBay để
+                            trở thành công ty web lớn thứ ba của Mỹ sau Google và Amazon.com.
+    
+                            Đầu năm 2011, Facebook đã công bố kế hoạch chuyển trụ sở của mình sang khuôn viên Sun
+                            Microsystems trước đây tại Menlo Park, California. Vào tháng 3 năm 2011, đã có thông báo rằng
+                            Facebook đã xóa khoảng 20.000 hồ sơ mỗi ngày đối với các vi phạm như tin nhắn rác, nội dung đồ
+                            họa và sử dụng tuổi vị thành niên, như một phần nỗ lực tăng cường an ninh mạng. Số liệu thống kê
+                            của DoubleClick cho thấy rằng Facebook đã đạt đến một nghìn tỷ lượt xem trang trong tháng 6 năm
+                            2011, khiến trang web được truy cập nhiều nhất bởi thống kê của DoubleClick. Theo một nghiên cứu
+                            của Nielsen, Facebook vào năm 2011 trở thành trang web được truy cập nhiều thứ hai ở Hoa Kỳ sau
+                            Google.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>
             </div>
         </div>
     </div>
