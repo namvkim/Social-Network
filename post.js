@@ -71,3 +71,9 @@ for (var i in listFriendd) {
     if (localStorage.getItem("listFriends") != null) {
     load();
     }
+    
+
+    function add() {
+            
+        <button type="file"></button>
+        }

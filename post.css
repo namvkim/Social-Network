@@ -1,6 +1,9 @@
 .title {
     text-align: center;
     font-weight: bold;
-    color:blue;
     font-size: x-large;
+}
+
+#myIcon:hover {
+    opacity: 0.2;
 }
