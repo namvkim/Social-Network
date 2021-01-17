@@ -1,6 +1,22 @@
-.connect2{
-    display: flex;
-}
-.mesg-meta{
-    display: flex;
-}
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  *{
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font: 11px;
+  }
+  i{
+      font-size: smaller;
+      color: slateblue;
+  }
+  b:hover{
+      color: blue;
+      
+  }
+  h6:hover{
+      color:red;
+  }
