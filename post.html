@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="post.css" rel="stylesheet">
 
 </head>
@@ -60,17 +60,34 @@
                     <div class="modal-body">
                            
                         <div class="d-inline-block" style=" width: 110px; ">
-                            <img class="rounded-circle" src="https://i.pinimg.com/originals/78/eb/fb/78ebfbbeea819d5a732101f5608d5edb.png" style="width:100px">
+                            <img class="rounded-circle" src="https://i.pinimg.com/originals/c2/9a/7d/c29a7d29348b1a3f502803ab9d8355cc.png" style="width:100px">
                         </div>
                        
                         <div  class="d-inline-block">
-                            <p id="name" style="margin-bottom: 0px; "><b>Tina</b></p>
-                            <button type="button"  class="btn " data-dismiss="modal" style="background-color: #CCCCCC;" >
+                            <p id="name" style="margin-bottom: 0px; "><b>Sơn Tùng MTP</b></p>
+                            <!-- <button type="button"  class="btn  " data-dismiss="modal" style="background-color: #CCCCCC;" >
                                 <i class="fas fa-globe-americas d-inline-block"></i>
                                 <span class="d-inline-block ">Công Khai</span>
                                 <i class="fas fa-caret-down d-inline-block "></i>
-                            </button>
-                          
+                            </button> -->
+                            
+                            <div class="btn-group ">
+                                <button type="button" class=" btn  btn-secondary " style="border: none;" >
+                                    <i class="fas fa-globe-americas "></i>
+                                </button>
+                                <button type="button" class=" btn btn-secondary" style="border: none;" >Công khai</button>
+                                <button type="button" class="btn btn-secondary dropdown-toggle "style="border: none;"  data-toggle="dropdown">
+                                  <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Công Khai</a></li>
+                                    <li><a href="#">Bạn bè</a></li>
+                                    <li><a href="#">Bạn bè trừ ...</a></li>
+                                    <li><a href="#">Bạn bè cụ thể</a></li>
+                                    <li><a href="#">chỉ mình tôi</a></li>
+                                </ul>
+                              </div>
+                             
                         </div>
                     </div>
 <!--                        
@@ -102,8 +119,8 @@
                                     <i class="fas fa-images mr-3 "  id="myIcon" onclick="add()" style="color:green ">
                                    
                                     </i>
-                                    <i class="fas fa-user-tag mr-3" id="myIcon" style="color:rgb(13, 46, 228)"></i>
-                                    <i class="far fa-smile mr-3" id="myIcon" style="color:rgb(241, 241, 143)"></i>
+                                    <i class="fas fa-user-tag mr-3" id="myIcon" style="color:rgb(81, 104, 240)"></i>
+                                    <i class="far fa-smile mr-3" id="myIcon" style="color:#d820b9"></i>
                                     <i class="fas fa-map-marker-alt mr-3" id="myIcon" style="color:orangered"></i>
                                     <i class="fas fa-video mr-3" id="myIcon" style="color:red"></i>
                                     <i class="fas fa-ellipsis-h mr-3" id="myIcon" ></i>
