@@ -14,16 +14,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-    <title>Document</title>
+    <title>Signup</title>
+    <script src="signUp.js"></script>
     <link rel="stylesheet" href="signUp.css">
 </head>
 <body >
-        <div class="container-fluid mb-9">
-            <h2 class="text-center">Đăng Ký</h2>
-                <form class="form-signin">
+    <div class="container-fluid mb-9">
+        <h2 class="text-center">Đăng Ký</h2>
+            <form class="form-signin">
                 <p class="h4 mb-3 font-weight-normal">Hãy thiết lập tài khoản của bạn!</p>
                 <div class="row ">
-                    <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
                             <input type="text" name="first_name" id="first_name" class="form-control " placeholder="First Name" required>
                         </div>
@@ -35,34 +36,21 @@
                     </div>
                 </div>
             <div class="form-group">
-                <input class="form-control" type="phoneEmail" placeholder="Số điện thoại hoặc Email" name="phone" required>
+                <input class="form-control" type="phoneEmail" placeholder="Số điện thoại hoặc Email" name="phoneEmail" id ="phoneEmail" required>
             </div>
             <div class="form-group">
-                <input class="form-control" type="password" placeholder="Mật khẩu" name="psw" required>
+                <input class="form-control" type="password" placeholder="Mật khẩu" name="psw" id="pass" required>
             </div>
             <div class="form-group">
-                <input class="form-control" type="password" placeholder="Xác nhận mật khẩu" name="cps" required>
+                <input class="form-control" type="password" placeholder="Xác nhận mật khẩu" name="cps" id="confirmPass" required>
             </div>
             <div class="form-group">
                 Ngày sinh: 
-            <div class="row">
-                <div class="col-xs-4 col-sm-4 col-md-4">
-                    <div class="form-group">
-                        <input class="form-control" type="number" placeholder="Ngày" name="date" min="1"max="31"> 
-                    </div>
-                </div>    
-                <div class="col-xs-4 col-sm-4 col-md-4">
-                    <div class="form-group">
-                        <input class="form-control" type="number" placeholder="Tháng" name="date" min="1"max="12">
-                    </div>
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4">
-                    <div class="form-group">
-                        <input class="form-control" type="number" placeholder="Năm" name="date" min="1950"max="3000">
-                    </div>
-                </div>
-            </div>
-            </div>
+            
+            <div class="form-group">
+                <input class="form-control" type="date" placeholder="Ngày" name="date" id="date"> 
+            </div> 
+            </div>   
             <div class="form-group">
                 Giới tính:
             <div class="row">
@@ -78,14 +66,13 @@
                 </div>
             </div>
             </div>
-            <div class="form-group">
+            <div class="form-group text-info">
                 <input type="checkbox" id="accept" name="accept" value="accept">
                 <label for="vehicle1"><small> Tôi chấp nhận Điều khoản Sử dụng & Chính sách Bảo mật</small></label><br>
             </div>
             <div class="border-top"><br>
-                <button class=" btn btn-md btn-info float-right" type="submit" >Đăng ký</button>
+                <button class=" btn btn-md btn-info float-right" type="submit" onclick="validate()" >Đăng ký</button>
             </div>    
-            </form>
+        </form>
     </div>
 </body>
-</html>
