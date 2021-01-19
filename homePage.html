@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
-        crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -20,9 +18,9 @@
 <body>
     <div class="container-fluid">
         <div class="menu fixed-top">
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="max-width: 1500px;">
                 <!-- Brand -->
-                <a class="navbar-brand" href="#">Logo</a>
+                <a class="navbar-brand" href="#"><i class="fas fa-heart-broken"></i></a>
                 <form class="input-group" action="/action_page.php">
                     <input type="text" class="form-control ml-auto" placeholder="Search..." style="max-width: 500px;">
                     <div class="input-group-append mr-auto">
@@ -80,104 +78,61 @@
                     </li>
                 </ul>
             </nav>
-            <div class="row">
+            <div class="row h_slidebar">
                 <div class="col-sm-3" style="background-color: rgb(81, 115, 165);">
                     sdajlkfsaj
                 </div>
                 <div class="col-sm-6"></div>
-                <div class="col-sm-3" style="background-color: rgb(81, 115, 165);"></div>
+                <div class="col-sm-3" style="background-color: rgb(81, 115, 165);">
+                    <h5><b>Bạn bè</b></h5>
+                    <table id="friend">
+                        <tr style="border: red 1px;">
+                            <img src="data:image/jpeg;base64,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"
+                                width="40px" height="40px" style="border-radius: 20px;" alt="">
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="content">
             <div class="row">
                 <div class="col-sm-3"></div>
                 <div class="col-sm-6 pt-lg-5 mt-lg-5">
-                   <div style="border: 1px solid black;" class="p-sm-3">
-                    <p> Zuckerberg đã viết một chương trình gọi là "Facemash" vào năm 2003 trong khi theo học Đại học
-                        Harvard như là một sinh viên năm thứ hai. Theo The Harvard Crimson, trang này có thể so sánh với
-                        Hot or Not và được sử dụng "các bức ảnh được biên soạn từ facebook trực tuyến của chín Houses,
-                        đặt hai bên cạnh nhau và yêu cầu người dùng chọn". Facemash đã thu hút 450 lượt truy cập và
-                        22.000 lượt xem ảnh trong bốn giờ đầu tiên trên mạng. Trang web Facemash nhanh chóng được chuyển
-                        tiếp tới một số máy chủ danh sách nhóm trường, nhưng đã bị đóng cửa một vài ngày sau đó bởi
-                        chính quyền Harvard. Zuckerberg phải đối mặt với trục xuất và bị buộc tội bởi chính quyền với vi
-                        phạm an ninh, vi phạm bản quyền, và vi phạm quyền riêng tư cá nhân. Cuối cùng, các cáo buộc đã
-                        bị bỏ qua. Zuckerberg đã mở rộng dự án ban đầu này vào học kỳ bằng cách tạo ra một công cụ
-                        nghiên cứu xã hội trước kỳ thi cuối cùng về lịch sử nghệ thuật. Anh ấy đã tải tất cả hình ảnh
-                        nghệ thuật lên một trang web, mỗi hình ảnh đều có phần nhận xét tương ứng, sau đó chia sẻ trang
-                        web với bạn học của mình và mọi người bắt đầu chia sẻ ghi chú.
-
-                        Một "face book" là một thư mục sinh viên có ảnh và thông tin cơ bản. Năm 2003, không có facebook
-                        trực tuyến phổ thông tại Harvard, chỉ có các tờ giấy được phân phối và các thư mục trực tuyến
-                        riêng tư. Zuckerberg nói với Crimson rằng "Mọi người đang nói rất nhiều về một face book phổ
-                        quát trong Harvard.... Tôi có thể làm điều đó tốt hơn họ có thể, và tôi có thể làm điều đó trong
-                        một tuần. ” Vào tháng 1 năm 2004, Zuckerberg bắt đầu viết mã cho một trang web mới, được gọi là
-                        "TheFacebook", với nguồn cảm hứng từ một bài xã luận ở Crimson về Facemash, nói rằng "Rõ ràng là
-                        công nghệ cần thiết để tạo ra một trang web tập trung là có sẵn... những lợi ích rất nhiều." Vào
-                        ngày 4 tháng 2 năm 2004, Zuckerberg đã phát hành "TheFacebook", ban đầu được đặt tại
-                        thefacebook.com.
-
-                        Sáu ngày sau khi trang web được giới thiệu, những người cao niên Harvard Cameron Winklevoss,
-                        Tyler Winklevoss và Divya Narendra đã cáo buộc Zuckerberg cố ý gây hiểu nhầm họ tin rằng anh ta
-                        sẽ giúp họ xây dựng một mạng xã hội có tên HarvardConnection.com. Họ tuyên bố rằng anh đã thay
-                        vì sử dụng ý tưởng của họ để xây dựng một sản phẩm cạnh tranh. Ba người than phiền với The
-                        Harvard Crimson và tờ báo bắt đầu một cuộc điều tra. Sau đó, họ đã đệ đơn kiện Zuckerberg, sau
-                        đó đã giải quyết trong năm 2008 cho 1,2 triệu cổ phiếu (trị giá 300 triệu USD tại IPO của
-                        Facebook).
-
-                        Thành viên ban đầu được giới hạn cho sinh viên của Đại học Harvard; trong tháng đầu tiên, hơn
-                        một nửa số sinh viên đại học tại Harvard đã được đăng ký trên dịch vụ Eduardo Saverin, Dustin
-                        Moskovitz, Andrew McCollum và Chris Hughes đã tham gia Zuckerberg để giúp quản lý sự phát triển
-                        của trang web. Vào tháng 3 năm 2004, Facebook đã mở rộng đến các trường đại học Columbia,
-                        Stanford và Yale. Sau đó nó được mở cho tất cả các trường đại học Ivy League, Đại học Boston,
-                        Đại học New York, MIT, Washington và dần dần hầu hết các trường đại học ở Hoa Kỳ và Canada.
-
-                        Vào giữa năm 2004, người đồng sáng lập Napster co-founder và nhà doanh nghiệp Sean Parker - một
-                        cố vấn không chính thức cho Zuckerberg - trở thành chủ tịch của công ty. Vào tháng 6 năm 2004,
-                        Facebook chuyển cơ sở hoạt động sang California. Nó đã nhận được khoản đầu tư đầu tiên vào cuối
-                        tháng đó từ người đồng sáng lập PayPal, Peter Thiel. Năm 2005, công ty đã bỏ "the" khỏi tên của
-                        nó sau khi mua tên miền facebook.com với giá 200.000 đô la Mỹ. Miền facebook.com thuộc về Tập
-                        đoàn AboutFace trước khi mua. Trang web này xuất hiện lần cuối vào ngày 8 tháng 4 năm 2005,từ
-                        ngày 10 tháng 4 năm 2005 đến ngày 4 tháng 8 năm 2005, tên miền này đã đưa ra lỗi 403.
-
-                        Vào tháng 5 năm 2005, Accel Partners đã đầu tư 12,7 triệu đô la vào Facebook và Jim Breyer đã
-                        thêm 1 triệu đô la tiền của mình. Một phiên bản trung học của trang web đã được đưa ra vào tháng
-                        9 năm 2005, mà Zuckerberg gọi là bước hợp lý tiếp theo. Facebook cũng mở rộng tính đủ điều kiện
-                        thành viên cho nhân viên của một số công ty, bao gồm cả Apple và Microsoft.</p>
-                   </div>
+                    <div style="border: 1px solid black;" class="p-sm-3">
+                        <p> Zuckerberg đã viết một chương trình gọi là "Facemash" vào năm 2003 trong khi theo học Đại học Harvard như là một sinh viên năm thứ hai. Theo The Harvard Crimson, trang này có thể so sánh với Hot or Not và được sử dụng "các bức
+                            ảnh được biên soạn từ facebook trực tuyến của chín Houses, đặt hai bên cạnh nhau và yêu cầu người dùng chọn". Facemash đã thu hút 450 lượt truy cập và 22.000 lượt xem ảnh trong bốn giờ đầu tiên trên mạng. Trang web Facemash
+                            nhanh chóng được chuyển tiếp tới một số máy chủ danh sách nhóm trường, nhưng đã bị đóng cửa một vài ngày sau đó bởi chính quyền Harvard. Zuckerberg phải đối mặt với trục xuất và bị buộc tội bởi chính quyền với vi phạm an ninh,
+                            vi phạm bản quyền, và vi phạm quyền riêng tư cá nhân. Cuối cùng, các cáo buộc đã bị bỏ qua. Zuckerberg đã mở rộng dự án ban đầu này vào học kỳ bằng cách tạo ra một công cụ nghiên cứu xã hội trước kỳ thi cuối cùng về lịch sử
+                            nghệ thuật. Anh ấy đã tải tất cả hình ảnh nghệ thuật lên một trang web, mỗi hình ảnh đều có phần nhận xét tương ứng, sau đó chia sẻ trang web với bạn học của mình và mọi người bắt đầu chia sẻ ghi chú. Một "face book" là một
+                            thư mục sinh viên có ảnh và thông tin cơ bản. Năm 2003, không có facebook trực tuyến phổ thông tại Harvard, chỉ có các tờ giấy được phân phối và các thư mục trực tuyến riêng tư. Zuckerberg nói với Crimson rằng "Mọi người đang
+                            nói rất nhiều về một face book phổ quát trong Harvard.... Tôi có thể làm điều đó tốt hơn họ có thể, và tôi có thể làm điều đó trong một tuần. ” Vào tháng 1 năm 2004, Zuckerberg bắt đầu viết mã cho một trang web mới, được gọi
+                            là "TheFacebook", với nguồn cảm hứng từ một bài xã luận ở Crimson về Facemash, nói rằng "Rõ ràng là công nghệ cần thiết để tạo ra một trang web tập trung là có sẵn... những lợi ích rất nhiều." Vào ngày 4 tháng 2 năm 2004, Zuckerberg
+                            đã phát hành "TheFacebook", ban đầu được đặt tại thefacebook.com. Sáu ngày sau khi trang web được giới thiệu, những người cao niên Harvard Cameron Winklevoss, Tyler Winklevoss và Divya Narendra đã cáo buộc Zuckerberg cố ý gây
+                            hiểu nhầm họ tin rằng anh ta sẽ giúp họ xây dựng một mạng xã hội có tên HarvardConnection.com. Họ tuyên bố rằng anh đã thay vì sử dụng ý tưởng của họ để xây dựng một sản phẩm cạnh tranh. Ba người than phiền với The Harvard
+                            Crimson và tờ báo bắt đầu một cuộc điều tra. Sau đó, họ đã đệ đơn kiện Zuckerberg, sau đó đã giải quyết trong năm 2008 cho 1,2 triệu cổ phiếu (trị giá 300 triệu USD tại IPO của Facebook). Thành viên ban đầu được giới hạn cho
+                            sinh viên của Đại học Harvard; trong tháng đầu tiên, hơn một nửa số sinh viên đại học tại Harvard đã được đăng ký trên dịch vụ Eduardo Saverin, Dustin Moskovitz, Andrew McCollum và Chris Hughes đã tham gia Zuckerberg để giúp
+                            quản lý sự phát triển của trang web. Vào tháng 3 năm 2004, Facebook đã mở rộng đến các trường đại học Columbia, Stanford và Yale. Sau đó nó được mở cho tất cả các trường đại học Ivy League, Đại học Boston, Đại học New York,
+                            MIT, Washington và dần dần hầu hết các trường đại học ở Hoa Kỳ và Canada. Vào giữa năm 2004, người đồng sáng lập Napster co-founder và nhà doanh nghiệp Sean Parker - một cố vấn không chính thức cho Zuckerberg - trở thành chủ
+                            tịch của công ty. Vào tháng 6 năm 2004, Facebook chuyển cơ sở hoạt động sang California. Nó đã nhận được khoản đầu tư đầu tiên vào cuối tháng đó từ người đồng sáng lập PayPal, Peter Thiel. Năm 2005, công ty đã bỏ "the" khỏi
+                            tên của nó sau khi mua tên miền facebook.com với giá 200.000 đô la Mỹ. Miền facebook.com thuộc về Tập đoàn AboutFace trước khi mua. Trang web này xuất hiện lần cuối vào ngày 8 tháng 4 năm 2005,từ ngày 10 tháng 4 năm 2005 đến
+                            ngày 4 tháng 8 năm 2005, tên miền này đã đưa ra lỗi 403. Vào tháng 5 năm 2005, Accel Partners đã đầu tư 12,7 triệu đô la vào Facebook và Jim Breyer đã thêm 1 triệu đô la tiền của mình. Một phiên bản trung học của trang web
+                            đã được đưa ra vào tháng 9 năm 2005, mà Zuckerberg gọi là bước hợp lý tiếp theo. Facebook cũng mở rộng tính đủ điều kiện thành viên cho nhân viên của một số công ty, bao gồm cả Apple và Microsoft.</p>
+                    </div>
 
                     <div style="border: 1px solid black;" class="mt-sm-3 p-sm-3">
-                        <p>Vào ngày 26 tháng 9 năm 2006, Facebook đã được mở cho tất cả mọi người ít nhất 13 tuổi với một
-                            địa chỉ email hợp lệ. Vào cuối năm 2007, Facebook đã có 100.000 trang kinh doanh (các trang cho
-                            phép các công ty quảng bá bản thân và thu hút khách hàng). Những trang này bắt đầu như các trang
-                            nhóm, nhưng một khái niệm mới được gọi là các trang công ty đã được lên kế hoạch. Trang bắt đầu
-                            triển khai cho các doanh nghiệp vào tháng 5 năm 2009. Vào ngày 24 tháng 10 năm 2007, Microsoft
-                            đã thông báo rằng họ đã mua 1,6% cổ phần của Facebook với giá 240 triệu đô la, cho Facebook tổng
-                            giá trị ngụ ý khoảng 15 tỷ đô la. Việc mua của Microsoft bao gồm quyền đặt quảng cáo quốc tế
-                            trên trang mạng xã hội.
-    
-                            Vào tháng 10 năm 2008, Facebook thông báo sẽ thành lập trụ sở quốc tế tại Dublin, Ireland. Gần
-                            một năm sau, vào tháng 9 năm 2009, Facebook nói rằng lần đầu tiên nó đã biến dòng tiền tích cực.
-                            Một nghiên cứu của Compete.com tháng 1 năm 2009 đã xếp hạng Facebook là dịch vụ mạng xã hội được
-                            sử dụng nhiều nhất bởi người dùng hoạt động hàng tháng trên toàn thế giới. Entertainment Weekly
-                            đã đưa trang web vào danh sách "best-of" của thập niên cuối, nói rằng "Chúng ta đã làm thế nào
-                            để chúng ta theo dõi những ngày xưa của chúng ta, hãy nhớ sinh nhật của đồng nghiệp của chúng
-                            ta, lừa bạn bè của chúng ta, và chơi một trò chơi sôi nổi Scrabulous bằng Facebook?"
-    
-                            Lưu lượng truy cập vào Facebook tăng đều đặn sau năm 2009. Công ty đã công bố 500 triệu người
-                            dùng vào tháng 7 năm 2010, và theo dữ liệu của nó, một nửa số thành viên của trang web sử dụng
-                            Facebook hàng ngày, trung bình 34 phút, trong khi 150 triệu người dùng truy cập trang web bằng
-                            điện thoại di động. Trong tháng 11 năm 2010, dựa trên SecondMarket Inc. (một cuộc trao đổi cổ
-                            phiếu của các công ty tư nhân), giá trị của Facebook là 41 tỷ đô la. Công ty đã vượt qua eBay để
-                            trở thành công ty web lớn thứ ba của Mỹ sau Google và Amazon.com.
-    
-                            Đầu năm 2011, Facebook đã công bố kế hoạch chuyển trụ sở của mình sang khuôn viên Sun
-                            Microsystems trước đây tại Menlo Park, California. Vào tháng 3 năm 2011, đã có thông báo rằng
-                            Facebook đã xóa khoảng 20.000 hồ sơ mỗi ngày đối với các vi phạm như tin nhắn rác, nội dung đồ
-                            họa và sử dụng tuổi vị thành niên, như một phần nỗ lực tăng cường an ninh mạng. Số liệu thống kê
-                            của DoubleClick cho thấy rằng Facebook đã đạt đến một nghìn tỷ lượt xem trang trong tháng 6 năm
-                            2011, khiến trang web được truy cập nhiều nhất bởi thống kê của DoubleClick. Theo một nghiên cứu
-                            của Nielsen, Facebook vào năm 2011 trở thành trang web được truy cập nhiều thứ hai ở Hoa Kỳ sau
-                            Google.</p>
+                        <p>Vào ngày 26 tháng 9 năm 2006, Facebook đã được mở cho tất cả mọi người ít nhất 13 tuổi với một địa chỉ email hợp lệ. Vào cuối năm 2007, Facebook đã có 100.000 trang kinh doanh (các trang cho phép các công ty quảng bá bản thân và
+                            thu hút khách hàng). Những trang này bắt đầu như các trang nhóm, nhưng một khái niệm mới được gọi là các trang công ty đã được lên kế hoạch. Trang bắt đầu triển khai cho các doanh nghiệp vào tháng 5 năm 2009. Vào ngày 24 tháng
+                            10 năm 2007, Microsoft đã thông báo rằng họ đã mua 1,6% cổ phần của Facebook với giá 240 triệu đô la, cho Facebook tổng giá trị ngụ ý khoảng 15 tỷ đô la. Việc mua của Microsoft bao gồm quyền đặt quảng cáo quốc tế trên trang
+                            mạng xã hội. Vào tháng 10 năm 2008, Facebook thông báo sẽ thành lập trụ sở quốc tế tại Dublin, Ireland. Gần một năm sau, vào tháng 9 năm 2009, Facebook nói rằng lần đầu tiên nó đã biến dòng tiền tích cực. Một nghiên cứu của
+                            Compete.com tháng 1 năm 2009 đã xếp hạng Facebook là dịch vụ mạng xã hội được sử dụng nhiều nhất bởi người dùng hoạt động hàng tháng trên toàn thế giới. Entertainment Weekly đã đưa trang web vào danh sách "best-of" của thập
+                            niên cuối, nói rằng "Chúng ta đã làm thế nào để chúng ta theo dõi những ngày xưa của chúng ta, hãy nhớ sinh nhật của đồng nghiệp của chúng ta, lừa bạn bè của chúng ta, và chơi một trò chơi sôi nổi Scrabulous bằng Facebook?"
+                            Lưu lượng truy cập vào Facebook tăng đều đặn sau năm 2009. Công ty đã công bố 500 triệu người dùng vào tháng 7 năm 2010, và theo dữ liệu của nó, một nửa số thành viên của trang web sử dụng Facebook hàng ngày, trung bình 34
+                            phút, trong khi 150 triệu người dùng truy cập trang web bằng điện thoại di động. Trong tháng 11 năm 2010, dựa trên SecondMarket Inc. (một cuộc trao đổi cổ phiếu của các công ty tư nhân), giá trị của Facebook là 41 tỷ đô la.
+                            Công ty đã vượt qua eBay để trở thành công ty web lớn thứ ba của Mỹ sau Google và Amazon.com. Đầu năm 2011, Facebook đã công bố kế hoạch chuyển trụ sở của mình sang khuôn viên Sun Microsystems trước đây tại Menlo Park, California.
+                            Vào tháng 3 năm 2011, đã có thông báo rằng Facebook đã xóa khoảng 20.000 hồ sơ mỗi ngày đối với các vi phạm như tin nhắn rác, nội dung đồ họa và sử dụng tuổi vị thành niên, như một phần nỗ lực tăng cường an ninh mạng. Số liệu
+                            thống kê của DoubleClick cho thấy rằng Facebook đã đạt đến một nghìn tỷ lượt xem trang trong tháng 6 năm 2011, khiến trang web được truy cập nhiều nhất bởi thống kê của DoubleClick. Theo một nghiên cứu của Nielsen, Facebook
+                            vào năm 2011 trở thành trang web được truy cập nhiều thứ hai ở Hoa Kỳ sau Google.
+                        </p>
                     </div>
                 </div>
                 <div class="col-sm-3"></div>
