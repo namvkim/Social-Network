@@ -24,3 +24,6 @@
   .col-sm-9{
     border-left: 1px solid rgb(165, 156, 156);
   }
+  .inline{
+    display: flex;
+  }
