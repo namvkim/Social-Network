@@ -9,8 +9,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">						
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>						
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>						
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>						
-	<link href="addFriend.css" rel="stylesheet">						
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>		
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">				
+    <link href="addFriend.css" rel="stylesheet">		
+    <script src="addFriend.js"></script>						
+				
 
 </head>
 <body>
@@ -22,75 +25,79 @@
                 <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
                     <i class="fas fa-user-friends fa-2x"></i>
                 </a>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu" style="width: 250px;">
                     <div class="dropdown-item a" href="#">
                         <div class="mr-5">
                             <b class="mr-5">Bạn bè </b>
                         </div>
-                       <div class=" text-right ml-5">
+                       <!-- <div class=" text-right ml-5">
                            <i class="fa fa-cog ml-5" aria-hidden="true"></i>
-                        </div>
+                        </div> -->
 
                     </div>
                     <center>
                         <hr width="95%" color="#A9A9A9" />
                     </center>
                     <div class="dropdown-item" href="#">
-                        <div>
-                            <div class="d-inline-block" style=" width: 100px; ">
-                                <img class="rounded-circle" src="https://static1.ohman.vn/YanNews/2167221/201908/nam-sinh-dh-luat-ha-noi-ha-di-tham-doi-thuc-dep-trai-nhu-giang-than-20190821-021804.jpg" style="width:100%">
+                        <div class="mb-3 a">
+                            <div style=" width: 100px; ">
+                                <img class="rounded-circle" src="https://static1.ohman.vn/YanNews/2167221/201908/nam-sinh-dh-luat-ha-noi-ha-di-tham-doi-thuc-dep-trai-nhu-giang-than-20190821-021804.jpg" style="width:70%">
                             </div>
-                            <div class="d-inline-block">
-                                <span class="a" style="margin-bottom:0px;">
-                                    <p><b >Yang Yu </b></p>
-                                    <p class="ml-5" style="margin-bottom:0px;">2 phút</p>
-                               </span> 
-                                <a  type="button" class="btn btn-primary btn-md d-inline-block"> Xác nhận</a>
-                                <button type="button" class="btn btn-secondary btn-md d-inline-block" style="margin-top:0px;" >Xóa</button>
-                            </div>
-                        </div>
-   
-                        <div>
-                            <div class="d-inline-block" style=" width: 100px; ">
-                                <img class="rounded-circle" src="https://static.vieon.vn/vieplay-image/avatar/2020/03/17/3hewmr3q_untitled-2.jpg" style="width:100%">
-                            </div>
-                            <div class="d-inline-block">
-                                <span class="a" style="margin-bottom:0px;">
-                                    <p><b >Lộ Tư</b></p>
-                                    <p class="ml-5" style="margin-bottom:0px;">1 giờ</p>
-                               </span> 
-                                <button  type="button" class="btn btn-primary btn-md d-inline-block"> Xác nhận</button>
-                                <button type="button" class="btn btn-secondary btn-md d-inline-block" style="margin-top:0px;" >Xóa</button>
+                            <div class=" text-bottom">
+                                <span class="">
+                                    <p style="margin-bottom: 0px;"><b>Yang Yu </b></p>
+                                    <p class="text-right" style="margin-bottom: 0px;">2 phút</p>
+                                </span> 
+                                <a type="button" class="btn btn-primary btn-sm d-inline-block"> Xác nhận</a>
+                                <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;">Xóa</a>
                             </div>
                         </div>
 
+                        <div class="mb-3 a">
+                            <div style=" width: 100px; ">
+                                <img class="rounded-circle" src="https://static.vieon.vn/vieplay-image/avatar/2020/03/17/3hewmr3q_untitled-2.jpg" style="width:70%">
+                            </div>
+                            <div class=" text-bottom">
+                                <span class="">
+                                    <p style="margin-bottom: 0px;"><b>Lộ Tư </b></p>
+                                    <p class="text-right" style="margin-bottom: 0px;">1 giờ</p>
+                                </span> 
+                                <a type="button" class="btn btn-primary btn-sm d-inline-block"> Xác nhận</a>
+                                <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;">Xóa</a>
+                            </div>
+                        </div>
                         
-                        <div>
-                            <div class="d-inline-block" style=" width: 100px; ">
-                                <img class="rounded-circle" src="https://scr.vn/wp-content/uploads/2020/08/%E1%BA%A2nh-trai-cute-d%E1%BB%85-th%C6%B0%C6%A1ng.jpg" style="width:100%">
+                        <div class="mb-3 a">
+                            <div style=" width: 100px; ">
+                                <img class="rounded-circle" src="https://scr.vn/wp-content/uploads/2020/08/%E1%BA%A2nh-trai-cute-d%E1%BB%85-th%C6%B0%C6%A1ng.jpg" style="width:70%">
                             </div>
-                            <div class="d-inline-block">
-                                <span class="a" style="margin-bottom:0px;">
-                                    <p><b >Lý Hiền</b></p>
-                                    <p class="ml-5" style="margin-bottom:0px;">3 giờ</p>
-                               </span> 
-                                <button  type="button" class="btn btn-primary btn-md d-inline-block"> Xác nhận</button>
-                                <button type="button" class="btn btn-secondary btn-md d-inline-block" style="margin-top:0px;" >Xóa</button>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="d-inline-block" style=" width: 100px; ">
-                                <img class="rounded-circle" src="https://dotobjyajpegd.cloudfront.net/photo/5cc322972cb8ca7a34ad6b4c_m" style="width:100%">
-                            </div>
-                            <div class="d-inline-block">
-                                <span class="a" style="margin-bottom:0px;">
-                                    <p><b >Minh Tử</b></p>
-                                    <p class="ml-5" style="margin-bottom:0px;">5 giờ</p>
-                               </span> 
-                                <button  type="button" class="btn btn-primary btn-md d-inline-block"> Xác nhận</button>
-                                <button type="button" class="btn btn-secondary btn-md d-inline-block" style="margin-top:0px;" >Xóa</button>
+                            <div class=" text-bottom">
+                                <span class="">
+                                    <p style="margin-bottom: 0px;"><b>Lý Hiền </b></p>
+                                    <p class="text-right" style="margin-bottom: 0px;">3 giờ</p>
+                                </span> 
+                                <a type="button" class="btn btn-primary btn-sm d-inline-block"> Xác nhận</a>
+                                <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;">Xóa</a>
                             </div>
                         </div>
+
+
+                        <div class="mb-3 a">
+                            <div style=" width: 100px; ">
+                                <img class="rounded-circle" src="https://dotobjyajpegd.cloudfront.net/photo/5cc322972cb8ca7a34ad6b4c_m" style="width:70%">
+                            </div>
+                            <div class=" text-bottom">
+                                <span class="">
+                                    <p style="margin-bottom: 0px;"><b>Minh Tử</b></p>
+                                    <p class="text-right" style="margin-bottom: 0px;">5 giờ</p>
+                                </span> 
+                                <a type="button" class="btn btn-primary btn-sm d-inline-block"> Xác nhận</a>
+                                <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;">Xóa</a>
+                            </div>
+                        </div>
+
+
+                      
 
                     </div>
                     <center>
@@ -104,45 +111,49 @@
                     <center>
                         <hr width="95%" color="#FFFFFF" />
                     </center>
-                    <div>
-                        <div class="d-inline-block" style=" width: 100px; ">
-                            <img class="rounded-circle" src="https://i.pinimg.com/originals/19/c4/b4/19c4b4c2a32a951e852a41f83e14530f.jpg" style="width:100%">
+                    <div class="dropdown-item" href="#">
+                        <div class="mb-3 a">
+                            <div style=" width: 100px; ">
+                                <img class="rounded-circle" src="https://i.pinimg.com/originals/19/c4/b4/19c4b4c2a32a951e852a41f83e14530f.jpg" style="width:70%">
+                            </div>
+                            <div class=" text-bottom">
+                                <span class="">
+                                    <p style="margin-bottom: 0px;"><b>Vương</b></p>
+                                </span> 
+                                <a type="button" class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
+                                <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;">Xóa</a>
+                            </div>
                         </div>
-                        <div class="d-inline-block">
-                            <span class="a" style="margin-bottom:0px;">
-                                <p><b >Vương</b></p>
-                           </span> 
-                            <button  type="button" class="btn btn-primary btn-md d-inline-block"> Thêm bạn bè</button>
-                            <button type="button" class="btn btn-secondary btn-md d-inline-block" style="margin-top:0px;" >Xóa</button>
-                        </div>
-                    </div>
 
-                    <div>
-                        <div class="d-inline-block" style=" width: 100px; ">
-                            <img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbKoihkRWHsOFdnwoxoWhkuhb4rC2ViOiy6g&usqp=CAU" style="width:100%">
+                        <div class="mb-3 a">
+                            <div style=" width: 100px; ">
+                                <img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbKoihkRWHsOFdnwoxoWhkuhb4rC2ViOiy6g&usqp=CAU" style="width:70%">
+                            </div>
+                            <div class=" text-bottom">
+                                <span class="">
+                                    <p style="margin-bottom: 0px;"><b>Nguyên</b></p>
+                                </span> 
+                                <a type="button" class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
+                                <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;">Xóa</a>
+                            </div>
                         </div>
-                        <div class="d-inline-block">
-                            <span class="a" style="margin-bottom:0px;">
-                                <p><b >Nguyên</b></p>
-                           </span> 
-                            <button  type="button" class="btn btn-primary btn-md d-inline-block"> Thêm bạn bè</button>
-                            <button type="button" class="btn btn-secondary btn-md d-inline-block" style="margin-top:0px;" >Xóa</button>
-                        </div>
-                    </div>
 
-                    <div>
-                        <div class="d-inline-block" style=" width: 100px; ">
-                            <img class="rounded-circle" src="https://1.bp.blogspot.com/-GubrZnm4HiQ/Xh_fq25X8DI/AAAAAAAAU1Y/rtrDkHEDq1sm3Ma_35ReZSWY4y04nRkxgCLcBGAsYHQ/s1600/hinh-anh-trai-dep%253Ddau-nam-hot-boy-2k-Wap102%2B%252811.1%2529.jpg" style="width:100%">
+                        <div class="mb-3 a">
+                            <div style=" width: 100px; ">
+                                <img class="rounded-circle" src="https://1.bp.blogspot.com/-GubrZnm4HiQ/Xh_fq25X8DI/AAAAAAAAU1Y/rtrDkHEDq1sm3Ma_35ReZSWY4y04nRkxgCLcBGAsYHQ/s1600/hinh-anh-trai-dep%253Ddau-nam-hot-boy-2k-Wap102%2B%252811.1%2529.jpg" style="width:70%">
+                            </div>
+                            <div class=" text-bottom">
+                                <span class="">
+                                    <p style="margin-bottom: 0px;"><b>Trịnh</b></p>
+                                </span> 
+                                <a type="button" class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
+                                <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;">Xóa</a>
+                            </div>
                         </div>
-                        <div class="d-inline-block">
-                            <span class="a" style="margin-bottom:0px;">
-                                <p><b >Trịnh</b></p>
-                           </span> 
-                            <button  type="button" class="btn btn-primary btn-md d-inline-block"> Thêm bạn bè</button>
-                            <button type="button" class="btn btn-secondary btn-md d-inline-block" style="margin-top:0px;" >Xóa</button>
-                        </div>
-                    </div>
 
+
+                       
+                    </div>
                 </div>
             </li>
          
