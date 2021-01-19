@@ -7,18 +7,20 @@
   }
   *{
 
-      font: 7px;
+      font-size: 12px;
   }
   i{
       font-size: smaller;
       color: slateblue;
   }
   b:hover{
-      color: blue;
-      
+    color: rgb(221, 20, 161);
+  }
+  b:visited{
+      color: navy;
   }
   h6:hover{
-      color:red;
+      color:rgb(248, 10, 248);
   }
   .dropdown{
       width: 40px;
@@ -29,6 +31,14 @@
     background-color: #eee;
     width: 280px;
     height: 300px;
-    border: 1px solid black;
+    border: 1px solid rgb(218, 192, 192);
     overflow: scroll;
+  }
+
+  .dropdown-item:hover{
+  
+      background-color: rgb(248, 240, 240);
+  }
+  .dropdown-divider{
+      color: rgb(59, 51, 51);
   }
