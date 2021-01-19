@@ -5,6 +5,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#friend td:hover {
+    background-color: rgb(193, 207, 207);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
 @media screen and (max-width: 580px) {
     .h_slidebar {
         display: none;
