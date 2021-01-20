@@ -5,6 +5,29 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.menu {
+    display: flex;
+}
+
+.menu1 {
+    display: flex;
+}
+
+.menu2 {
+    display: flex;
+}
+
+.a {
+    color: cornsilk;
+}
+
+.link {}
+
+.link:hover {
+    color: cornsilk;
+    background-color: crimson;
+}
+
 #friend td:hover {
     background-color: rgb(193, 207, 207);
 }
@@ -13,11 +36,27 @@
     box-shadow: none;
 }
 
-@media screen and (max-width: 580px) {
-    .h_slidebar {
+input:hover {
+    background-color: darkgray;
+}
+
+.stt {
+    background-color: rgb(240, 242, 245);
+}
+
+.stt:hover {
+    background-color: rgb(212, 218, 228);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 560px) {
+    .slidebar {
         display: none;
     }
     .nav-item>i {
         float: left;
+    }
+    .menu {
+        display: block;
     }
 }
