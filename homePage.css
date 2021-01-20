@@ -49,6 +49,15 @@ input:hover {
     cursor: pointer;
 }
 
+.stt_2{
+    font-size: 1.2em;
+}
+
+.stt_2:hover {
+    background-color: rgb(212, 218, 228);
+    cursor: pointer;
+}
+
 @media screen and (max-width: 560px) {
     .slidebar {
         display: none;
