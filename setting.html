@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
     <link rel="stylesheet" href="setting.css" />
 </head>
 
@@ -19,79 +24,72 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-sm-3">
-
+            <nav class="col-sm-3 fixed-top nav nav-tabs">
                 <h4>Cài đặt</h4>
-                <ul class="input-group">
-
+                <ul class="input-group mt-sm-3">
                     <form class="input-group" action="/action_page.php">
                         <input type="text" class="form-control ml-auto" placeholder="Tìm kiếm cài đặt..." style="max-width: 600px;">
                         <div class="input-group-append mr-auto">
                             <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
                         </div>
-                    </form><br>
-
-
+                    </form>
                 </ul>
+                <a href="#sign" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
+                    <div class="inline"><i class='fas fa-shield-alt' style='font-size:22px'></i>
+                        <p class="ml-sm-3 mt-sm-1"> Bảo mật và đăng nhập</p>
+                    </div>
+                </a>
+                <a href="#infor" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
+                    <div class="inline"><i class='far fa-id-card' style='font-size:22px'></i>
+                        <p class="ml-sm-3 mt-sm-1"></p>Thông tin của bạn
+                    </div>
+                </a>
+                <hr>
+                <a href="#secur" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
+                    <div class="inline"><i class='fas fa-user-shield' style='font-size:22px'></i>
+                        <p class="ml-sm-3 mt-sm-1"></p>Quyền riêng tư
+                    </div>
+                </a>
+                <a href="#public" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
+                    <div class="inline"><i class='fa fa-globe' style="font-size:22px"></i>
+                        <p class="ml-sm-3 mt-sm-1">Bài viết công khai</p>
+                    </div>
+                </a>
+                <a href="#local" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
+                    <div class="inline"><i class='fas fa-map-marker-alt' style='font-size:22px'></i>
+                        <p class="ml-sm-3 mt-sm-1">Vị trí</p>
+                    </div>
+                </a>
+                <a href="#note" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
+                    <div class="inline"><i class='fas fa-bell' style='font-size:22px'></i>
+                        <p class="ml-sm-3 mt-sm-1">Thông báo</p>
+                    </div>
+                </a>
+                <a href="#story" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
+                    <div class="inline"><i class="fa fa-history" style="font-size:22px"></i>
+                        <p class="ml-sm-3 mt-sm-1">Tin lưu trữ</p>
+                    </div>
+                </a>
+                <a href="#block" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
+                    <div class="inline"><i class="fa fa-user-times" style="font-size:22px"></i>
+                        <p class="ml-sm-3 mt-sm-1">Chặn</p>
+                    </div>
+                </a>
+                <a href="#tag" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
+                    <div class="inline"><i class="fa fa-tags" style="font-size:22px"></i>
+                        <p class="ml-sm-3 mt-sm-1">Trang cá nhân và gắn thẻ</p>
+                    </div>
+                </a>
+                <a href="#support" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
+                    <div class="inline"><i class="fas fa-question-circle" style="font-size:22px"></i>
+                        <p class="ml-sm-3 mt-sm-1">Hỗ trợ</p>
+                    </div>
+                </a>
 
-                <div class="vertical-menu">
 
-                    <a href="#sign" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
-                        <div class="inline"><i class='fas fa-shield-alt' style='font-size:22px'></i>
-                            <p class="ml-sm-3"> Bảo mật và đăng nhập</p>
-                        </div>
-                    </a>
-                    <a href="#infor" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
-                        <div class="inline"><i class='far fa-id-card' style='font-size:22px'></i>
-                            <p class="ml-sm-3"></p>Thông tin của bạn
-                        </div>
-                    </a>
-                    <hr>
-                    <a href="#secur" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
-                        <div class="inline"><i class='fas fa-user-shield' style='font-size:22px'></i>
-                            <p class="ml-sm-3"></p>Quyền riêng tư
-                        </div>
-                    </a>
-                    <a href="#public" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
-                        <div class="inline"><i class="material-icons" style="font-size:22px">public</i>
-                            <p class="ml-sm-3">Bài viết công khai</p>
-                        </div>
-                    </a>
-                    <a href="#local" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
-                        <div class="inline"><i class='fas fa-map-marker-alt' style='font-size:22px'></i>
-                            <p class="ml-sm-3">Vị trí</p>
-                        </div>
-                    </a>
-                    <a href="#note" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
-                        <div class="inline"><i class='fas fa-bell' style='font-size:22px'></i>
-                            <p class="ml-sm-3">Thông báo</p>
-                        </div>
-                    </a>
-                    <a href="#story" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
-                        <div class="inline"><i class="fa fa-history" style="font-size:22px"></i>
-                            <p class="ml-sm-3">Tin lưu trữ</p>
-                        </div>
-                    </a>
-                    <a href="#block" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
-                        <div class="inline"><i class="fa fa-user-times" style="font-size:22px"></i>
-                            <p class="ml-sm-3">Chặn</p>
-                        </div>
-                    </a>
-                    <a href="#tag" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
-                        <div class="inline"><i class="fa fa-tags" style="font-size:22px"></i>
-                            <p class="ml-sm-3">Trang cá nhân và gắn thẻ</p>
-                        </div>
-                    </a>
-                    <a href="#support" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab" style="border: 0px;">
-                        <div class="inline"><i class="fa fa-support" style="font-size:22px"></i>
-                            <p class="ml-sm-3">Hỗ trợ</p>
-                        </div>
-                    </a>
-                </div>
+            </nav>
 
-            </div>
-
-            <div class="col-sm-9">
+            <div class="col-sm-9 ml-auto">
                 <div class="tab-content">
                     <div class="tab-pane fade " id="infor">
                         <h2>Thông tin của bạn trên ứng dụng</h2>
@@ -99,42 +97,43 @@
                         <div id="name"></div>
                     </div>
                     <div class="tab-pane fade show active" id="sign">
-                        <h2>Bảo mật và đăng nhập</h2>
-                        <br>
+                        <h2 class="mt-sm-3">Bảo mật và đăng nhập</h2>
+
                         <hr>
                         <div>
-                            <h5>Đề xuất</h5><br>
+                            <h5 class="mt-sm-3">Đề xuất</h5>
                             <p>Nhận cảnh báo về những lần đăng nhập không nhận ra<button type="button" class="btn btn-info" style="width: 70px;height: 30px; font-size: x-small;">Chỉnh sửa</button>
                         </div>
 
                         <hr>
                         <hr>
                         <div>
-                            <h5>Đăng nhập</h5><br>
+                            <h5>Đăng nhập</h5>
                             <p>Đổi mật khẩu
-                                <button type="button" class="btn btn-info" style="width: 70px;height: 30px; font-size: x-small;">Chỉnh sửa</button>
-                            </p><br><br>
-
-                            <p>Lưu thông tin đăng nhập của bạn</p><label class="switch">
-                <input type="checkbox" checked>
-                <span class="slider round"></span>
-              </label>
-
+                                <button type="button" class="btn btn-info mr-sm-3" style="width: 70px;height: 30px; font-size: x-small;">Chỉnh sửa</button>
+                            </p>
+                            <div class="inline mt-sm-2">
+                                <p class="mt-sm-2">Lưu thông tin đăng nhập của bạn</p>
+                                <label class="switch">
+                                <input type="checkbox" checked >
+                                <span class="slider round"></span>
+                            </label>
+                            </div>
                         </div>
                         <hr>
                         <hr>
                         <div class="t">
-                            <h5>Xác thực 2 yếu tố</h5><br>
+                            <h5 class="mt-sm-3">Xác thực 2 yếu tố</h5>
                             <p>Bảo vệ tài khoản cho bạn</p><i> Chúng tôi sẽ yêu
                 cầu bạn cung cấp mã nếu phát hiện lần đăng nhập từ thiết bị lạ</i><label class="switch">
-                  <input type="checkbox" checked>
+                  <input type="checkbox" checked class="mt-sm-3">
                   <span class="slider round"></span>
                 </label>
                         </div>
 
                     </div>
                     <div class="tab-pane fade " id="secur">
-                        <div></div>
+
                         nam
                     </div>
                     <div class="tab-pane fade" id="public">
@@ -148,7 +147,7 @@
                     </div>
                     <div class="tab-pane fade" id="story">
                         <h2>Tin lưu trữ</h2><br>
-                        <div class="stor">
+                        <div class="inline">
                             <div>
                                 <div class="polaroid rotate_right">
                                     <img src="imgNotificate/mem2.jpg" alt="Pulpit rock" width="256" height="213" class="ml-sm-3">

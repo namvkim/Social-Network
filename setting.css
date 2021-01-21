@@ -1,25 +1,3 @@
-.vertical-menu {
-    width: 100%;
-    background-color: white;
-}
-
-.vertical-menu a {
-    background-color: white;
-    color: black;
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-}
-
-.vertical-menu a:hover {
-    background-color: white;
-}
-
-.vertical-menu a.active {
-    background-color: #4CAF50;
-    color: olive;
-}
-
 .dropdown-divider {
     width: 20px;
 }
@@ -28,7 +6,7 @@
     border-left: 1px solid rgb(151, 138, 138);
 }
 
-.inline {
+.stor {
     display: flex;
 }
 
@@ -134,12 +112,4 @@ label,
 button {
     margin-left: 15px;
     font-size: xx-small;
-}
-
-.affix {
-    top: 20px;
-}
-
-.stor {
-    display: flex;
 }
