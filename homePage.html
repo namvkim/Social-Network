@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="homePage.css">
+    <title>home page</title>
+</head>
+
+<body>
+    <div class="container-fulid">
+        <!-- <div class="fixed-top">
+            <div class="menu bg-dark align-items-center py-md-1 ">
+                <div class="menu1 col-md-8 align-items-center py-1">
+                    <div>
+                        <a class="mr-2" href="#" data-toggle="tooltip" data-placement="right" title="Have a nice day!">
+                            <img src="https://www.beeart.vn/uploads/file/images/blog/logo_dong_vat/logo_dong_vat_bee_art0003.png" width="40px" alt=""></a>
+                    </div>
+                    <div class="ml-sm-auto" style="width: 80%;">
+                        <form class="input-group" action="/action_page.php">
+                            <input type="text" class="form-control" placeholder="Search..." style="max-width: 500px;">
+                            <div class="input-group-append" data-toggle="tooltip" data-placement="bottom" title="Search">
+                                <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="menu2 col-md-4 align-items-center justify-content-around ml-lg-auto pb-1">
+                    <div class="link" data-toggle="tooltip" data-placement="bottom" title="Home">
+                        <a class="a" href="#"><i class="fas fa-home fa-2x"></i></a>
+                    </div>
+                    <div class="link" data-toggle="tooltip" data-placement="bottom" title="Personal page">
+                        <a class="a" href="#"><i class="far fa-user fa-2x"></i></a>
+                    </div>
+
+                    <div class="dropdown link" data-toggle="tooltip" data-placement="bottom" title="Messenger">
+                        <a class="a" href="#" data-toggle="dropdown">
+                            <i class="far fa-comment-dots fa-2x"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">divnk</a>
+                            <center>
+                                <hr width="95%" color="#A9A9A9" />
+                            </center>
+                            <a class="dropdown-item" href="#">divnk</a>
+                        </div>
+                    </div>
+                    <div class=" dropdown link" data-toggle="tooltip" data-placement="bottom" title="Add friend">
+                        <a class="a" href="#" data-toggle="dropdown">
+                            <i class="fas fa-user-friends fa-2x"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">divnk</a>
+                            <center>
+                                <hr width="95%" color="#A9A9A9" />
+                            </center>
+                            <a class="dropdown-item" href="#">divnk</a>
+                        </div>
+                    </div>
+                    <div class="dropdown link" data-toggle="tooltip" data-placement="bottom" title="Notification">
+                        <a class="a" href="#" data-toggle="dropdown">
+                            <i class="far fa-bell fa-2x"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">divnk</a>
+                            <center>
+                                <hr width="95%" color="#A9A9A9" />
+                            </center>
+                            <a class="dropdown-item" href="#">divnk</a>
+
+                        </div>
+                    </div>
+                    <div class="link pr-lg-4 pr-md-3 pr-sm-2" data-toggle="tooltip" data-placement="bottom" title="Setting">
+                        <a class="a" href="#"><i class="fas fa-cog fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row slidebar">
+                <div class="col-sm-3 mr-auto bg-info">
+                    sfdds
+                </div>
+                <div class="col-sm-3 bg-info">
+                    <b><h4 class="p-sm-2 mb-sm-2">Bạn bè</h4></b>
+                    <form action="">
+                        <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4 mr-sm-3">
+                            <div class="input-group">
+                                <input type="search" placeholder="Bạn tìm ai?" aria-describedby="button-addon1" class="form-control border-0 bg-light rounded-pill">
+                                <div class="input-group-append">
+                                    <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <table id="friend" width="95%">
+                        <tr>
+                            <td class="p-sm-2">
+                                <img src="https://phunugioi.com/wp-content/uploads/2020/01/anh-avatar-supreme-dep-lam-dai-dien-facebook.jpg" width="40px" height="40px" style="border-radius: 20px;" alt="">
+                                <span class="ml-sm-2" style="font-weight: bold;">Le Son Nam</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-sm-2">
+                                <img src="https://phunugioi.com/wp-content/uploads/2020/01/anh-avatar-supreme-dep-lam-dai-dien-facebook.jpg" width="40px" height="40px" style="border-radius: 20px;" alt="">
+                                <span class="ml-sm-2" style="font-weight: bold;">Le Son Nam</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div> -->
+        <div class="content bg-secondary">
+            <div class="row col-sm-6 pt-sm-5 mt-sm-4 mx-auto">
+                <div style="border: 1px solid black; border-radius: 6px;" class="p-sm-3 bg-white col-sm-12 mt-md-3 mt-1">
+                    <div class="d-flex align-items-center">
+                        <img src="https://phunugioi.com/wp-content/uploads/2020/01/anh-avatar-supreme-dep-lam-dai-dien-facebook.jpg" width="40px" height="40px" style="border-radius: 20px;" alt="">
+                        <div class="stt ml-md-2 p-md-2 col-md-11 rounded-pill">Bạn đang nghĩ gì thế ???</div>
+                    </div>
+                    <div class="d-flex mt-1" style="text-align: center;">
+                        <div class="col-6 py-md-2 stt_2" style="border-right: 1px solid rgb(194, 184, 184);">
+                            <i class="far fa-images mr-xl-3 mr-2" style="color: green;"></i>Ảnh/Video
+                        </div>
+                        <div class="col-6 py-md-2 stt_2">
+                            <i class="far fa-smile mr-xl-3 mr-2" style="color: rgba(218, 123, 15, 0.747);"></i>Cảm xúc/Hoạt động
+                        </div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid black; border-radius: 6px;" class="p-sm-3 bg-white col-sm-12 mt-md-3 mt-1">
+                    <div class="d-flex align-items-center">
+                        <img src="https://phunugioi.com/wp-content/uploads/2020/01/anh-avatar-supreme-dep-lam-dai-dien-facebook.jpg" width="40px" height="40px" style="border-radius: 20px;" alt="">
+                        <div class="ml-2">
+                            <div>Son Nam</div>
+                            <div>20 năm trước</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <div id="inf">
+                            hello world !!!!!
+                        </div>
+                        <div id="img" class="mt-2 bg-info">
+                            akslf
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="homePage.js"></script>
+    </div>
+</body>
+
+</html>
