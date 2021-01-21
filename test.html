@@ -1,44 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>Multipurpose Free Website Template | Free CSS Templates | Free CSS</title>
-    <link rel="stylesheet" href="test.css">
-
+    <title>CSS Ellipsis</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css" />
+    <style>
+        /* handling text overflow with 
+        Ellipsis 
+        text-overflow: clip | ellipsis | inherit
+        
+        white-space: nowrap;
+        overflow: hidden;
+        */
+        
+        .more {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 90%;
+            position: relative;
+            padding: 1rem;
+            padding-right: 110px;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+        
+        .more::before {
+            position: absolute;
+            right: 0;
+            bottom: 1rem;
+            line-height: 1.5rem;
+            width: 100px;
+            color: cornflowerblue;
+            text-decoration: underline;
+            content: 'Read More';
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <h1>CSS Ellipsis</h1>
+    </header>
+    <main>
+        <p class="more">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
 
-    <div class="contener">
-        <div class="page">
+        <p class="more">Minus cupiditate sint quos delectus libero a necessitatibus eius accusantium corporis doloribus voluptatibus laborum, facere aut eaque at dolorem eveniet officia ducimus. Dolores delectus repellendus natus! Esse doloremque a blanditiis? </p>
 
-
-            <a href="https://zingnews.vn/johnny-depp-nhan-it-nhat-10-trieu-usd-du-mat-vai-dien-post1151458.html">Năm 2015, Yoojung, Doyeon, Lua, Lucy, Elly và Yejin xuất hiện trong web drama "To be continued" của tiền bối cùng công ty Astro.
-                        Cuối năm 2015, đầu năm 2016, các thành viên Elly, Yoojung, Doyeon, Sei và Yejin được biết đến thông qua chương trình Produce 101 mùa 1. Trong đó Yoojung và Doyeon nằm trong top 11 chung cuộc và được ra mắt với nhóm nhạc nữ dự án I.O.I.[2] Tháng 7 năm 2016, Yoojung xuất hiện trong MV "Breathless" của Astro và tháng 11 cùng năm, Sei góp mặt trong MV "Confession" của Astro.
-                        Cũng trong năm 2016, Yoojung và Doyeon cùng góp mặt trong Dramma cùng với tiền bối ASTRO trong Idol Fever của công ty chủ quản Fantagio gồm 10 tập đã hoàn thành.
-                        Trước khi Weki Meki ra mắt, thành viên Chu Ye-jin rời khỏi dự án và được thay thế bởi Ji Su Yeon.
-                        Vào ngày 6 tháng 7 năm 2017, Fantagio tiết lộ nhóm nhạc nữ mới của họ sẽ được gọi là Weki Meki.
-                        
-                        2017-2018: Ra mắt với WEME, Lucky, và Kiss, Kicks
-                        Vào ngày 23 tháng 7 năm 2017, Fantagio đã tung ra ảnh teaser cá nhân của các thành viên. Weki Meki đã phát hành mini-album WEME vào ngày 8 tháng 8 năm 2017 với bài hát chủ đề "I Don't Like Your Girlfriend" do thành viên Yoojung tham gia viết lời.[3][4] Vào ngày 21 tháng 2 năm 2018, Weki Meki phát hành EP thứ hai có tựa đề Lucky. Album có tổng cộng sáu bài hát bao gồm đĩa đơn chính "La La La" và "Butterfly", bài sau là bản làm lại từ OST từ bộ phim Take Off năm 2009 mà nhóm phát hành để ủng hộ Thế vận hội mùa đông 2018. Weki Meki phát hành single album đầu tiên Kiss, Kicks vào ngày 11 tháng 10 năm 2018. Album có tổng cộng ba bài hát bao gồm đĩa đơn chính "Crush" với các phần rap trong album do thành viên Yoo-jung viết.
-                        
-                        2019: Lock End LOL và Week End LOL
-                        Nhóm đã phát hành album đơn thứ hai Lock End LOL vào ngày 14 tháng 5 năm 2019, bao gồm cả đĩa đơn chính "Picky Picky".
-                        
-                        Vào ngày 8 tháng 8 năm 2019, nhóm đã phát hành Week End LOL, một phiên bản album tái bản trước của họ, có đĩa đơn chính "Tiki-Taka (99%)" cùng với cả ba bài hát từ album trước.</a>
-
-
-        </div>
-    </div>
+        <p class="more">Facere, consequuntur! </p>
+    </main>
 </body>
 
 </html>
