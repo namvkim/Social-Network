@@ -59,6 +59,23 @@ input:hover {
     cursor: pointer;
 }
 
+#inf {
+    text-decoration: none;
+    display: -webkit-box;
+    max-height: 3.2rem;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    line-height: 1.6rem;
+}
+
+#inf:hover {
+    overflow: show;
+    background-color: black;
+}
+
 @media screen and (max-width: 560px) {
     .slidebar {
         display: none;
