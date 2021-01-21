@@ -40,18 +40,6 @@ a{
     cursor: pointer;
 }
 
-
-.icon-upload > input
-{
-    display: none;
-}
-
-.icon-upload img
-{
-    width: 80px;
-    cursor: pointer;
-}
-
 #nghigi{
     background-attachment: scroll;
     /* background-image: url("https://i.pinimg.com/originals/2b/b5/0c/2bb50cf144658b21f51ab6236e678b38.gif"); */
