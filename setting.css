@@ -113,3 +113,7 @@ button {
     margin-left: 15px;
     font-size: xx-small;
 }
+
+.inline {
+    color: black;
+}
