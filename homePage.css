@@ -71,37 +71,41 @@ input:hover {
     background-color: black;
 }
 
-.modal-dialog{
+.modal-dialog {
     max-width: 100%;
     margin: 0;
 }
 
-.modal-content{
+.modal-content {
     -ms-flex-direction: row;
     flex-direction: row;
 }
 
-.modal_image{
+.modal_image {
     width: 77%;
     display: flex;
     height: 99.7vh;
 }
 
-.carousel-item{
+.carousel-item {
     padding: auto;
     height: 100%;
 }
 
-#img_modal{
+#img_modal {
     display: flex;
     max-height: 90vh;
     max-width: 80%;
     margin: auto;
 }
 
-.modal_comment{
+.modal_comment {
     width: 23%;
     margin-left: auto;
+}
+
+.comment_img:hover {
+    background-color: rgb(212, 218, 228);
 }
 
 @media screen and (max-width: 560px) {
