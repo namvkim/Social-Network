@@ -7,6 +7,7 @@
 
 .menu {
     display: flex;
+    height: 6vh;
 }
 
 .menu1 {
@@ -21,7 +22,9 @@
     color: cornsilk;
 }
 
-.link {}
+.content{
+    background-color: silver;
+}
 
 .link:hover {
     color: cornsilk;
@@ -52,6 +55,22 @@ input:hover {
 .stt_2:hover {
     background-color: rgb(212, 218, 228);
     cursor: pointer;
+}
+
+.img_like{
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%
+}
+
+.img_like:hover{
+    cursor: pointer;
+    background-color:rgb(240, 242, 245);
 }
 
 #inf {
@@ -106,6 +125,22 @@ input:hover {
 
 .comment_img:hover {
     background-color: rgb(212, 218, 228);
+}
+
+.slidebar{
+    height: 94vh;
+}
+
+.search_friend{
+    background-color:  #fff;
+}
+
+.search_friend:hover{
+    background-color:  rgb(212, 218, 228);
+}
+
+.form-control:hover{
+    background-color:  rgb(212, 218, 228);
 }
 
 @media screen and (max-width: 560px) {
