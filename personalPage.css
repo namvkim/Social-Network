@@ -68,12 +68,32 @@ opacity: 1.0;
 #menu1{
 display: inline;
 } */
-
-
-.img1{
-  width: 25%;
-  height: 90px ;
+.background{
+  margin: 0 auto; 
+  width:900px; 
+  background-color:rgb(137, 141, 141);
+  border-radius: 20px;
+  
 }
+
+.menu{
+
+  margin: 0 auto;
+  width:900px; 
+  background-color:rgb(219, 216, 216);
+  border-radius: 20px;
+}
+
+.tab-content .border-top{
+  border-radius: 20px;
+}
+.img1{
+  width: 163px;
+  height: 180px ;
+  padding: 10px 10px;
+}
+
+
 .dropdown {
   float: left;
   overflow: hidden;
@@ -121,6 +141,16 @@ display: inline;
 }
 .row1{
   display: grid;
-  grid-template-columns: auto auto auto auto;;
+  grid-template-columns: auto auto auto auto auto;
+}
+.icon{
+  background-color: rgb(187, 184, 184);
+  position: relative;
+  left: 375px;
+  opacity: 0.7;
+}
+.icon:hover{
+  opacity: 1.0;
+  background-color: rgb(22, 62, 121);
 }
 
