@@ -1,216 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-  <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
-    crossorigin="anonymous" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
-    crossorigin="anonymous"></script>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="homePage.css">
-  <title>homePage</title>
 </head>
-
 <body>
-  <div class="container-fluid">
-    <div class="fixed-top" style=" background-color:rgb(26, 25, 25);">
-      <div style="margin: 0 auto;width:900px; background-color:aqua">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-          <!-- Brand -->
-          <a class="navbar-brand col-sm-3" href="#">Logo</a>
-          <!-- Links -->
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item mr-sm-5 rounded-circle">
-              <a class="nav-link" href="#"><i class="fas fa-home fa-2x"></i></a>
-            </li>
-            <li class="nav-item mr-sm-5 rounded-circle">
-              <a class="nav-link" href="#"><i class="far fa-user fa-2x"></i></a>
-            </li>
-            <!-- Dropdown -->
-            <li class="nav-item dropdown mr-sm-5 rounded-circle">
-              <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
-                <i class="far fa-comment-dots fa-2x"></i>
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Link</a>
-                <center>
-                  <hr width="95%" color="#A9A9A9" />
-                </center>
-                <a class="dropdown-item" href="#">Link</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown mr-sm-1 rounded-circle">
-              <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
-                <i class="fas fa-user-friends fa-2x"></i>
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Link</a>
-                <center>
-                  <hr width="95%" color="#A9A9A9" />
-                </center>
-                <a class="dropdown-item" href="#">Link</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown mr-sm-1 rounded-circle">
-              <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
-                <i class="far fa-bell fa-2x"></i>
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Link</a>
-                <center>
-                  <hr width="95%" color="#A9A9A9" />
-                </center>
-                <a class="dropdown-item" href="#">Link</a>
 
-              </div>
-            </li>
-            <li class="nav-item mr-sm-1 rounded-circle">
-              <a class="nav-link" href="#"><i class="fas fa-cog fa-2x"></i></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <!---title-->
+<div class="container">
+  <h2>Pills with Dropdown</h2>
+  <ul class="nav nav-pills">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a></div>
+    </li>
+    
+  </ul>
+</div>
 
-    <div style=" background-color:rgb(26, 25, 25);">
-      <div style=" margin: 0 auto; width:900px; background-color:rgb(137, 141, 141)">
-        <div style="border: 1px solid black;" class="sm-3">
-          <img src="http://wpkixx.com/html/pitnik/images/resources/profile-image.jpg" class="img-fluid">
-          <!-- <div class="carousel-caption"style="mt">
-          <div class="edit-pp">
-            <label class="fileContainer">
-              <i class="fa fa-camera">Chỉnh sửa ảnh bìa</i>
-              <input type="file" class="fileUpload" data-count="0" style="display: none;">
-            </label>
-          </div>
-          <div class="float-left ">
-            <a class="nav-link text-nowrap px-2" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-              aria-expanded="false">
-              <img class="user-avatar rounded-circle mr-3 mt-sm-3" src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" width="150px"height="150px" alt="User Avatar">
-              <span class="d-none d-md-inline-block text-white ">
-                <h1>Sierra Brooks</h1>
-              </span>
-            </a>
-          </div>
-        </div></img> -->
-        </div>
-      </div>
-    </div>
-    <div style="margin: 0 auto;width:900px; background-color:white">
-      <div class="p-sm-3 row">
-        <div class="col-xs-6 col-sm-6 col-md-6">
-
-        </div>
-        <div class="navbar col-xs-6 col-sm-6 col-md-6 ">
-          <div class=form-group>
-            <a class="nav-link" href="#home">Dòng thời gian</a>
-          </div>
-          <div class=form-group>
-            <a class="nav-link" href="#company">Giơí thiệu</a>
-          </div>
-          <div class=form-group>
-            <a class="nav-link" href="#team">Bạn bè</a>
-          </div>
-          <div class=form-group>
-            <a class="nav-link" href="#careers">Anh</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="margin: 0 auto;width:500px; background-color:rgb(137, 141, 141)">
-      <div style="border: 1px solid black;" class="p-sm-3">
-        <div class="modal-body">
-          <div class="d-inline-block" style=" width: 110px; ">
-            <img class="rounded-circle"
-              src="https://i.pinimg.com/originals/c2/9a/7d/c29a7d29348b1a3f502803ab9d8355cc.png" style="width:100px">
-          </div>
-          <div class="d-inline-block">
-            <p id="name" style="margin-bottom: 0px; "><b>Sơn Tùng MTP</b></p>
-            <select style="background-color: rgb(172, 173, 173);   border-radius: 6%; height: 30px; " id="select">
-              <i class="fas fa-globe-americas ">Cong</i>
-              <option value="Congkhai" href="#">Công khai</option>
-              <option value="banbe"><i class="fas fa-globe-americas "></i> Bạn bè</option>
-              <option value="banbetru">Bạn bè trừ ...</option>
-              <option value="banbecuthe">Bạn bè cụ thể</option>
-              <option value="chiminhtoi">Chỉ mình tôi</option>
-            </select>
-          </div>
-        </div>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="caption">
-              <p>Click on the button to toggle between showing and hiding content.
-                <button type="button" class="btn " data-toggle="collapse" data-target="#demo">Xem thêm...</button>
-              <div id="demo" class="collapse">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </div>
-              </p>
-            </div>
-            <div class="carousel-item active "><img class="d-block w-100"
-                src="http://1.bp.blogspot.com/-rLsE4w9e8HQ/UClid3sA70I/AAAAAAAAQaQ/q98wI_NNlMI/s1600/Flowers+beauty+desktop+wallpapers.+(2).jpg"
-                alt="First slide">
-            </div>
-            <div class="carousel-item ">
-              <div class="caption">
-                <p>...</p>
-              </div>
-              <img class="d-block w-100"
-                src="https://www.loudwallpapers.com/wp-content/gallery/dahlia-flower/beautiful-beautiful-flowers-blooming-910645.jpg"
-                alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="https://i.ytimg.com/vi/ORajYnhsJOI/maxresdefault.jpg" alt="Third slide">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin: 0 auto;width:500px; background-color:rgb(137, 141, 141)">
-      <div style="border: 1px solid black;" class="p-sm-3">
-        <div class="modal-body">
-          <div class="d-inline-block" style=" width: 110px; ">
-            <img class="rounded-circle"
-              src="https://i.pinimg.com/originals/c2/9a/7d/c29a7d29348b1a3f502803ab9d8355cc.png" style="width:100px">
-          </div>
-          <div class="d-inline-block">
-            <p id="name" style="margin-bottom: 0px; "><b>Sơn Tùng MTP</b></p>
-            <select style="background-color: rgb(172, 173, 173);   border-radius: 6%; height: 30px; " id="select">
-              <i class="fas fa-globe-americas ">Cong</i>
-              <option value="Congkhai" href="#">Công khai</option>
-              <option value="banbe"><i class="fas fa-globe-americas "></i> Bạn bè</option>
-              <option value="banbetru">Bạn bè trừ ...</option>
-              <option value="banbecuthe">Bạn bè cụ thể</option>
-              <option value="chiminhtoi">Chỉ mình tôi</option>
-            </select>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
 </body>
-
 </html>

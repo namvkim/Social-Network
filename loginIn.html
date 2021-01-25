@@ -17,6 +17,9 @@
     <title>Login</title>
     <script src="loginIn.js"></script>
     <link rel="stylesheet" href="loginIn.css">
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script src = "index.js"> </script>
 </head>
 <body class="text-center ">
     <div class="container-fluid mb-3 ">
@@ -31,13 +34,16 @@
             </div>
             <div class="checkbox mb-3 mt-3">
                 <label>
-                    <input type="checkbox" value="remember-me"> Kiểm tra lại xem nào
+                    <input type="checkbox" value="remember-me" id="check"> Kiểm tra lại xem nào
                 </label>
             </div>
             <button class="btn btn-lg btn-info btn-block mb-3" type="submit" onclick="validate()">Đăng nhập</button>
             <a class="mb-9 text-info "> Quên mật khẩu?</a>
             <div class="border-top mt-3 "><br><p>Chưa có tài khoản?<a style="color:white"> <button class=" btn btn-sm btn-info" type="submit" onclick='location.href="//127.0.0.1:5500/signUp.html"'>Đăng kí</button></div>
         </div>
+        <!-- <form method="post">
+            <input type="button" value="Send Email" onclick="sendEmail()"/>
+        </form>  -->
     </form>
 </div>
 </body>

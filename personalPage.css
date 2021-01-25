@@ -16,11 +16,7 @@
   height: 10px;
   
 }
-.img-fluid .rounded {
-width: 900px;
-height: 500px;
-border-radius: 70px;
-}
+
 
 .file-input:focus {
   z-index: 3; /*lớp thứ bn*/
@@ -50,34 +46,33 @@ padding:2px 7px;
 border-radius: 7px;
 opacity: 0.7;
 }
-.float-right .file-input:hover{
+ .float-right .file-input:hover{
 opacity: 1.0;
 }
           
 .avatar{
 opacity: 1.0;
 }
+
 #image1{
   width:150px;
   height:150px;
   border-radius: 100%;
 }
+
 .avatar:hover{
   opacity: 0.8;
   }
   
-
+/*
 #menu1{
 display: inline;
-}
-
-/* .row .p-sm-5{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
 } */
+
+
 .img1{
   width: 25%;
-  height: 25%;
+  height: 90px ;
 }
 .dropdown {
   float: left;
@@ -124,3 +119,8 @@ display: inline;
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.row1{
+  display: grid;
+  grid-template-columns: auto auto auto auto;;
+}
+
