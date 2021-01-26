@@ -91,12 +91,12 @@
 
     <div class="background">
       <div class="sm-3 ">
-        <img src="http://wpkixx.com/html/pitnik/images/resources/profile-image.jpg" class="img-fluid" id="image">
+        <img src="http://wpkixx.com/html/pitnik/images/resources/profile-image.jpg" class="img-fluid" id="background">
         <div class="float-left px-4 align-items-center d-flex" style="position: absolute; top:150px">
           <div class="avatar">
             <img class="user-avatar img-thumbnail  mr-3 mt-sm-3"
               src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" alt="User Avatar"
-              id="image1">
+              id="avatar">
           </div>
           <div class=" text-white ">
             <h1>Thu Hà</h1>
@@ -120,32 +120,32 @@
         </div>
       </div>
     </div>
-    <!-- <script type="text/javascript">
-        function readURL(input) {
+   <script type="text/javascript">
+        // function readURL(input) {
 
-          if (input.files && input.files[0]) {
-            var reader = new FileReader();
+        //   if (input.files && input.files[0]) {
+        //     var reader = new FileReader();
 
-            reader.onload = function (e) {
-              document.getElementById('image').setAttribute('src', e.target.result);
-            }
+        //     reader.onload = function (e) {
+        //       document.getElementById('background').setAttribute('src', e.target.result);
+        //     }
 
-            reader.readAsDataURL(input.files[0]);
-          }
-        }
+        //     reader.readAsDataURL(input.files[0]);
+        //   }
+        // }
 
-        document.getElementById('imgBackground').onchange = function () { //set up a common class
-          readURL(this);
-        };
-       </script> -->
-    <script type="text/javascript">
+        // document.getElementById('imgBackground').onchange = function () { //set up a common class
+        //   readURL(this);
+        // };
+       
+ 
       function readURL(input) {
 
         if (input.files && input.files[0]) {
           var reader = new FileReader();
 
           reader.onload = function (e) {
-            document.getElementById('image1').setAttribute('src', e.target.result);
+            document.getElementById('avatar').setAttribute('src', e.target.result);
           }
 
           reader.readAsDataURL(input.files[0]);

@@ -50,17 +50,17 @@ opacity: 0.7;
 opacity: 1.0;
 }
           
-.avatar{
+#avatar{
 opacity: 1.0;
 }
 
-#image1{
+#avatar{
   width:150px;
   height:150px;
   border-radius: 100%;
 }
 
-.avatar:hover{
+#avatar:hover{
   opacity: 0.8;
   }
   
