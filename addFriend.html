@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">						
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">						
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">		
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>				
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">						
 	<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />						
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>						
@@ -10,10 +11,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>						
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>						
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>		
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">				
     <link href="addFriend.css" rel="stylesheet">		
     <script src="addFriend.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		
 </head>
 <body>
@@ -23,16 +24,18 @@
   <div onclick="myFunction()"> <i class="fas fa-user-friends fa-2x"></i></div>
        
         <div id="myDropdown" class="dropdown-content ooverflow ">
-                    <a href="#">
+                    <!-- <a href="#">
                         <div class=" text-center">
                                             <b >Bạn bè </b>
                                         </div>
-                    </a>
+                    </a> -->
+                   
                    <div>
                     <center>
                         <hr width="95%" color="#808080" style="height:1px;" />
                     </center>
                    </div>
+                   
                     <div class="m-4">
                         <a href="#">
                             <div class="mb-3 a">
@@ -44,10 +47,7 @@
                                             <p style="margin-bottom: 0px;"><b>Yang Yu </b></p>
                                             <p class="text-right" style="margin-bottom: 0px;">2 phút</p>
                                         </span> 
-                    <!-- 
-                                                    <a type="button" class="btn btn-primary btn-sm d-inline-block" onclick="document.write('Các bạn đã là bạn bè')"> Xác nhận</a>
-                                                    <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;" onclick="document.write('Đã gờ lời mời')">Xóa</a>
-                                                -->
+                 
     
                                         <a type="button" id="demo1" onclick="myFFunction1()" class="btn btn-primary btn-sm d-inline-block"> Xác nhận</a>
                                         <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;">Xóa</a>
@@ -66,10 +66,7 @@
                                             <p style="margin-bottom: 0px;"><b>Lộ Tư </b></p>
                                             <p class="text-right" style="margin-bottom: 0px;">1 giờ</p>
                                         </span> 
-                    <!-- 
-                                                    <a type="button" class="btn btn-primary btn-sm d-inline-block" onclick="document.write('Các bạn đã là bạn bè')"> Xác nhận</a>
-                                                    <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;" onclick="document.write('Đã gờ lời mời')">Xóa</a>
-                                                -->
+                 
     
                                         <a type="button" id="demo1" onclick="myFFunction1()" class="btn btn-primary btn-sm d-inline-block"> Xác nhận</a>
                                         <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;">Xóa</a>
@@ -88,10 +85,7 @@
                                             <p style="margin-bottom: 0px;"><b>Lý Hiền </b></p>
                                             <p class="text-right" style="margin-bottom: 0px;">3 giờ</p>
                                         </span> 
-                    <!-- 
-                                                    <a type="button" class="btn btn-primary btn-sm d-inline-block" onclick="document.write('Các bạn đã là bạn bè')"> Xác nhận</a>
-                                                    <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;" onclick="document.write('Đã gờ lời mời')">Xóa</a>
-                                                -->
+                  
     
                                         <a type="button"  id="demo1" onclick="myFFunction1()" class="btn btn-primary btn-sm d-inline-block"> Xác nhận</a>
                                         <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;">Xóa</a>
@@ -111,10 +105,7 @@
                                             <p style="margin-bottom: 0px;"><b>Minh Tử </b></p>
                                             <p class="text-right" style="margin-bottom: 0px;">5 giờ</p>
                                         </span> 
-                    <!-- 
-                                                    <a type="button" class="btn btn-primary btn-sm d-inline-block" onclick="document.write('Các bạn đã là bạn bè')"> Xác nhận</a>
-                                                    <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;" onclick="document.write('Đã gờ lời mời')">Xóa</a>
-                                                -->
+                    
     
                                         <a type="button" id="demo1" onclick="myFFunction1()" class="btn btn-primary btn-sm d-inline-block"> Xác nhận</a>
                                         <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;">Xóa</a>
@@ -147,10 +138,7 @@
                                         <span class="">
                                             <p style="margin-bottom: 0px;"><b>Vương </b></p>
                                         </span> 
-                    <!-- 
-                                                    <a type="button" class="btn btn-primary btn-sm d-inline-block" onclick="document.write('Các bạn đã là bạn bè')"> Xác nhận</a>
-                                                    <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;" onclick="document.write('Đã gờ lời mời')">Xóa</a>
-                                                -->
+              
     
                                                 <a type="button" id="demo2" onclick="myFFunction2()" class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
                                                 
@@ -168,10 +156,7 @@
                                         <span class="">
                                             <p style="margin-bottom: 0px;"><b>Nguyên </b></p>
                                         </span> 
-                    <!-- 
-                                                    <a type="button" class="btn btn-primary btn-sm d-inline-block" onclick="document.write('Các bạn đã là bạn bè')"> Xác nhận</a>
-                                                    <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;" onclick="document.write('Đã gờ lời mời')">Xóa</a>
-                                                -->
+              
     
                                                 <a type="button" id="demo2" onclick="myFFunction2()" class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
                                     </div>
@@ -188,10 +173,7 @@
                                         <span class="">
                                             <p style="margin-bottom: 0px;"><b>Trịnh </b></p>
                                         </span> 
-                    <!-- 
-                                                    <a type="button" class="btn btn-primary btn-sm d-inline-block" onclick="document.write('Các bạn đã là bạn bè')"> Xác nhận</a>
-                                                    <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;" onclick="document.write('Đã gờ lời mời')">Xóa</a>
-                                                -->
+              
     
                                                 <a type="button" id="demo2" onclick="myFFunction2()" class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
                                     </div>
@@ -225,7 +207,8 @@ function filterFunction() {
   }
 }
 </script>
-
+<button onclick="add()">add</button>
+<div id="ava"></div>
 </body>
 </html>
 
