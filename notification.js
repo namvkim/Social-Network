@@ -1,74 +1,67 @@
-var friends = [{
-        id: "1",
-        name: "",
-        img: 'XZ2.png',
-        price: 3190000 + '₫'
-    },
-    {
-        id: "SP2",
-        name: "SONY XZ1",
-        img: 'XZ1.png',
-        price: 2190000 + '₫'
-    },
-    {
-        id: "SP3",
-        name: "SONY Xperia 1",
-        img: 'xperia1.jpg',
-        price: 11190000 + '₫'
-    }
-]
+const url_api = "https://600a50de778d1a0017793a0a.mockapi.io/ai";
 
-function save() {
-    localStorage.setItem('listProAdmin', JSON.stringify(proAdmin))
+function callAPI(endpoint, method, body) {
+    return axios({
+        method: method,
+        url: `${url_api}/${endpoint}`,
+        data: body,
+    }).catch((err) => {
+        console.log(err);
+    });
 }
 
-function load() {
-    proAdmin = JSON.parse(localStorage.getItem('listProAdmin'))
-}
+var user;
+var pesonal;
+var email = "Lexie.Keeling@yahoo.com";
+var id_user;
+var id_note;
 
-if (localStorage.getItem('listProAdmin') != null) {
-    load();
+function get_user() {
+    callAPI("user", "GET", null).then(res => {
+        user = res.data;
+        for (var i in user) {
+            if (user[i].email == email) { id_user = parseInt(i) + 1; break; }
+        };
+        callAPI(`user/${id_user}/pesonal`, "GET", null).then(res => {
+            pesonal = res.data;
+            console.log(pesonal);
+        });
+    });
 }
+get_user();
 
-function updatePro(i) {
-    var d = proAdmin[i];
-    document.getElementById("id").value = d.id;
-    document.getElementById("named").value = d.name;
-    document.getElementById("imgd").value = d.img;
-    document.getElementById("priced").value = d.price;
-}
+function add2() {
+    for (var i in user) {
+        if (id_user == notification[i].userId) {
+            id_note = notification[i].id_notfi - 1;
+            document.getElementById("note1").innerHTML += `
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="${user[id_note].background}" alt="" style="height: 40px; width: 40px;">
+                </div>
+                <div class="col-sm-4"><b>${user[id_note].name}</b>
+                    <p>${notification[id_note].content}</p>
+                </div>
+                <div class="col-sm-6"><i style="color: cadetblue;">1 giây trước</i></div>
+                </div>
+        `;
 
-function submitUpdate() {
-    var id1 = document.getElementById("id").value;
-    for (var i in proAdmin)
-        if (id1 === proAdmin[i].id) {
-            var d = proAdmin[i];
-            d.name = document.getElementById("named").value;
-            d.img = document.getElementById("imgd").value;
-            d.price = document.getElementById("priced").value;
-            localStorage.setItem('listProAdmin', JSON.stringify(proAdmin));
-            window.location.reload();
-            break;
         }
+
+    }
+}
+
+function add() {
+    for (var i in pesonal) {
+        document.getElementById("ava").innerHTML += `<img src="${pesonal[i].img}" alt="">`;
+    }
 }
 
 
-function show() {
-    var listProduct = '';
-    for (i in proAdmin) {
-        var data = JSON.parse(JSON.stringify(proAdmin[i]))
-        var n = i;
-        n++;
-        listProduct += "<tr>";
-        listProduct += "<td>" + "TD-" + n + "</td>";
-        listProduct += "<td>" + data.name + "</td>";
-        listProduct += "<td>" + '<img class = "card-img-top" src = "./img/' + data.img + '" style="width: 50px">' + "</td>";
-        listProduct += "<td>" + data.price + "</td>";
-        listProduct += "<td>" + '<button class = "btn btn-danger" data-toggle = "modal"data-target = "#updateProduct" onclick="updatePro(' + i + ')">';
-        listProduct += '<a href="#"> <i class="fa fa-cogs"> </i> </a>' + '</button>';
-        listProduct += '<button class = "btn btn-warning" onclick = "deletePro(' + i + ')"> <a href="#"> <i class="fa fa-trash"> </i>  </a> </button>' + "</td>";
-        listProduct += "</tr>";
-    }
-    document.getElementById("product-admin").innerHTML = listProduct;
-    save();
+
+
+function deleteTour(i) {
+    callAPI(`cart/${i}`, "DELETE", null).then(response => {
+        window.location.reload();
+    });
 }
