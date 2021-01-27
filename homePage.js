@@ -1,175 +1,155 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
 
-function callAPI(user, method = "GET", body) {
+const url_api = "https://600a50de778d1a0017793a0a.mockapi.io/ai";
+
+function callAPI(endpoint, method, body) {
     return axios({
         method: method,
-        url: `${"https://600a50de778d1a0017793a0a.mockapi.io/ai"}/${"user"}`,
+        url: `${url_api}/${endpoint}`,
         data: body,
     }).catch((err) => {
         console.log(err);
     });
 }
 
-// var admin = JSON.parse(localStorage.getItem("admin"));
-// document.getElementById("admin").innerHTML = admin.user;
+var user;
+var pesonal;
+var email = "Lexie.Keeling@yahoo.com";
+var id_user;
 
-var id;
-
-function save() {
-    document.getElementById("huy").style.display = "none";
-    document.getElementById("themmoi").style.display = "block";
-    document.getElementById("divAddHotel").style.display = "none";
-    var hotels = JSON.parse(localStorage.getItem("hotels")) || [];
-    for (i = 0; i <= hotels.length; i++) {
-        id = i;
-    }
-    var name = document.getElementById("nameproduct").value;
-    var price = document.getElementById("priceproduct").value | 0;
-    var note = document.getElementById("noteproduct").value;
-    var detail = document.getElementById("detailproduct").value;
-    let img = document.getElementById("imgproduct").value;
-    let image = img.split("\\")[2];
-    if (name | detail | note | (price != "")) {
-        var oneProduct = {
-            id: id,
-            name: name,
-            price: price,
-            note: note,
-            detail: detail,
-            img: "images/" + image,
+function get_user() {
+    callAPI("user", "GET", null).then(res => {
+        user = res.data;
+        for (var i in user) {
+            if (user[i].email == email) { id_user = parseInt(i) + 1; break; }
         };
-        hotels.push(oneProduct);
-        callAPI("hotels", "POST", oneProduct).then((response) => {
-            show();
-            alert("Thêm phòng thành công!");
+        callAPI(`user/${id_user}/pesonal`, "GET", null).then(res => {
+            pesonal = res.data;
+            console.log(pesonal);
         });
+    });
+}
+get_user();
 
-    } else {
-        reset();
+function add2() {
+    for (var i in user) {
+        document.getElementById("ava").innerHTML += `<img src="${user[i].background}" alt="">`;
     }
 }
 
-// document.getElementById("divAddHotel").style.display = "none";
-// document.getElementById("huy").style.display = "none";
-
-// function addHotel() {
-//     document.getElementById("divAddHotel").style.display = "block";
-//     document.getElementById("huy").style.display = "block";
-//     document.getElementById("themmoi").style.display = "none";
-// }
-
-// function removeHotel() {
-//     document.getElementById("divAddHotel").style.display = "none";
-//     document.getElementById("huy").style.display = "none";
-//     document.getElementById("themmoi").style.display = "block";
-// }
-
-function show() {
-    var hotels = [];
-    callAPI("hotels", "GET", null).then((res) => {
-        hotels = res.data;
-        let row = "";
-        for (i in hotels) {
-            row += "<tr >";
-            row += "<td>" + hotels[i].id + "</td>";
-            row += "<td>" + hotels[i].name + "</td>";
-            row += "<td>" + '<img src = ' + hotels[i].img + "style = 'width: 80px; height: 80px;' >" + "</td>";
-            row += "<td>" + hotels[i].price + "</td>";
-            row += "<td>" + hotels[i].note + "</td>";
-            row += "<td>" + `<button type="button" onclick="editsp(${i})" class="btn btn-success">Edit</button>` + "</td>";
-            row += "<td>" + `<button type="button" onclick="deletesp(${i})" class="btn btn-danger">Delete</button>` + "</td>";
-            row += "</tr>";
-        }
-        document.getElementById("tab").innerHTML = row;
-    });
-}
-
-function show2() {
-    var hotels = [];
-    callAPI("user", "GET", null).then((res) => {
-        hotels = res.data;
-        localStorage.setItem("test", hotels);
-    });
-}
-
-show2();
-
-function editsp(id) {
-    document.getElementById("huy").style.display = "block";
-    document.getElementById("themmoi").style.display = "none";
-    document.getElementById("divAddHotel").style.display = "block";
-    callAPI(`hotels/${id}`, "GET", null).then((res) => {
-        let hotel;
-        hotel = res.data;
-        console.log(hotel);
-        document.getElementById("nameproduct").value = hotel.name;
-        document.getElementById("priceproduct").value = hotel.price;
-        document.getElementById("noteproduct").value = hotel.note;
-        document.getElementById("detailproduct").value = hotel.detail;
-    });
-    document.getElementById("ok").style.display = "none";
-    document.getElementById("edit").style.display = "block";
-
-    document.getElementById(
-        edit
-    ).innerHTML = `<button type="button" onclick="editok(${id})" class="btn btn-success">save</button>`;
-}
-
-function editok(id) {
-    document.getElementById("huy").style.display = "none";
-    document.getElementById("themmoi").style.display = "block";
-    document.getElementById("divAddHotel").style.display = "none";
-    var nameproduct = document.getElementById("nameproduct").value;
-    var price = document.getElementById("priceproduct").value;
-    var note = document.getElementById("noteproduct").value;
-    var detail = document.getElementById("detailproduct").value;
-    let img = document.getElementById("imgproduct").value;
-    var image = img.split("\\")[2];
-
-    var oneProduct = {
-        id: id,
-        name: nameproduct,
-        price: price,
-        note: note,
-        detail: detail,
-        img: "images/" + image
-    }
-    callAPI(`hotels/${id}`, "PUT", oneProduct).then((response) => {
-        alert("Cập nhật thành công!");
-        show();
-
-    });
-    if (document.getElementById("edit").style.display == "block") {
-        document.getElementById("edit").style.display = "none";
-        document.getElementById("ok").style.display = "block";
-    } else {
-        document.getElementById("edit").style.display = "block";
-        document.getElementById("ok").style.display = "none";
-    }
-
-
-    reset();
-}
-
-function deletesp(id) {
-    var r = confirm("Bạn có chắc muốn xoá sản phẩm?");
-    if (r === true) {
-        callAPI(`hotels/${id}`, "DELETE", null).then((response) => {
-            show();
-            alert("Xoá thành công!");
-        });
-
-    } else {
-        window.location.href = "adminHotel.html";
+function add() {
+    for (var i in pesonal) {
+        document.getElementById("add").innerHTML += `
+        <div style="border: 1px solid black; border-radius: 6px;" class="p-sm-3 bg-white col-sm-12 mt-md-3 mt-1">
+        <div class="d-flex align-items-center">
+            <img src="${user[id_user-1].name}" width="40px" height="40px" style="border-radius: 20px;" alt="">
+            <div class="ml-2">
+                <a style="text-decoration: none; color: black; font-weight: bold;" href="#">Son Nam</a>
+                <div>20 năm trước</div>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div class="col-12 pl-0" id="inf" data-toggle="collapse" data-target="#full">
+                ${pesonal[i].content}
+            </div>
+            <div id="full" class="collapse">
+                askjfdkjsd
+            </div>
+            <div id="img" class="mt-2 bg-info" data-toggle="modal" data-target="#exampleModal">
+                <img width="100%" src="${pesonal[i].img}" alt="">
+            </div>
+            <div class="row mt-1">
+                <div class="col-4 pr-0">
+                    <img width="100%" src="https://giupban.com.vn/wp-content/uploads/2019/09/anh-thien-nhien-dep-2.jpeg" alt="">
+                </div>
+                <div class="col-4 px-2">
+                    <img width="100%" src="https://giupban.com.vn/wp-content/uploads/2019/09/anh-thien-nhien-dep-2.jpeg" alt="">
+                </div>
+                <div class="col-4 pl-0">
+                    <img width="100%" src="https://giupban.com.vn/wp-content/uploads/2019/09/anh-thien-nhien-dep-2.jpeg" alt="">
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLable1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal_image">
+                            <div id="carouselExampleIndicators" class="carousel slide w-100" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner bg-dark" style="height: 100%;" id="content">
+                                    <div class="carousel-item active" id="content">
+                                        <img id="img_modal" class="d-block" src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.0-9/140181024_120652886576667_8053329220062311513_o.jpg?_nc_cat=107&ccb=2&_nc_sid=730e14&_nc_ohc=QbyOCX-JDX4AX9vJZkd&_nc_ht=scontent.fsgn5-2.fna&oh=48ddcfba55fe25bfa3e7c1bd01c71dbd&oe=602FE93C"
+                                            alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img id="img_modal" class="d-block" src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.0-9/140181024_120652886576667_8053329220062311513_o.jpg?_nc_cat=107&ccb=2&_nc_sid=730e14&_nc_ohc=QbyOCX-JDX4AX9vJZkd&_nc_ht=scontent.fsgn5-2.fna&oh=48ddcfba55fe25bfa3e7c1bd01c71dbd&oe=602FE93C"
+                                            alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img id="img_modal" class="d-block" src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.0-9/140181024_120652886576667_8053329220062311513_o.jpg?_nc_cat=107&ccb=2&_nc_sid=730e14&_nc_ohc=QbyOCX-JDX4AX9vJZkd&_nc_ht=scontent.fsgn5-2.fna&oh=48ddcfba55fe25bfa3e7c1bd01c71dbd&oe=602FE93C"
+                                            alt="Second slide">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span aria-hidden="true"><i class="fas fa-caret-left fa-2x"></i></span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span aria-hidden="true"><i class="fas fa-caret-right fa-2x"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="modal_comment bg-light">
+                            <div class="d-flex align-items-center m-md-2">
+                                <img src="https://phunugioi.com/wp-content/uploads/2020/01/anh-avatar-supreme-dep-lam-dai-dien-facebook.jpg" width="40px" height="40px" style="border-radius: 20px;" alt="">
+                                <div class="ml-2">
+                                    <a style="text-decoration: none; color: black; font-weight: bold;" href="#">Son Nam</a>
+                                    <div>20 năm trước</div>
+                                </div>
+                                <button type="button" class="btn btn-secondary ml-auto" data-dismiss="modal">Exit</button>
+                            </div>
+                            <div class="d-flex mt-md-5 text-secondary p-md-2" style="text-align: center; border-top: 1px solid rgb(212, 218, 228); border-bottom: 1px solid rgb(212, 218, 228);">
+                                <div class="py-md-1 img_like">
+                                    <i class="far fa-thumbs-up mr-md-1"></i>Thích
+                                </div>
+                                <div class="py-md-1 img_like">
+                                    <i class="far fa-comment-alt mr-md-1"></i>Bình luận
+                                </div>
+                                <div class="py-md-1 img_like">
+                                    <i class="far fa-share-square mr-md-1"></i>Chia sẽ
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center m-md-2 mt-md-5">
+                                <img src="https://phunugioi.com/wp-content/uploads/2020/01/anh-avatar-supreme-dep-lam-dai-dien-facebook.jpg" width="40px" height="40px" style="border-radius: 20px;" alt="">
+                                <div class="comment_img p-1 bg-light rounded rounded-pill w-100">
+                                    <div class="input-group rounded-pill" style="background-color:rgb(240, 242, 245);">
+                                        <input type="search" placeholder="Viết bình luận..." aria-describedby="button-addon1" class="form-control rounded-pill border-0" style="background-color: rgb(240, 242, 245);">
+                                        <div class="input-group-append">
+                                            <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i
+                                                    class="far fa-paper-plane"></i></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        `;
     }
 }
 
-function reset() {
-    document.getElementById("nameproduct").value = "";
-    document.getElementById("priceproduct").value = "";
-    document.getElementById("noteproduct").value = "";
-    document.getElementById("detailproduct").value = "";
-    document.getElementById("imgproduct").value = "";
+add();
+
+function deleteTour(i) {
+    callAPI(`cart/${i}`, "DELETE", null).then(response => {
+        window.location.reload();
+    });
 }

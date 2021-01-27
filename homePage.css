@@ -24,6 +24,7 @@
 
 .content{
     background-color: silver;
+    min-height: 100vh;
 }
 
 .link:hover {
