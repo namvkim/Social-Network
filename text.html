@@ -1,34 +1,21 @@
+<!DOCTYPE html>
 <html>
-
-<head>
-  <title>Email</title>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-</head>
-
 <body>
-  <div>
-    Chủ đề
-    <input type="text" id="chude" size="30"> Nội dung
-    <input type="text" id="noidung" size="30">
-    <button onclick="sendd()">Gửi</button>
-  </div>
-  <script>
-    function sendd() {
-      var title = document.getElementById('chude').value;
-      var content = document.getElementById('noidung').value;
-      Email.send({
-        Host: "smtp.gmail.com",
-        Username: "nguyenthithuha2911ntth@gmail.com",
-        Password: "cvaehfblqsjraowk",
-        To: "nguyenthithuha2911ntth@gmail.com",
-        From: "nguyenthithuha2911ntth@gmail.com",
-        Subject: title,
-        Body: content
-      }).then(
-        message => console.log('data ', message)
-      );
-    }
-  </script>
-</body>
 
+<p>Clck the button to display "Good day", only if the time is less than 20:00.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var time = 3;
+  if (time == 3) {
+    window.location.href = 'https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_state_if';
+  }
+}
+</script>
+
+</body>
 </html>
