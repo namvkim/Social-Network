@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
 });
 
-function callAPI(endpoint, method = "GET", body) {
+function callAPI(user, method = "GET", body) {
     return axios({
         method: method,
         url: `${"https://600a50de778d1a0017793a0a.mockapi.io/ai"}/${"user"}`,
@@ -12,8 +12,8 @@ function callAPI(endpoint, method = "GET", body) {
     });
 }
 
-var admin = JSON.parse(localStorage.getItem("admin")) || [];
-document.getElementById("admin").innerHTML = admin.user;
+// var admin = JSON.parse(localStorage.getItem("admin"));
+// document.getElementById("admin").innerHTML = admin.user;
 
 var id;
 
@@ -50,20 +50,21 @@ function save() {
         reset();
     }
 }
-document.getElementById("divAddHotel").style.display = "none";
-document.getElementById("huy").style.display = "none";
 
-function addHotel() {
-    document.getElementById("divAddHotel").style.display = "block";
-    document.getElementById("huy").style.display = "block";
-    document.getElementById("themmoi").style.display = "none";
-}
+// document.getElementById("divAddHotel").style.display = "none";
+// document.getElementById("huy").style.display = "none";
 
-function removeHotel() {
-    document.getElementById("divAddHotel").style.display = "none";
-    document.getElementById("huy").style.display = "none";
-    document.getElementById("themmoi").style.display = "block";
-}
+// function addHotel() {
+//     document.getElementById("divAddHotel").style.display = "block";
+//     document.getElementById("huy").style.display = "block";
+//     document.getElementById("themmoi").style.display = "none";
+// }
+
+// function removeHotel() {
+//     document.getElementById("divAddHotel").style.display = "none";
+//     document.getElementById("huy").style.display = "none";
+//     document.getElementById("themmoi").style.display = "block";
+// }
 
 function show() {
     var hotels = [];
@@ -84,6 +85,16 @@ function show() {
         document.getElementById("tab").innerHTML = row;
     });
 }
+
+function show2() {
+    var hotels = [];
+    callAPI("user", "GET", null).then((res) => {
+        hotels = res.data;
+        localStorage.setItem("test", hotels);
+    });
+}
+
+show2();
 
 function editsp(id) {
     document.getElementById("huy").style.display = "block";
