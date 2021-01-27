@@ -28,15 +28,15 @@
             <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 <i class=" fas fa-plus mr-2"></i>Tạo bài viết
             </button>
-            <table class="table">
-                <thead class="thead-light text-center">
-                    <tr>
+            <table class="table" style="width:1000px; height:1000px;">
+                <thead class="text-center">
+                        <tr>
                         
-                    </tr>
+                        </tr>
+                        <tbody class="text-center" id="list-admin">
+                            <script src="post.js"></script>
+                        </tbody>
                 </thead>
-                <tbody class="text-center" id="">
-                    <script src="post.js"></script>
-                </tbody>
             </table>
         </div>
     </div>
@@ -52,9 +52,7 @@
                 </div>
 
 
-
-
-                <div class="modal-body">
+                <div class="modal-body py-md-2">
                     <form action="" class="form-row">
                        
 
@@ -79,14 +77,14 @@
                             </div>
                         </div>
 
-                        <div id="textarea" contenteditable style=" height:auto;" >
+                        <div id="textarea" contenteditable style=" height:100px;"  >
                             Bạn đang nghĩ gì?
-                            <img contenteditable="false" style="width:100%;" id="myimg" />
-                           
-                        
-                        </div>
-
-                            <div class="col-12 mt-3" style="padding-left: 0px; padding-right:0px; ">
+                            </div>
+                            <div style="width: auto;">
+                                <img contenteditable="false" style="width:500px;" id="myimg" />
+                                
+                            </div>
+                            <!-- <div class="col-12 mt-3" style="padding-left: 0px; padding-right:0px; ">
                                 <div class="d-inline-block background-upload" style="text-align: left; width: 45%;">
                                     <label for="color-input">
                                         <i class="fas fa-ad fa-2x"  id="myIcon" style="color:rgb(19, 235, 206);" onchange="previewFile()"></i>
@@ -99,13 +97,13 @@
                                      <i class="far fa-smile fa-2x ml-5  "  id="myIcon"style="color:gray"></i>
                                 </div>
                          
-                            </div>
+                            </div> -->
                         
                                         
                          <div  class="col-12 mt-3" >
                             <div  class="form-control " type="text" >
                                 <div class="d-inline-block mr-5"> Thêm vào bài viết </div>
-                                <div class="d-inline-block ml-4  ">
+                                <div class="d-inline-block ml-4">
                                                                         
                                     <div class=" d-inline-block image-upload ">
                                         <label for="file-input">
@@ -118,13 +116,13 @@
                                         <i class="fas fa-user-tag mr-3" id="myIcon1" style="color:rgb(81, 104, 240)"></i>
                                     </div>
                         
-                                <div class="d-inline-block ">
-                                        <i class="far fa-smile mr-3" id="myIcon1" style="color:#d820b9"></i>
-                                </div>
+                                    <div class="d-inline-block ">
+                                            <i class="far fa-smile mr-3" id="myIcon1" style="color:#d820b9"></i>
+                                    </div>
                         
-                                <div class="d-inline-block ">
-                                        <i class="fas fa-map-marker-alt mr-3" id="myIcon1" style="color:orangered"></i>
-                                </div>
+                                    <div class="d-inline-block ">
+                                            <i class="fas fa-map-marker-alt mr-3" id="myIcon1" style="color:orangered"></i>
+                                    </div>
                         
                                     <div class="d-inline-block ">
                                         <i class="fas fa-video mr-3" id="myIcon1" style="color:red"></i>
@@ -140,7 +138,7 @@
                         </div>                 
                     </form>
                 </div>
-               
+               <b></b>
 
                 <div class="modal-footer">
                     <a class="btn btn-outline-primary  btn-lg btn-block" href="" onclick="Post()">Đăng </a>
@@ -151,8 +149,6 @@
 
 
     <script type="text/javascript">
-        
-        
         function readURL(input) {
               
               if (input.files && input.files[0]) {
@@ -163,17 +159,15 @@
                   }
           
                   reader.readAsDataURL(input.files[0]);
+                  
               }
           }
-          
-          
           document.getElementById('file-input').onchange = function () { //set up a common class
               readURL(this);
           };
-                
       </script>
       
-      
+
       
       
 </body>

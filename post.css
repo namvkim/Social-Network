@@ -4,13 +4,12 @@
     font-size: x-large;
   }
   
-  #myIcon:hover {
-    /* opacity: 0.2; */
-    font-size: 40px;
+  /* #myIcon:hover {
+    font-size: 30px;
     transition: .5s;
-  }
+  } */
   #myIcon1:hover {
-    opacity: 0.2;
+    /* opacity: 0.2; */
     font-size: 20px;
   }
   a{
