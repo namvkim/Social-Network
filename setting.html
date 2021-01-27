@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -142,10 +143,13 @@
                             <div class="row">
                                 <div class="col-sm-8 mt-sm-2">Lưu thông tin đăng nhập của bạn</div>
                                 <div class="col-sm-4 mr-auto">
-                                    <label class="switch">
-                                        <input type="checkbox" checked >
-                                        <span class="slider round"></span>
-                                    </label>
+                                    <form action="/action_page.php">
+                                        <div class="custom-control custom-switch ml-sm-3">
+                                            <input type="checkbox" class="custom-control-input" id="switch1" name="example">
+                                            <label class="custom-control-label" for="switch1"></label>
+                                        </div>
+                                        <br>
+                                    </form>
                                 </div>
                             </div>
 
@@ -158,14 +162,21 @@
                         <div class="row">
                             <div class="col-sm-8 mt-sm-2">Bảo vệ tài khoản cho bạn</div>
                             <div class="col-sm-4 mr-auto">
-                                <label class="switch">
-                                        <input type="checkbox" checked >
-                                        <span class="slider round"></span>
-                                    </label>
+                                <form action="/action_page.php">
+                                    <div class="custom-control custom-switch ml-sm-3">
+                                        <input type="checkbox" class="custom-control-input" id="switch2" name="example1">
+                                        <label class="custom-control-label" for="switch2"></label>
+                                    </div>
+                                    <br>
+                                </form>
                             </div>
                             <i class="ml-sm-3"> Chúng tôi sẽ yêu
                                 cầu bạn cung cấp mã nếu phát hiện lần đăng nhập từ thiết bị lạ</i>
                         </div>
+
+                        <center><button type="submit" class="btn btn-info mt-sm-5" style="width: 70px;height: 30px; font-size: x-small;">
+                            Lưu
+                        </button></center>
                     </div>
 
 
@@ -204,7 +215,7 @@
                                                 <div class="col-sm-8">
                                                     <a class="nav-link" href="#">Ai có thể xem thông tin của bạn trong tương lai</a>
                                                 </div>
-                                                <div class="col-sm-4 ml-auto">
+                                                <div class="col-sm-4">
                                                     <select class="select" id="pub">
                                                         <option selected>Bạn bè</option>
                                                         <option value="1">Mọi người</option>
@@ -212,24 +223,19 @@
                                                       </select>
                                                 </div>
                                             </div>
-
-
                                         </li>
                                         <li class="nav-item">
                                             <div class="row">
                                                 <div class="col-sm-8">
                                                     <a class="nav-link" href="#">Xem tất cả nội dung bạn được gắn thẻ</a>
                                                 </div>
-                                                <div class="col-sm-4 ml-auto">
+                                                <div class="col-sm-4">
                                                     <select class="select" id="pub">
                                                         <option selected>Bạn bè</option>
-                                                        <option value="1">Mọi người</option>
-                                                       
+                                                        <option value="">Mọi người</option>         
                                                       </select>
                                                 </div>
                                             </div>
-
-
                                         </li>
                                         <li class="nav-item">
                                             <div class="row">
@@ -239,13 +245,10 @@
                                                 <div class="col-sm-4 ml-auto">
                                                     <select class="select" id="pub">
                                                         <option selected>Bạn bè</option>
-                                                        <option value="1">Mọi người</option>
-                                                       
+                                                        <option value="">Mọi người</option>  
                                                       </select>
                                                 </div>
                                             </div>
-
-
                                         </li>
                                         <li class="nav-item">
                                             <div class="row">
@@ -255,15 +258,11 @@
                                                 <div class="col-sm-4 ml-auto">
                                                     <select class="select" id="pub">
                                                         <option selected>Bạn bè</option>
-                                                        <option value="1">Mọi người</option>
-                                                       
+                                                        <option value="1">Mọi người</option>        
                                                       </select>
                                                 </div>
                                             </div>
-
-
                                         </li>
-
                                     </ul>
                                 </nav>
                                 <hr>
@@ -272,7 +271,6 @@
                             <div class="col-sm-8 ">
                                 <nav class="navbar bg-default">
                                     <ul class="nav navbar-nav">
-
                                         <li class="nav-item">
                                             <div class="row">
                                                 <div class="col-sm-8">
@@ -281,8 +279,7 @@
                                                 <div class="col-sm-4 ml-auto">
                                                     <select class="select" id="pub">
                                                         <option selected>Bạn bè</option>
-                                                        <option value="1">Mọi người</option>
-                                                       
+                                                        <option value="1">Mọi người</option>                   
                                                       </select>
                                                 </div>
                                             </div>
@@ -324,8 +321,12 @@
 
                             </div>
                         </div>
-
+                        <center><button type="submit" class="btn btn-info mt-sm-5" style="width: 70px;height: 30px; font-size: x-small;">
+                            Lưu
+                        </button></center>
                     </div>
+
+
 
                     <div class="tab-pane fade" id="public">
                         <h2>Bộ lọc và công cụ của bài viết trên trang</h2>
@@ -339,7 +340,7 @@
                                         <li class="nav-item">
                                             <div class="row">
                                                 <div class="col-sm-8">
-                                                    <a class="" style="line-height: 18px;" href="#">Người theo dõi sẽ nhìn thấy bài viết của bạn trong Bảng tin. Theo mặc định thì bạn bè sẽ theo dõi bài viết của bạn, nhưng bạn cũng có thể để những người không phải là bạn bè theo dõi bài viết công khai của mình. Hãy sử dụng cài đặt này để chọn người có thể theo dõi bạn.
+                                                    <a class="" style="line-height: 20px;" href="#">Người theo dõi sẽ nhìn thấy bài viết của bạn trong Bảng tin. Theo mặc định thì bạn bè sẽ theo dõi bài viết của bạn, nhưng bạn cũng có thể để những người không phải là bạn bè theo dõi bài viết công khai của mình. Hãy sử dụng cài đặt này để chọn người có thể theo dõi bạn.
                                                         Mỗi lần bạn đăng bài, bạn có thể chọn đối tượng nào bạn muốn chia sẻ.
                                                         Cài đặt này không áp dụng cho những người theo dõi bạn trên Marketplace cũng như trong các nhóm mua bán. Bạn có thể quản lý các cài đặt đó trên Marketplace.</a>
                                                 </div>
@@ -365,7 +366,7 @@
                                     <div class="col-sm-8">
                                         <a class="nav-link" href="#">Ai có thể xem thông tin của bạn trong tương lai</a>
                                     </div>
-                                    <div class="col-sm-4 ml-auto">
+                                    <div class="col-sm-4">
                                         <select class="select" id="pub">
                                             <option selected>Bạn bè</option>
                                             <option value="1">Mọi người</option>
@@ -407,12 +408,15 @@
                             </div>
 
                         </div>
+                        <center><button type="submit" class="btn btn-info mt-sm-5" style="width: 70px;height: 30px; font-size: x-small;">
+                            Lưu
+                        </button></center>
                     </div>
                     <div class="tab-pane fade" id="local">
                         <h2>Cài đặt vị trí</h2>
                         <hr>
                         <div class="row">
-                            <div class="col-sm-9" style="line-height: 18px;">
+                            <div class="col-sm-9" style="line-height: 20px;">
                                 Để giúp bạn khám phá cuộc sống xung quanh, Facebook sẽ dùng tùy chọn Lịch sử vị trí để tạo lịch sử về các vị trí chính xác nhận được qua Dịch vụ vị trí trên thiết bị di động của bạn. Chỉ bạn mới xem được thông tin này và có thể xóa đi bằng cách xem Lịch
                                 sử vị trí trên thiết bị di động hoặc trên máy tính của bạn
                             </div>
@@ -425,24 +429,264 @@
                     </div>
                     <div class="tab-pane fade" id="note">
                         <h2>Cài đặt thông báo</h2>
-                        <h5>Bạn muốn nhận thông báo về</h5>
+                        <h5 class="mb-sm-3">Bạn muốn nhận thông báo về</h5>
                         <div class="row mt-sm-2">
                             <div class="col-sm-2 ">
-                                <i class='far fa-comment-alt' style='font-size:20px'></i>
-                            </div>
-                            <div class="col-sm-10" style="display: inline;">
-                                <b>Bình luận</b>
-                                <p> Thông báo đẩy, Email, SMS</p>
+                                <i class='fas fa-comment-alt' style='font-size:20px'></i>
                             </div>
 
+                            <div class="col-sm-10" style="display: inline;">
+                                <div class="row">
+                                    <div class="col-sm-4"><b>Bình luận</b></div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <label class="checkbox-inline">
+                                              <input type="checkbox" value="">Thông báo đẩy
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">Email
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">SMS
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+                            </div>
                         </div>
+                        <hr>
+                        <div class="row mt-sm-2">
+                            <div class="col-sm-2 ">
+                                <i class='fas fa-tag' style='font-size:20px;'></i>
+                            </div>
+                            <div class="col-sm-10" style="display: inline;">
+                                <div class="row">
+                                    <div class="col-sm-4"><b>Thẻ</b></div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <label class="checkbox-inline">
+                                              <input type="checkbox" value="">Thông báo đẩy
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">Email
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">SMS
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row mt-sm-2">
+                            <div class="col-sm-2 ">
+                                <i class='fas fa-bell' style='font-size:20px;'></i>
+                            </div>
+                            <div class="col-sm-10" style="display: inline;">
+                                <div class="row">
+                                    <div class="col-sm-4"><b>Lời nhắc</b></div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <label class="checkbox-inline">
+                                              <input type="checkbox" value="">Thông báo đẩy
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">Email
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">SMS
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row mt-sm-2">
+                            <div class="col-sm-2 ">
+                                <i class='fab fa-buromobelexperte' style='font-size:20px;'></i>
+                            </div>
+                            <div class="col-sm-10" style="display: inline;">
+                                <div class="row">
+                                    <div class="col-sm-4"><b>Hoạt động khác về bạn</b></div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <label class="checkbox-inline">
+                                              <input type="checkbox" value="">Thông báo đẩy
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">Email
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">SMS
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row mt-sm-2">
+                            <div class="col-sm-2 ">
+                                <i class='fas fa-user-clock' style='font-size:20px;'></i>
+                            </div>
+                            <div class="col-sm-10" style="display: inline;">
+                                <div class="row">
+                                    <div class="col-sm-4"><b>Cập nhật từ bạn bè</b></div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <label class="checkbox-inline">
+                                              <input type="checkbox" value="">Thông báo đẩy
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">Email
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">SMS
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row mt-sm-2">
+                            <div class="col-sm-2 ">
+                                <i class='fas fa-user-plus' style='font-size:20px;'></i>
+                            </div>
+                            <div class="col-sm-10" style="display: inline;">
+                                <div class="row">
+                                    <div class="col-sm-4"><b>Lời mời kết bạn</b></div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <label class="checkbox-inline">
+                                              <input type="checkbox" value="">Thông báo đẩy
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">Email
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">SMS
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row mt-sm-2">
+                            <div class="col-sm-2 ">
+                                <i class='fas fa-birthday-cake' style='font-size:20px;'></i>
+                            </div>
+                            <div class="col-sm-10" style="display: inline;">
+                                <div class="row">
+                                    <div class="col-sm-4"><b>Sinh nhật</b></div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <label class="checkbox-inline">
+                                              <input type="checkbox" value="">Thông báo đẩy
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">Email
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">SMS
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row mt-sm-2">
+                            <div class="col-sm-2 ">
+                                <i class='fas fa-user-friends' style='font-size:20px;'></i>
+                            </div>
+                            <div class="col-sm-10" style="display: inline;">
+                                <div class="row">
+                                    <div class="col-sm-4"><b>Nhóm</b></div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <label class="checkbox-inline">
+                                              <input type="checkbox" value="">Thông báo đẩy
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">Email
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">SMS
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row mt-sm-2">
+                            <div class="col-sm-2 ">
+                                <i class="fa fa-sticky-note" style='font-size:20px;'></i>
+                            </div>
+                            <div class="col-sm-10" style="display: inline;">
+                                <div class="row">
+                                    <div class="col-sm-4"><b>Trang bạn quản lí</b></div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <label class="checkbox-inline">
+                                              <input type="checkbox" value="">Thông báo đẩy
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">Email
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">SMS
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row mt-sm-2">
+                            <div class="col-sm-2 ">
+                                <i class="fa fa-flag" style='font-size:20px;'></i>
+                            </div>
+                            <div class="col-sm-10" style="display: inline;">
+                                <div class="row">
+                                    <div class="col-sm-4"><b>Trang bạn theo dõi</b></div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <label class="checkbox-inline">
+                                              <input type="checkbox" value="">Thông báo đẩy
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">Email
+                                            </label>
+                                            <label class="checkbox-inline ml-sm-5">
+                                              <input type="checkbox" value="">SMS
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+
+                        <center><button type="submit" class="btn btn-info mt-sm-5" style="width: 70px;height: 30px; font-size: x-small;">
+                            Lưu
+                        </button></center>
                     </div>
                     <div class="tab-pane fade" id="story">
                         <h2>Tin lưu trữ</h2><br>
                         <div class="inline">
                             <div>
                                 <div class="polaroid rotate_right">
-                                    <img src="imgNotificate/mem2.jpg" alt="Pulpit rock" width="256" height="213" class="ml-sm-3">
+                                    <img src="imgNotificate/mem2.jpg" alt="Pulpit rock" width="265" height="213" class="ml-sm-3">
                                     <p class="caption"></p>
                                 </div>
 
@@ -452,18 +696,18 @@
                                 </div>
                             </div>
                         </div>
-                        <br><br><br>
+
                         <div>
                             <h5>Danh sách tin lưu trữ</h5>
                             <p>Ai có thể xem kho lưu trữ tin của bạn</p>
                         </div>
 
+                        <center><button type="submit" class="btn btn-info mt-sm-5" style="width: 70px;height: 30px; font-size: x-small;">
+                            Lưu
+                        </button></center>
+
                     </div>
                 </div>
-
-
-
-
                 <h4>Để lại một bình luận:</h4>
                 <form role="form">
                     <div class="form-group">
