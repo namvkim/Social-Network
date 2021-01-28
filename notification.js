@@ -25,8 +25,8 @@ function get_user() {
             if (user[i].email == email) { id_user = parseInt(i) + 1; break; }
         };
         callAPI(`user/${id_user}/notification`, "GET", null).then(res => {
-            notification = res.data;
-            console.log(notification);
+            notification = res.data;   
+            add2();    
         });
     });
 }
@@ -36,54 +36,32 @@ get_user();
 
 
 function add2() {
-    for (var i in notification)
+    for (var i in notification){
+    var n=notification[i].id_notfi-1;
         document.getElementById("note1").innerHTML += `
         <a class="dropdown-item" href="#">
             <div class="row">
                 <div class="col-sm-2">
-                    <img src="${user[notification[i].id_notif-1].avatar}" alt="" style="height: 40px; width: 40px;">
+                    <img src="${user[n].avatar}" alt="" style="height: 40px; width: 40px;">
                 </div>
-                <div class="col-sm-4"><b>${user[notification[i].id_notif-1].name}</b>
-                    <p>${user[notification[i].id_notif-1].comment}</p>
+                <div class="col-sm-4"><b>${user[n].name}</b>
+                    <p>${user[n].comment}</p>
                 </div>
                 <div class="col-sm-6"><i style="color: cadetblue;">1 giây trước</i></div>
             </div>
         </a>
         `;
+    }
 }
-add2();
+
+
 
 function abc() {
     for (var i in notification)
         document.getElementById("note1").innerHTML += `
             <img src="${user[notification[i].id_notif-1].avatar}" alt="" style="height: 40px; width: 40px;">`;
 }
-abc();
-
-
-
-
-
-function add() {
-    for (var i = 5; i > 1; i--) {
-        document.getElementById("note1").innerHTML += `												
-            <a class="dropdown-item" href="#">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <img src="https://cdn4.iconfinder.com/data/icons/avatars-21/512/avatar-circle-human-male-black-7-512.png" alt="" style="height: 40px; width: 40px;">
-                    </div>
-                    <div class="col-sm-4"><b>Marry</b>
-                        <p>Vua binh luan trong bai viet cua ban</p>
-                    </div>
-                    <div class="col-sm-6"><i style="color: cadetblue;">1 giây trước</i></div>
-                </div>
-            </a>									
-    `;
-    }
-}
-
-
-
+// abc();
 
 
 // function add2() {
