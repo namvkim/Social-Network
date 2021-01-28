@@ -15,7 +15,7 @@ var user;
 var pesonal;
 var email = "Lexie.Keeling@yahoo.com";
 var id_user;
-var id_note;
+
 
 
 function get_user() {
@@ -24,22 +24,25 @@ function get_user() {
         for (var i in user) {
             if (user[i].email == email) { id_user = parseInt(i) + 1; break; }
         };
-        // callAPI(`user/${id_user}/notification`, "GET", null).then(res => {
-        //     notification = res.data;
-        // });
+        console.log(user);
+        add2();
+        console.log(id_user);
+        console.log(user[id_user - 1].name);
+        console.log(user[id_user - 1].birthday);
+
     });
 }
-
-
 get_user();
 
-
 function add2() {
-
-    document.getElementById("note2").innerHTML += `
-        <p>${user[i].name}</p>
-        <p></p>
-        <p>Male</p>
-        `;
-
+    var gen = '';
+    if (user[id_user - 1].gender == false) {
+        gen = "nam";
+    } else gen = "nu";
+    console.log(user[id_user - 1].name);
+    var infor = "";
+    infor += '<p>' + user[id_user - 1].name + '</p>';
+    infor += '<p>' + user[id_user - 1].birthday + '</p>';
+    infor += '<p>' + gen + '</p>';
+    document.getElementById("setinfor").innerHTML += infor;
 }
