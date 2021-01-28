@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">						
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">		
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>				
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">						
-	<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />						
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>						
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">						
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>						
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>						
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>		
-    <link href="addFriend.css" rel="stylesheet">		
-    <script src="addFriend.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="addFriend.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
+
 <body>
 
 
-<div class="dropdown ">
-  <div onclick="myFunction()"> <i class="fas fa-user-friends fa-2x"></i></div>
-       
+    <div class="dropdown ">
+        <div onclick="myFunction()"> <i class="fas fa-user-friends fa-2x"></i></div>
+
         <div id="myDropdown" class="dropdown-content ooverflow ">
-                    <!-- <a href="#">
-                        <div class=" text-center">
-                                            <b >Bạn bè </b>
-                                        </div>
-                    </a> -->
-                   
-                   <div>
-                    <center>
-                        <hr width="95%" color="#808080" style="height:1px;" />
-                    </center>
-                   </div>
-                   
-                    <div class="m-4">
+            <a href="#">
+                <div class=" text-center">
+                    <b>Bạn bè </b>
+                </div>
+            </a>
+
+            <div>
+                <center>
+                    <hr width="95%" color="#808080" style="height:1px;" />
+                </center>
+            </div>
+            <!-- <div id="ava"></div> -->
+
+            <!-- <div class="m-4">
                         <a href="#">
                             <div class="mb-3 a">
                                     <div style=" width: 100px;"  >
@@ -92,123 +95,113 @@
                                     </div>
                                 </div>
                         </a>
-                    </div>
-                    
-                    <div class="m-4">
-                        <a href="#">
-                            <div class="mb-3 a">
-                                    <div style=" width: 100px;"  >
-                                        <img class="rounded-circle" src="https://dotobjyajpegd.cloudfront.net/photo/5cc322972cb8ca7a34ad6b4c_m" style="width:65%">
-                                    </div>
-                                    <div class=" text-bottom">
-                                        <span class="">
-                                            <p style="margin-bottom: 0px;"><b>Minh Tử </b></p>
-                                            <p class="text-right" style="margin-bottom: 0px;">5 giờ</p>
-                                        </span> 
-                    
-    
-                                        <a type="button" id="demo1" onclick="myFFunction1()" class="btn btn-primary btn-sm d-inline-block"> Xác nhận</a>
-                                        <a type="button" class="btn btn-secondary btn-sm d-inline-block" style="margin-top:0px;">Xóa</a>
-                                    </div>
-                                </div>
-                        </a>
-                    </div>
-                    <div>
-                        <center>
-                            <hr width="95%" color="#808080" style="height:1px;" />
-                        </center>
-                    </div>
-                    <div class="text-center">
-                        <div>
-                            <b>Những người bạn có thể biết </b>
+                    </div>-->
+
+            <div id="hienthi">
+                <div class="m-4">
+                    <a href="#">
+                        <div class="mb-3 a">
+                            <div style=" width: 100px;">
+                                <img class="rounded-circle"
+                                    src="https://dotobjyajpegd.cloudfront.net/photo/5cc322972cb8ca7a34ad6b4c_m"
+                                    style="width:65%">
+                            </div>
+                            <div class=" text-bottom">
+                                <span class="">
+                                    <p style="margin-bottom: 0px;"><b>Minh Tử </b></p>
+                                    <p class="text-right" style="margin-bottom: 0px;">5 giờ</p>
+                                </span>
+
+
+                                <a type="button" id="demo1" onclick="myFFunction1()"
+                                    class="btn btn-primary btn-sm d-inline-block"> Xác nhận</a>
+                                <a type="button"  class="btn btn-secondary btn-sm d-inline-block"
+                                    style="margin-top:0px;">Xóa</a>
+                            </div>
                         </div>
-                    </div>
-                    <center>
-                        <hr width="95%" color="#808080" style="height:1px;" />
-                    </center>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <center>
+                    <hr width="95%" color="#808080" style="height:1px;" />
+                </center>
+            </div>
+            <div class="text-center">
+                <div>
+                    <b>Những người bạn có thể biết </b>
+                </div>
+            </div>
+            <center>
+                <hr width="95%" color="#808080" style="height:1px;" />
+            </center>
 
+
+            
                     
-                    <div class="m-4">
-                        <a href="#">
-                            <div class="mb-3 a">
-                                    <div style=" width: 100px;"  >
-                                        <img class="rounded-circle" src="https://i.pinimg.com/originals/19/c4/b4/19c4b4c2a32a951e852a41f83e14530f.jpg" style="width:65%">
-                                    </div>
-                                    <div class=" text-bottom">
-                                        <span class="">
-                                            <p style="margin-bottom: 0px;"><b>Vương </b></p>
-                                        </span> 
-              
-    
-                                                <a type="button" id="demo2" onclick="myFFunction2()" class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
-                                                
-                                            </div>
+            <div id="hienthi1">
+                <!-- <div class="m-4">
+                    <a href="#">
+                        <div class="mb-3 a">
+                                <div style=" width: 100px;"  >
+                                    <img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbKoihkRWHsOFdnwoxoWhkuhb4rC2ViOiy6g&amp;usqp=CAU" style="width:65%">
                                 </div>
-                        </a>
-                    </div>
-                    <div class="m-4">
-                        <a href="#">
-                            <div class="mb-3 a">
-                                    <div style=" width: 100px;"  >
-                                        <img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbKoihkRWHsOFdnwoxoWhkuhb4rC2ViOiy6g&amp;usqp=CAU" style="width:65%">
-                                    </div>
-                                    <div class=" text-bottom">
-                                        <span class="">
-                                            <p style="margin-bottom: 0px;"><b>Nguyên </b></p>
-                                        </span> 
-              
-    
-                                                <a type="button" id="demo2" onclick="myFFunction2()" class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
-                                    </div>
+                                <div class=" text-bottom">
+                                    <span class="">
+                                        <p style="margin-bottom: 0px;"><b>Nguyên </b></p>
+                                    </span> 
+          
+
+                                            <a type="button" id="demo2" onclick="myFFunction2()" class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
                                 </div>
-                        </a>
-                    </div>
-                    <div class="m-4">
-                        <a href="#">
-                            <div class="mb-3 a">
-                                    <div style=" width: 100px;"  >
-                                        <img class="rounded-circle" src="https://1.bp.blogspot.com/-GubrZnm4HiQ/Xh_fq25X8DI/AAAAAAAAU1Y/rtrDkHEDq1sm3Ma_35ReZSWY4y04nRkxgCLcBGAsYHQ/s1600/hinh-anh-trai-dep%253Ddau-nam-hot-boy-2k-Wap102%2B%252811.1%2529.jpg" style="width:65%">
-                                    </div>
-                                    <div class=" text-bottom">
-                                        <span class="">
-                                            <p style="margin-bottom: 0px;"><b>Trịnh </b></p>
-                                        </span> 
-              
-    
-                                                <a type="button" id="demo2" onclick="myFFunction2()" class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
-                                    </div>
+                            </div>
+                    </a>
+                </div>  -->
+                <div class="m-4">
+                    <a href="#">
+                        <div class="mb-3 a">
+                                <div style=" width: 100px;"  >
+                                    <img class="rounded-circle" src="https://i.pinimg.com/originals/19/c4/b4/19c4b4c2a32a951e852a41f83e14530f.jpg" style="width:65%">
                                 </div>
-                        </a>
-                    </div>
-                   
+                                <div class=" text-bottom">
+                                    <span class="">
+                                        <p style="margin-bottom: 0px;"><b>Vương </b></p>
+                                    </span> 
+          
+
+                                            <a type="button" id="demo2" onclick="myFFunction2()" class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
+                                            
+                                        </div>
+                            </div>
+                    </a>
+                </div>
+                <div class="m-4">
+                    <a href="#">
+                        <div class="mb-3 a">
+                            <div style=" width: 100px;">
+                                <img class="rounded-circle"
+                                    src="https://1.bp.blogspot.com/-GubrZnm4HiQ/Xh_fq25X8DI/AAAAAAAAU1Y/rtrDkHEDq1sm3Ma_35ReZSWY4y04nRkxgCLcBGAsYHQ/s1600/hinh-anh-trai-dep%253Ddau-nam-hot-boy-2k-Wap102%2B%252811.1%2529.jpg"
+                                    style="width:65%">
+                            </div>
+                            <div class=" text-bottom">
+                                <span class="">
+                                    <p style="margin-bottom: 0px;"><b>Trịnh </b></p>
+                                </span>
+
+
+                                <a type="button" id="demo2" onclick="myFFunction2()"
+                                    class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
         </div>
+
+    </div>
+
     
-</div>
-
-<script>
- 
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-function filterFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  div = document.getElementById("myDropdown");
-  a = div.getElementsByTagName("a");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-}
-</script>
-<button onclick="add()">add</button>
-<div id="ava"></div>
 </body>
+<script src="addFriend.js"></script>
 </html>
-
