@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
         crossorigin="anonymous" />
@@ -12,22 +13,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-    <link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <!-- <link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Signup</title>
-    <script src="signUp.js"></script>
+  
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <link rel="stylesheet" href="signUp.css">
 </head>
 
 <body>
-    <div class="container-fluid mb-2">
+    <div class="container-fluid">
         <div class="content">
-            <a onclick='location.href="http://127.0.0.1:5500/loginIn.html"'><b><i class="fa fa-arrow-left"></i></b></a>
+            <a onclick='location.href="http://127.0.0.1:5500/loginIn.html"'><i class="fa fa-arrow-left"></i></a>
             <h2 class="text-center">Đăng Ký</h2>
+            <br>
             <form class="form-signin bg-dark">
-                <p class="h4 mb-3 font-weight-normal">Hãy thiết lập tài khoản của bạn!</p>
+                <p class="h4  font-weight-normal">Hãy thiết lập tài khoản của bạn!</p>
                 <div class="row ">
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
@@ -52,11 +54,11 @@
                     <input class="form-control" type="password" placeholder="Xác nhận mật khẩu" name="cps"
                         id="confirmPass" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group h4">
                     Ngày sinh:
                     <input class="form-control" type="date" placeholder="Ngày" name="date" id="date">
                 </div>
-                <div class="form-group">
+                <div class="form-group h4">
                     Giới tính:
                     <div class="row">
                         <div class="col-xs-4 col-sm-4 col-md-4">
@@ -75,8 +77,8 @@
                     <input type="checkbox" id="accept" name="accept" value="accept" onchange="checkAddress()">
                     <label for="vehicle1"> Tôi chấp nhận Điều khoản Sử dụng & Chính sách Bảo mật</label><br>
                 </div>
-                <div class="form-footer"><br>
-                    <button class=" btn btn-lg btn-info btn-block " type="button" data-toggle="modal"
+                <div class="form-footer "><br>
+                    <button class="btn btn-lg btn-info btn-block " type="button" data-toggle="modal"
                         data-target="#myModal" onclick="sendd()" id="myBtn">Đăng ký</button>
                 </div>
             </form>
@@ -92,55 +94,16 @@
                     <h4 class="modal-title">Nhập mã xác nhận</h4>
                 </div>
                 <div class="modal-body">
-                    <p><input class="form-control" type="xn" placeholder="Vui lòng điền mã xác nhận trên email của bạn" name="xn" id="vali"
+                    <p><input class="form-control" type="number" placeholder="Vui lòng điền mã xác nhận trên email của bạn" name="xn" id="vali"
                             required></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-info" data-dismiss="modal">Tiếp tục</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal"onclick="Next()">Tiếp tục</button>
                 </div>
             </div>
 
         </div>
     </div>
-
-    <script>
-        function sendd() {
-            var firstName = document.getElementById("first_name").value;
-            var lastName = document.getElementById("last_name").value;
-            var date = document.getElementById("date").value;
-            var pas = document.getElementById('pass').value;
-            var cpas = document.getElementById('confirmPass').value;
-            if (pas != cpas ) {
-                alert("Bạn xác nhận mật khẩu không đúng. Vui lòng điền lại!");
-                window.location.reload(this.document);
-            }
-            if (firstName ==""||lastName==""|| date=="") {
-                alert("Thông tin bạn điền thiếu. Vui lòng điền lại!");
-                window.location.reload(this.document);
-            }
-            var email = document.getElementById('inputEmail').value;
-            var a = Math.floor(Math.random() * (999999 - 100000)) + 100000;
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "nguyenthithuha2911ntth@gmail.com",
-                Password: "cvaehfblqsjraowk",
-                To: email,
-                From: "FA@gmail.com",
-                Subject: "Xác nhận đăng ký tài khoản",
-                Body: "Mã xác nhận của bạn là: " + a
-            }).then(
-                message => console.log('data ', message)
-            );
-
-
-            var vali = document.getElementById('vali').value;
-            if(vali==a){
-                return;
-            }
-        }
-
-
-    </script>
 </body>
-
+<script src="signUp.js"></script>
 </html>

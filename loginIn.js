@@ -1,26 +1,43 @@
-function validate() {
-    var e = document.forms["myForm"]["email"].value;
-    e = document.getElementById("inputEmail").value;
-    var p = document.getElementById("inputPassword").value;
-    // var c = document.getElementById("check").value;
 
-    if (e == "") {
-        alert("Vui lòng điền số điện thoại hoặc Email!");
-        return false;
-    }
-    if (p == "") {
-        alert("Vui lòng điền mật khẩu!");
-        return false;
-    }
-    alert("Vui lòng điền thông tin chính xác!")
-    return true;
-}
-var aCong = e.indexOf("@");
-var dauCham = e.lastIndexOf(".");
-if ((aCong < 1) || (dauCham < aCong + 2) || (dauCham + 2 > email.length)) {
-    alert("Email bạn điền không chính xác");
-    return false;
-}
+   const url_api = "https://600a50de778d1a0017793a0a.mockapi.io/ai";
+
+   function callAPI(endpoint, method, body) {
+       return axios({
+           method: method,
+           url: `${url_api}/${endpoint}`,
+           data: body,
+       }).catch((err) => {
+           console.log(err);
+       });
+   }
+
+   var user;
+   var pesonal;
+   var id_user;
+   var email = document.getElementById('inputEmail').value;
+   var password = document.getElementById('inputPassword').value;
+        
+
+   function login() {
+       callAPI("user", "GET", null).then(res => {
+           user = res.data;
+           console.log(user);
+           for (var i in user) {
+           if (user[i].email === email) {
+              //if(user[i].password == password) {
+                   return window.location.href = 'http://127.0.0.1:5500/personalPage.html';
+               //}
+           }
+           else {
+               alert("không đúng");
+              window.location.reload();
+               }
+       }
+       });
+   }
+
+
+
 
 
 

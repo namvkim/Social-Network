@@ -1,21 +1,68 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="vi">
 
-<p>Clck the button to display "Good day", only if the time is less than 20:00.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <title>Login</title>
+    
+</head>
 
-<button onclick="myFunction()">Try it</button>
+<body class="text-center ">
+  <div class="background">
+    <div class="sm-3">
+        <img src="http://wpkixx.com/html/pitnik/images/resources/profile-image.jpg" class="img-fluid"
+            id="background">
+        <div class="float-left px-4 align-items-center d-flex" style="position: absolute; top:160px">
+            <div class="avatar">
+                <img class="user-avatar img-thumbnail  mr-3 mt-sm-3"
+                    src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png"
+                    alt="User Avatar" id="avatar">
+            </div>
+            <div class=" text-white ">
+                <h1>Thu Hà</h1>
+            </div>
+        </div>
+        <div class="float-left ">
+            <label class="file-input" onclick="camera()">
+                <i class="fa fa-camera"></i>
+                <input type="file" class="fileUpload" data-count="0" style="display: none;" id="imgAvatar">
+            </label>
+            </a>
+        </div>
+        <div class="float-right">
+            <div>
+                <label class="file-input" onclick="camera1()">
+                    <i class="fa fa-camera"></i>
+                    <large class="text-white"> Chỉnh sửa hình ảnh</large>
+                    <input type="file" accept="image/*" onchange="loadFile(event)" class="fileUpload"
+                        data-count="0" style="display: none;" id="imgBackground">
+                        <input type="file" accept="image/*" onchange="loadFile(event)">
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p id="demo"></p>
 
 <script>
-function myFunction() {
-  var time = 3;
-  if (time == 3) {
-    window.location.href = 'https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_state_if';
-  }
-}
+  var loadFile = function(event) {
+    var output = document.getElementById('background');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
 </script>
-
+  
 </body>
+
 </html>

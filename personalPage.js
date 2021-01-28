@@ -1,154 +1,51 @@
+const url_api = "https://600a50de778d1a0017793a0a.mockapi.io/ai";
 
-const API_URL = "https://600a50de778d1a0017793a0a.mockapi.io/ai/";
-
-function callAPI(endpoint, method = "GET", body) {
-return axios({
-method: method,
-url: `${API_URL}/${endpoint}`,
-data: body,
-}).catch((err) => {
-console.log(err);
-});
-}
-
-var id;
-function save() {
-var users = JSON.parse(localStorage.getItem("users")) || [];
-for (i = 0; i <= hotels.length; i++) {
-id = i;
-}
-let img = document.getElementById("avatar").value;
-let image = img.split("\\")[2];
-if (img ="") {
-var oneImage= {
-img: "images/" + image,
-};
-users.push(oneImage);
-callAPI("avatar", "POST", oneImage).then((response) => {
-show();
-alert("Thêm ảnh thành công!");
-});
-
-} else {
-reset();
-}
-}
-document.getElementById("divAddHotel").style.display = "none";
-document.getElementById("huy").style.display = "none";
-function addHotel() {
-document.getElementById("divAddHotel").style.display = "block";
-document.getElementById("huy").style.display = "block";
-document.getElementById("themmoi").style.display = "none";
-}
-function removeHotel() {
-document.getElementById("divAddHotel").style.display = "none";
-document.getElementById("huy").style.display = "none";
-document.getElementById("themmoi").style.display = "block";
-}
-function show() {
-var hotels = [];
-callAPI("hotels", "GET", null).then((res) => {
-hotels = res.data;
-let row = "";
-for (i in hotels) {
-row += "<tr >";
-row += "<td>" + hotels[i].id + "</td>";
-row += "<td>" + hotels[i].name + "</td>";
-row +=
-<td> +
-<img src=' +
-hotels[i].img +
- style='width: 80px; height: 80px;'> +
-</td>;
-row += "<td>" + hotels[i].price + "</td>";
-row += "<td>" + hotels[i].note + "</td>";
-row +=
-<td> +
-`<button type="button" onclick="editsp(${i})" class="btn btn-success">Edit</button>` +
-</td>;
-row +=
-<td> +
-`<button type="button" onclick="deletesp(${i})" class="btn btn-danger">Delete</button>` +
-</td>;
-row += "</tr>";
-}
-document.getElementById("tab").innerHTML = row;
-});
-}
-function editsp(id) {
-document.getElementById("huy").style.display = "block";
-document.getElementById("themmoi").style.display = "none";
-document.getElementById("divAddHotel").style.display = "block";
-callAPI(`hotels/${id}`, "GET", null).then((res) => {
-let hotel;
-hotel = res.data;
-console.log(hotel);
-document.getElementById("nameproduct").value = hotel.name;
-document.getElementById("priceproduct").value = hotel.price;
-document.getElementById("noteproduct").value = hotel.note;
-document.getElementById("detailproduct").value = hotel.detail;
-});
-document.getElementById("ok").style.display = "none";
-document.getElementById("edit").style.display = "block";
-
-document.getElementById(
-edit
-).innerHTML = `<button type="button" onclick="editok(${id})" class="btn btn-success">save</button>`;
+function callAPI(endpoint, method, body) {
+    return axios({
+        method: method,
+        url: `${url_api}/${endpoint}`,
+        data: body,
+    }).catch((err) => {
+        console.log(err);
+    });
 }
 
-function editok(id) {
-document.getElementById("huy").style.display = "none";
-document.getElementById("themmoi").style.display = "block";
-document.getElementById("divAddHotel").style.display = "none";
-var nameproduct = document.getElementById("nameproduct").value;
-var price = document.getElementById("priceproduct").value;
-var note = document.getElementById("noteproduct").value;
-var detail = document.getElementById("detailproduct").value;
-let img = document.getElementById("imgproduct").value;
-var image = img.split("\\")[2];
+var user;
+var pesonal;
+var email = "Lexie.Keeling@yahoo.com";
+var id_user;
 
-var oneProduct = {
-id: id,
-name: nameproduct,
-price: price,
-note: note,
-detail: detail,
-img: "images/" + image
+function get_user() {
+    callAPI("user", "GET", null).then(res => {
+        user = res.data;
+        for (var i in user) {
+            if (user[i].email == email) { id_user = parseInt(i) + 1; break; }
+        };
+        callAPI(`user/${id_user}/pesonal`, "GET", null).then(res => {
+            pesonal = res.data;
+            console.log(pesonal);
+        });
+    });
 }
-callAPI(`hotels/${id}`, "PUT", oneProduct).then((response) => {
-alert("Cập nhật thành công!");
-show();
+get_user();
 
-});
-if (document.getElementById("edit").style.display == "block") {
-document.getElementById("edit").style.display = "none";
-document.getElementById("ok").style.display = "block";
-} else {
-document.getElementById("edit").style.display = "block";
-document.getElementById("ok").style.display = "none";
+function add2() {
+    for (var i in user) {
+        document.getElementById("ava").innerHTML += `<img src="${user[i].background}" alt="">`;
+    }
+}
+
+function add() {
+    for (var i in pesonal) {
+        document.getElementById("ava").innerHTML += `<img src="${pesonal[i].img}" alt="">`;
+    }
 }
 
 
-reset();
-}
-function deletesp(id) {
-var r = confirm("Bạn có chắc muốn xoá sản phẩm?");
-if (r === true) {
-callAPI(`hotels/${id}`, "DELETE", null).then((response) => {
-show();
-alert("Xoá thành công!");
-});
 
-} else {
-window.location.href = "adminHotel.html";
-}
-}
 
-function reset() {
-document.getElementById("nameproduct").value = "";
-document.getElementById("priceproduct").value = "";
-document.getElementById("noteproduct").value = "";
-document.getElementById("detailproduct").value = "";
-document.getElementById("imgproduct").value = "";
+function deleteTour(i) {
+    callAPI(`cart/${i}`, "DELETE", null).then(response => {
+        window.location.reload();
+    });
 }
-

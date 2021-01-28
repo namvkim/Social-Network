@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
         crossorigin="anonymous" />
@@ -15,11 +16,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
     <title>Login</title>
-    <script src="loginIn.js"></script>
     <link rel="stylesheet" href="loginIn.css">
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script src="index.js"> </script>
 </head>
 
 <body class="text-center ">
@@ -47,19 +44,11 @@
             </div>
     </div>
     </div>
-    <script>
-        function login(){
-        var email = document.getElementById('inputEmail').value;
-        var pass = document.getElementById('inputPassword').value;
-        if (email == 'thu ha'&& pass == '123') {
-            window.location.href = 'http://127.0.0.1:5500/personalPage.html';
-        }
-        if (email != 'thu ha' && pass == '123'){
-            return false;
-        }
-    }
-    </script>
+
+     
+
     </div>
+    <script src="loginIn.js"></script>
 </body>
 
 </html>
