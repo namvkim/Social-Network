@@ -23,12 +23,17 @@
     height: 0;
 }
 
+body {
+    margin: 30px;
+    background-color: #E9E9E9;
+}
+
 div.polaroid {
     width: 284px;
-    padding: 10px 10px 20px 10px;
+    padding: 10px 10px 10px 10px;
     border: 1px solid #BFBFBF;
     background-color: white;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 15px 15px 5px #aaaaaa;
 }
 
 div.rotate_right {
@@ -62,10 +67,6 @@ p {
 button {
     margin-left: 15px;
     font-size: xx-small;
-}
-
-.inline {
-    color: black;
 }
 
 .nav-item a:hover {

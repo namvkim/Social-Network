@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="notification.css" />
 </head>
 
+
 <body>
+    <p></p>
+
     <div class="container">
         <div class="row">
             <div class="dropdown">
@@ -27,40 +30,76 @@
                     <h5 class="dropdown-header">
                         <p>Mới nhất</p>
                     </h5>
-                    <a id="note1" class="dropdown-item" href="#"></a>
-                    <a class="dropdown-item" href="#">
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <img src="imgNotificate/fr14.png" alt="" style="height: 40px; width: 40px;">
+                    <div id="note1">
+                        <a class="dropdown-item" href="#">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <img src="imgNotificate/fr13.png" alt="" style="height: 40px; width: 40px;">
+                                </div>
+                                <div class="col-sm-4"><b>SeoUn</b>
+                                    <p>Bình luận vào bài viết của cô ấy</p>
+                                </div>
+                                <div class="col-sm-6" id="hvn"><i id="demo" style="color: cadetblue;"> trước</i></div>
                             </div>
-                            <div class="col-sm-4"><b>LeLeMan</b>
-                                <p>Bình luận vào bài viết của cô ấy</p>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <img src="imgNotificate/fr14.png" alt="" style="height: 40px; width: 40px;">
+                                </div>
+                                <div class="col-sm-4"><b>LeLeMan</b>
+                                    <p>Bình luận vào bài viết của cô ấy</p>
+                                </div>
+                                <div class="col-sm-6"><i style="color: cadetblue;">1 ngày trước</i></div>
                             </div>
-                            <div class="col-sm-6"><i style="color: cadetblue;">1 ngày trước</i></div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                     <h2 class="dropdown-divider"></h2>
                     <h5 class="dropdown-header">
                         Trước đó
                     </h5>
-                    <a class="dropdown-item" href="#">
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <img src="imgNotificate/Fr2.png" alt="" style="height: 40px; width: 40px;">
+                    <div id="note2">
+                        <a class="dropdown-item" href="#">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <img src="imgNotificate/Fr2.png" alt="" style="height: 40px; width: 40px;">
+                                </div>
+                                <div class="col-sm-4"><b>Tunhy</b>
+                                    <p>Chúc mừng sinh nhật</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img class="ml-sm-5" src="imgNotificate/birthday.png" alt="" style="height: 40px; width: 40px;">
+                                </div>
                             </div>
-                            <div class="col-sm-4"><b>Tunhy</b>
-                                <p>Chúc mừng sinh nhật</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <img class="ml-sm-5" src="imgNotificate/birthday.png" alt="" style="height: 40px; width: 40px;">
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
+
+
             </div>
         </div>
     </div>
-    </div>
+
+
+    <script src="notification.js"></script>
+    <script>
+        function addZero(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        function myFunction() {
+            var d = new Date();
+            var x = document.getElementById("demo");
+            var h = addZero(d.getHours());
+            var m = addZero(d.getMinutes());
+            var s = addZero(d.getSeconds());
+            x.innerHTML = h + ":" + m + ":" + s;
+        }
+        myFunction();
+    </script>
 </body>
 
 </html>
