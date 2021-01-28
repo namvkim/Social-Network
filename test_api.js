@@ -36,12 +36,12 @@ function add2() {
 }
 
 function add() {
-    for (var i in pesonal) {
-        document.getElementById("ava").innerHTML += `<img src="${pesonal[i].img}" alt="">`;
-    }
+
+    document.getElementById("ava").innerHTML += `aa`;
+
 }
 
-
+add();
 
 
 function deleteTour(i) {

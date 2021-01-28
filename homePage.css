@@ -22,7 +22,7 @@
     color: cornsilk;
 }
 
-.content{
+.content {
     background-color: silver;
     min-height: 100vh;
 }
@@ -58,7 +58,7 @@ input:hover {
     cursor: pointer;
 }
 
-.img_like{
+.img_like {
     border-radius: 5px;
     position: relative;
     width: 100%;
@@ -69,26 +69,25 @@ input:hover {
     max-width: 33.333333%
 }
 
-.img_like:hover{
+.img_like:hover {
     cursor: pointer;
-    background-color:rgb(240, 242, 245);
+    background-color: rgb(240, 242, 245);
 }
 
 #inf {
     text-decoration: none;
     display: -webkit-box;
-    max-height: 3.2rem;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: clip;
     white-space: normal;
     -webkit-line-clamp: 2;
     line-height: 1.6rem;
+    border-radius: 5px;
 }
 
 #inf:hover {
-    overflow: show;
-    background-color: black;
+    background-color: rgb(240, 242, 245);
 }
 
 .modal-dialog {
@@ -128,20 +127,20 @@ input:hover {
     background-color: rgb(212, 218, 228);
 }
 
-.slidebar{
+.slidebar {
     height: 94vh;
 }
 
-.search_friend{
-    background-color:  #fff;
+.search_friend {
+    background-color: #fff;
 }
 
-.search_friend:hover{
-    background-color:  rgb(212, 218, 228);
+.search_friend:hover {
+    background-color: rgb(212, 218, 228);
 }
 
-.form-control:hover{
-    background-color:  rgb(212, 218, 228);
+.form-control:hover {
+    background-color: rgb(212, 218, 228);
 }
 
 @media screen and (max-width: 560px) {
