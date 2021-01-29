@@ -21,7 +21,7 @@ function callAPI(endpoint, method, body) {
 }
 
 var user;
-var pesonal;
+var pesonal = [];
 var email = "Lexie.Keeling@yahoo.com";
 var id_user;
 
@@ -32,49 +32,43 @@ function get_user() {
             if (user[i].email == email) { id_user = parseInt(i); break; };
         };
         console.log(user);
-        get_pesonal();
+        for (var i in user) {
+            var x = parseInt(i) + 1;
+            callAPI(`user/${x}/pesonal`, "GET", null).then(res => {
+                var pes = res.data;
+                pesonal = pesonal.concat(pes);
+            });
+        };
+        setTimeout(add_stt, 1000);
     });
 }
 
 function get_pesonal() {
-    for (i in user) {
-        var x = parseInt(i) + 1;
-        callAPI(`user/${x}/pesonal`, "GET", null).then(res => {
-            pesonal = res.data;
-        });
-        console.log(x);
-    };
 
 }
 
-
-
-function add_stt(i) {
-    for (var j in pesonal) {
+function add_stt() {
+    for (var i in pesonal) {
+        document.getElementById("ava").innerHTML = `<img src="${user[id_user].avatar}" width="40px" height="40px" style="border-radius: 20px;" alt="">`;
+        document.getElementById("status").style.display = "block";
+        var x = user[pesonal[i].userId - 1];
+        var y = user[pesonal[i].id_comment - 1];
         document.getElementById("add").innerHTML += `
         <div style="border: 1px solid black; border-radius: 6px;" class="p-sm-3 bg-white col-sm-12 mt-md-3 mt-1">
         <div class="d-flex align-items-center">
-            <img src="${user[i-1].avatar}" width="40px" height="40px" style="border-radius: 20px;" alt="">
+            <img src="${x.avatar}" width="40px" height="40px" style="border-radius: 20px;" alt="">
             <div class="ml-2">
-                <a style="text-decoration: none; color: black; font-weight: bold;" href="#">${user[i-1].name}</a>
+                <a style="text-decoration: none; color: black; font-weight: bold;" href="#">${x.name}</a>
                 <div>19 năm trước</div>
             </div>
         </div>
         <hr>
         <div>
             <div class="col-12 pl-0" id="inf" onclick="change()">
-                <p class="pl-2">Năm 2015, Yoojung, Doyeon, Lua, Lucy, Elly và Yejin xuất hiện trong web drama "To be continued" của tiền bối cùng công ty Astro. Cuối năm 2015, đầu năm 2016, các thành viên Elly, Yoojung, Doyeon, Sei và Yejin được biết đến
-                    thông qua chương trình Produce 101 mùa 1. Trong đó Yoojung và Doyeon nằm trong top 11 chung cuộc và được ra mắt với nhóm nhạc nữ dự án I.O.I.[2] Tháng 7 năm 2016, Yoojung xuất hiện trong MV "Breathless" của Astro và tháng
-                    11 cùng năm, Sei góp mặt trong MV "Confession" của Astro. Cũng trong năm 2016, Yoojung và Doyeon cùng góp mặt trong Dramma cùng với tiền bối ASTRO trong Idol Fever của công ty chủ quản Fantagio gồm 10 tập đã hoàn thành.
-                    Trước khi Weki Meki ra mắt, thành viên Chu Ye-jin rời khỏi dự án và được thay thế bởi Ji Su Yeon. Vào ngày 6 tháng 7 năm 2017, Fantagio tiết lộ nhóm nhạc nữ mới của họ sẽ được gọi là Weki Meki. 2017-2018: Ra mắt với WEME,
-                    Lucky, và Kiss, Kicks Vào ngày 23 tháng 7 năm 2017, Fantagio đã tung ra ảnh teaser cá nhân của các thành viên. Weki Meki đã phát hành mini-album WEME vào ngày 8 tháng 8 năm 2017 với bài hát chủ đề "I Don't Like Your Girlfriend"
-                    do thành viên Yoojung tham gia viết lời.[3][4] Vào ngày 21 tháng 2 năm 2018, Weki Meki phát hành EP thứ hai có tựa đề Lucky. Album có tổng cộng sáu bài hát bao gồm đĩa đơn chính "La La La" và "Butterfly", bài sau là bản
-                    làm lại từ OST từ bộ phim Take Off năm 2009 mà nhóm phát hành để ủng hộ Thế vận hội mùa đông 2018. Weki Meki phát hành single album đầu tiên Kiss, Kicks vào ngày 11 tháng 10 năm 2018. Album có tổng cộng ba bài hát bao gồm
-                    đĩa đơn chính "Crush" với các phần rap trong album do thành viên Yoo-jung viết. 2019: Lock End LOL và Week End LOL Nhóm đã phát hành album đơn thứ hai Lock End LOL vào ngày 14 tháng 5 năm 2019, bao gồm cả đĩa đơn chính
-                    "Picky Picky". Vào ngày 8 tháng 8 năm 2019, nhóm đã phát hành Week End LOL, một phiên bản album tái bản trước của họ, có đĩa đơn chính "Tiki-Taka (99%)" cùng với cả ba bài hát từ album trước.</p>
+                <p class="pl-2">${pesonal[i].content}</p>
             </div>
             <div id="img" class="mt-2 bg-info" data-toggle="modal" data-target="#exampleModal">
-                <img width="100%" src="https://vcdn1-vnexpress.vnecdn.net/2019/09/29/2-1569755302.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=eIlnCLgSWVtioKgU4I4VzA" alt="">
+                <img width="100%" src="${pesonal[i].img}" alt="">
             </div>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLable1" aria-hidden="true">
@@ -159,7 +153,7 @@ function add_stt(i) {
                 </div>
             </div>
             <div class="d-flex align-items-center m-md-2">
-                <img src="https://phunugioi.com/wp-content/uploads/2020/01/anh-avatar-supreme-dep-lam-dai-dien-facebook.jpg" width="40px" height="40px" style="border-radius: 20px;" alt="">
+                <img src="${user[id_user].avatar}" width="40px" height="40px" style="border-radius: 20px;" alt="">
                 <div class="comment_img p-1 bg-light rounded rounded-pill w-100">
                     <div class="input-group rounded-pill" style="background-color:rgb(240, 242, 245);">
                         <input type="search" placeholder="Viết bình luận..." aria-describedby="button-addon1" class="form-control rounded-pill border-0" style="background-color: rgb(240, 242, 245);">
@@ -171,12 +165,10 @@ function add_stt(i) {
                 </div>
             </div>
             <div class="d-flex m-md-2">
-                <img src="https://phunugioi.com/wp-content/uploads/2020/01/anh-avatar-supreme-dep-lam-dai-dien-facebook.jpg" width="40px" height="40px" style="border-radius: 20px;" alt="">
+                <img src="${y.avatar}" width="40px" height="40px" style="border-radius: 20px;" alt="">
                 <div class="ml-2" style="background-color: rgb(240, 242, 245); padding: 5px; border-radius: 5px;">
-                    <a style="text-decoration: none; color: black; font-weight: bold;" href="#">Son Nam</a>
-                    <div style="word-break: break-word;">
-                        Waoooooooooooooooooooooooo!aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                    </div>
+                    <a style="text-decoration: none; color: black; font-weight: bold;" href="#">${y.name}</a>
+                    <div style="word-break: break-word;">${pesonal[i].comment}</div>
                 </div>
             </div>
         </div>

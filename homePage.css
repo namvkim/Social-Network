@@ -44,6 +44,12 @@ input:hover {
     background-color: darkgray;
 }
 
+#status {
+    border: 1px solid black;
+    border-radius: 6px;
+    display: none;
+}
+
 .stt {
     background-color: rgb(240, 242, 245);
 }
