@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto");
+<<<<<<< HEAD
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -12,6 +13,9 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+=======
+*{
+>>>>>>> nam
   margin: 0;
   padding: 0;
   border: 0;
@@ -66,6 +70,7 @@ body {
 }
 
 .chatbot__overview {
+<<<<<<< HEAD
   background-color: #363636;
   display: flex;
   flex-flow: row nowrap;
@@ -75,6 +80,12 @@ body {
   margin: 0 auto;
   padding: 1em;
   padding-bottom: 0;
+=======
+  display: block;
+  flex-flow: row nowrap;
+  align-content: space-between;
+  width: 22em;
+>>>>>>> nam
 }
 
 .chatlist {
@@ -85,9 +96,15 @@ body {
   align-items: flex-end;
   overflow-x: hidden;
   width: 100%;
+<<<<<<< HEAD
   max-width: 35em;
   max-height: 75vh;
   margin: 0 auto;
+=======
+  height: 400px;
+  border: 2px solid #27ae60;
+  border-radius: 8px 8px 0px 0px;
+>>>>>>> nam
 }
 .chatlist .userInput, .chatlist .bot__output {
   padding: 0.85em;
@@ -169,11 +186,15 @@ body {
 .block--background {
   background-color: #363636;
   width: 100vw;
+<<<<<<< HEAD
   height: 100vh;
+=======
+>>>>>>> nam
 }
 
 #chatform {
   display: flex;
+<<<<<<< HEAD
   justify-content: center;
   width: 80%;
   max-width: 35em;
@@ -182,6 +203,13 @@ body {
   font-size: 1em;
   font-family: Helvetica;
 }
+=======
+  width: 100%;
+  font-size: 1em;
+  font-family: Helvetica;
+}
+
+>>>>>>> nam
 @media screen and (max-width: 29em) {
   #chatform {
     width: 90%;
@@ -193,26 +221,41 @@ body {
   position: relative;
   bottom: 0;
   height: auto;
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 100%;  
+>>>>>>> nam
 }
 
 textarea[name=chatbox] {
   resize: none;
   border: 2px solid #27ae60;
   border-right: 0;
+<<<<<<< HEAD
   width: 70%;
+=======
+  width: 80%;
+>>>>>>> nam
   background-color: transparent;
   color: #fff;
   height: 3em;
   margin: 0;
   padding: 0.75em;
+<<<<<<< HEAD
   border-radius: 8px 0px 0px 8px;
+=======
+  border-radius: 0px 0px 0px 8px;
+>>>>>>> nam
   font-family: inherit;
   font-size: 1em;
 }
 textarea[name=chatbox]:focus {
   outline: none;
+<<<<<<< HEAD
   border: 2px solid #4bd786;
+=======
+>>>>>>> nam
 }
 
 ::-webkit-input-placeholder {
@@ -242,7 +285,11 @@ input[type=submit] {
   color: #fff;
   border: 2px solid #27ae60;
   border-left: 0;
+<<<<<<< HEAD
   border-radius: 0 8px 8px 0;
+=======
+  border-radius: 0 0px 8px 0;
+>>>>>>> nam
   font-family: inherit;
   font-size: 1em;
   transition: 200ms all ease-in;

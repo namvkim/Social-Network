@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
 
 <head>
@@ -20,6 +21,61 @@
 
     <div class="stt ml-md-2 p-md-2 col-md-11 rounded-pill">Bạn đang nghĩ gì thế ???</div>
 
+=======
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Ellipsis</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css" />
+    <style>
+        /* handling text overflow with 
+        Ellipsis 
+        text-overflow: clip | ellipsis | inherit
+        
+        white-space: nowrap;
+        overflow: hidden;
+        */
+        
+        .more {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 90%;
+            position: relative;
+            padding: 1rem;
+            padding-right: 110px;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+        
+        .more::before {
+            position: absolute;
+            right: 0;
+            bottom: 1rem;
+            line-height: 1.5rem;
+            width: 100px;
+            color: cornflowerblue;
+            text-decoration: underline;
+            content: 'Read More';
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS Ellipsis</h1>
+    </header>
+    <main>
+        <p class="more">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+
+        <p class="more">Minus cupiditate sint quos delectus libero a necessitatibus eius accusantium corporis doloribus voluptatibus laborum, facere aut eaque at dolorem eveniet officia ducimus. Dolores delectus repellendus natus! Esse doloremque a blanditiis? </p>
+
+        <p class="more">Facere, consequuntur! </p>
+    </main>
+>>>>>>> nam
 </body>
 
 </html>

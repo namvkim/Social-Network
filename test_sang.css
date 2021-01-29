@@ -1,182 +1,3 @@
-* {
-    padding: 0px;
-    margin: 0px;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.menu {
-    display: flex;
-<<<<<<< HEAD
-=======
-    height: 6vh;
->>>>>>> nam
-}
-
-.menu1 {
-    display: flex;
-}
-
-.menu2 {
-    display: flex;
-}
-
-.a {
-    color: cornsilk;
-}
-
-<<<<<<< HEAD
-.link {}
-=======
-.content {
-    background-color: silver;
-    min-height: 100vh;
-}
->>>>>>> nam
-
-.link:hover {
-    color: cornsilk;
-    background-color: crimson;
-}
-
-#friend td:hover {
-    background-color: rgb(193, 207, 207);
-}
-
-.form-control:focus {
-    box-shadow: none;
-}
-
-input:hover {
-    background-color: darkgray;
-}
-
-<<<<<<< HEAD
-=======
-#status {
-    border: 1px solid black;
-    border-radius: 6px;
-    display: none;
-}
-
->>>>>>> nam
-.stt {
-    background-color: rgb(240, 242, 245);
-}
-
-.stt:hover {
-    background-color: rgb(212, 218, 228);
-    cursor: pointer;
-}
-
-<<<<<<< HEAD
-
-/* .stt_2 {
-    font-size: 15px;
-} */
-
-.stt_2:hover {
-    background-color: rgb(212, 218, 228);
-    cursor: pointer;
-}
-
-=======
-.stt_2:hover {
-    background-color: rgb(212, 218, 228);
-    cursor: pointer;
-}
-
-.img_like {
-    border-radius: 5px;
-    position: relative;
-    width: 100%;
-    padding-right: 5px;
-    padding-left: 5px;
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-    color: #525564;
-}
-
-.img_like:hover {
-    cursor: pointer;
-    background-color: rgb(240, 242, 245);
-}
-
-#inf {
-    text-decoration: none;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: clip;
-    white-space: normal;
-    -webkit-line-clamp: 3;
-    line-height: 1.6rem;
-    max-height: 4.8rem;
-    border-radius: 5px;
-    word-break: break-word;
-}
-
-#inf:hover {
-    background-color: rgb(240, 242, 245);
-}
-
-.modal-dialog {
-    max-width: 100%;
-    margin: 0;
-}
-
-.modal-content {
-    -ms-flex-direction: row;
-    flex-direction: row;
-}
-
-.modal_image {
-    width: 77%;
-    display: flex;
-    height: 99.7vh;
-}
-
-.carousel-item {
-    padding: auto;
-    height: 100%;
-}
-
-#img_modal {
-    display: flex;
-    max-height: 90vh;
-    max-width: 80%;
-    margin: auto;
-}
-
-.modal_comment {
-    width: 23%;
-    margin-left: auto;
-}
-
-.comment_img:hover {
-    background-color: rgb(212, 218, 228);
-}
-
-.slidebar {
-    height: 94vh;
-}
-
-.search_friend {
-    background-color: #fff;
-}
-
-.search_friend:hover {
-    background-color: rgb(212, 218, 228);
-}
-
-.form-control:hover {
-    background-color: rgb(212, 218, 228);
-}
-
-
-/* thanh serch */
-
 .search-box {
     color: white;
     background-color: rgb(143, 36, 36);
@@ -189,16 +10,17 @@ input:hover {
 
 .search-icon,
 .go-icon {
+    background-color: violet;
     position: absolute;
     top: 0;
-    height: 60px;
-    width: 86px;
+    height: 65px;
+    width: 25px;
     line-height: 61px;
     text-align: center;
 }
 
 .search-icon {
-    left: 0;
+    left: 10px;
     pointer-events: none;
     font-size: 1.22em;
     will-change: transform;
@@ -299,20 +121,4 @@ input:hover {
 
 #search::-webkit-input-placeholder {
     color: #FFFFFF;
-}
-
-
-/* end */
-
->>>>>>> nam
-@media screen and (max-width: 560px) {
-    .slidebar {
-        display: none;
-    }
-    .nav-item>i {
-        float: left;
-    }
-    .menu {
-        display: block;
-    }
 }
