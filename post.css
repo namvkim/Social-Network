@@ -2,45 +2,52 @@
     text-align: center;
     font-weight: bold;
     font-size: x-large;
-}
-
-#myIcon:hover {
-    /* opacity: 0.2; */
-    font-size: 40px;
+  }
+  
+  /* #myIcon:hover {
+    font-size: 30px;
     transition: .5s;
-}
-#myIcon1:hover {
-    opacity: 0.2;
+  } */
+  #myIcon1:hover {
+    /* opacity: 0.2; */
     font-size: 20px;
-}
-a{
+  }
+  a{
     color: black;
     direction: none;
-}
-
-.image-upload > input
-{
+  }
+  
+  .image-upload > input
+  {
     display: none;
-}
-
-.image-upload img
-{
+  }
+  
+  .image-upload img
+  {
     width: 80px;
     cursor: pointer;
-}
-
-.background-upload > input
-{
+  }
+  
+  .background-upload > input
+  {
     display: none;
-}
-
-.background-upload img
-{
+  }
+  
+  .background-upload img
+  {
     width: 80px;
     cursor: pointer;
-}
-
-#nghigi{
-    background-attachment: scroll;
-    /* background-image: url("https://i.pinimg.com/originals/2b/b5/0c/2bb50cf144658b21f51ab6236e678b38.gif"); */
-}
+  }
+  
+  #textarea {
+    -moz-appearance: textfield-multiline;
+    -webkit-appearance: textarea;
+    font: medium -moz-fixed;
+    font: -webkit-small-control;
+    overflow: auto;
+    padding: 2px;
+    resize: both;
+    height: 200px;  
+    width: 100%;
+    border:none;
+  }

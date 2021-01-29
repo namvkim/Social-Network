@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -28,18 +29,20 @@
             <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 <i class=" fas fa-plus mr-2"></i>Tạo bài viết
             </button>
-            <table class="table">
-                <thead class="thead-light text-center">
-                    <tr>
-                        
-                    </tr>
+            <table  class="table" style="width:1000px; height:1000px;">
+                <thead class="text-center">
+                        <tr id="dang">
+                            
+                        </tr>
+                        <tbody class="text-center" id="list-admin">
+                        </tbody>
                 </thead>
-                <tbody class="text-center" id="product-admin">
-                    <script src="post.js"></script>
-                </tbody>
             </table>
         </div>
+        
     </div>
+   
+    
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLable1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -52,92 +55,93 @@
                 </div>
 
 
-
-
-                <div class="modal-body">
+                <div class="modal-body py-md-2">
                     <form action="" class="form-row">
                        
 
-                    <div class="modal-body">
-                           
-                        <div class="d-inline-block" style=" width: 110px; ">
-                            <img class="rounded-circle" src="https://i.pinimg.com/originals/c2/9a/7d/c29a7d29348b1a3f502803ab9d8355cc.png" style="width:100px">
-                        </div>
-                       
-                        <div  class="d-inline-block">
-                            <p id="name" style="margin-bottom: 0px; "><b>Sơn Tùng MTP</b></p>
-                         
-                              <select style="background-color: rgb(172, 173, 173);   border-radius: 6%; height: 30px; " id="select">
-                                <option value="Congkhai" >Công khai</option>
-                                  <option value="banbe"> Bạn bè</option>
-                                  <option value="banbetru">Bạn bè trừ ...</option>
-                                  <option value="banbecuthe">Bạn bè cụ thể</option>
-                                  <option value="chiminhtoi">Chỉ mình tôi</option>
-
-                              </select>
-                             
-                        </div>
-                    </div>
-
-                        <div class="col-12  ">
-                            <textarea class="form-control"  id="nghigi" placeholder="Bạn đang nghĩ gì?" rows="4" style=" border:none; "></textarea>
-                  
-                        </div>
-                        <div class="col-12 mt-3" style="padding-left: 0px; padding-right:0px; ">
-                            <div class="d-inline-block background-upload" style="text-align: left; width: 45%;">
-                                <label for="color-input">
-                                    <i class="fas fa-ad fa-2x"  id="myIcon" style="color:rgb(19, 235, 206);"></i>
-                                </label>
-                                <input id="color-input" type="color" style="text-align: center;">
+                        <div class="modal-body">
+                            
+                            <div class="d-inline-block" style=" width: 110px; ">
+                                <img class="rounded-circle" src="https://i.pinimg.com/originals/c2/9a/7d/c29a7d29348b1a3f502803ab9d8355cc.png" style="width:100px">
                             </div>
+                        
+                            <div  class="d-inline-block">
+                                <p id="name" style="margin-bottom: 0px; "><b>Sơn Tùng MTP</b></p>
+                            
+                                <select style="background-color: rgb(172, 173, 173);   border-radius: 6%; height: 30px; " id="select">
+                                    <option value="Congkhai" >Công khai</option>
+                                    <option value="banbe"> Bạn bè</option>
+                                    <option value="banbetru">Bạn bè trừ ...</option>
+                                    <option value="banbecuthe">Bạn bè cụ thể</option>
+                                    <option value="chiminhtoi">Chỉ mình tôi</option>
+
+                                </select>
+                                
+                            </div>
+                        </div>
+
+                        <div id="textarea" contenteditable style=" height:100px;"  >
+                            Bạn đang nghĩ gì?
+                            </div>
+                            <div style="width: 500px;">
+                                <img contenteditable="false" style="width:100%;" id="myimg" />
+                                
+                            </div>
+                            <!-- <div class="col-12 mt-3" style="padding-left: 0px; padding-right:0px; ">
+                                <div class="d-inline-block background-upload" style="text-align: left; width: 45%;">
+                                    <label for="color-input">
+                                        <i class="fas fa-ad fa-2x"  id="myIcon" style="color:rgb(19, 235, 206);" onchange="previewFile()"></i>
+                                        
+                                    </label>
+                                    <input id="color-input" type="color" style="text-align: center;">
+                                </div>
                  
-                            <div class="d-inline-block ml-3 " style="text-align: right; width: 50%;">
-                                 
+                                <div class="d-inline-block ml-3 " style="text-align: right; width: 50%;">
                                      <i class="far fa-smile fa-2x ml-5  "  id="myIcon"style="color:gray"></i>
-                            </div>
+                                </div>
                          
-                     </div>
-                        <div  class="col-12 mt-3" >
+                            </div> -->
+                        
+                                        
+                         <div  class="col-12 mt-3" >
                             <div  class="form-control " type="text" >
                                 <div class="d-inline-block mr-5"> Thêm vào bài viết </div>
-                                <div class="d-inline-block ml-4  ">
+                                <div class="d-inline-block ml-4">
                                                                         
                                     <div class=" d-inline-block image-upload ">
                                         <label for="file-input">
                                             <i class="far fa-images mr-3 " id="myIcon1" style="color:rgb(31, 173, 85)"></i>
                                         </label>
-                                        <input id="file-input" type="file"/>
+                                        <input id="file-input" class="file" type='file' />
                                     </div>
-
+                        
                                     <div class="d-inline-block ">
                                         <i class="fas fa-user-tag mr-3" id="myIcon1" style="color:rgb(81, 104, 240)"></i>
                                     </div>
-
-                                   <div class="d-inline-block ">
-                                        <i class="far fa-smile mr-3" id="myIcon1" style="color:#d820b9"></i>
-                                   </div>
-
-                                   <div class="d-inline-block ">
-                                        <i class="fas fa-map-marker-alt mr-3" id="myIcon1" style="color:orangered"></i>
-                                   </div>
-
+                        
+                                    <div class="d-inline-block ">
+                                            <i class="far fa-smile mr-3" id="myIcon1" style="color:#d820b9"></i>
+                                    </div>
+                        
+                                    <div class="d-inline-block ">
+                                            <i class="fas fa-map-marker-alt mr-3" id="myIcon1" style="color:orangered"></i>
+                                    </div>
+                        
                                     <div class="d-inline-block ">
                                         <i class="fas fa-video mr-3" id="myIcon1" style="color:red"></i>
                                     </div>
-
+                        
                                     <div class="d-inline-block ">
                                         <i class="fas fa-ellipsis-h mr-3" id="myIcon1" ></i> 
                                     </div>                                  
                                 </div>
-                             
-
-                            </div>
-                           
-                        </div>
+                            
                         
+                            </div>
+                        </div>                 
                     </form>
                 </div>
-               
+               <b></b>
 
                 <div class="modal-footer">
                     <a class="btn btn-outline-primary  btn-lg btn-block" href="" onclick="Post()">Đăng </a>
@@ -147,5 +151,29 @@
     </div>
 
 
+    <script type="text/javascript">
+        function readURL(input) {
+              
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+          
+                  reader.onload = function (e) {
+                      document.getElementById('myimg').setAttribute('src',e.target.result);
+                  }
+          
+                  reader.readAsDataURL(input.files[0]);
+                  
+              }
+          }
+          document.getElementById('file-input').onchange = function () { //set up a common class
+              readURL(this);
+          };
+      </script>
+      
+
+      
+      
 </body>
+<script src="post.js"></script>
+
 </html>
