@@ -1,0 +1,86 @@
+.dropdown-divider {
+    width: 20px;
+}
+
+.col-sm-3 {
+    border-right: 1px solid rgb(151, 138, 138);
+}
+
+.stor {
+    display: flex;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 27px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+body {
+    margin: 30px;
+    background-color: #E9E9E9;
+}
+
+div.polaroid {
+    width: 284px;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 15px 15px 5px #aaaaaa;
+}
+
+div.rotate_right {
+    float: left;
+    -ms-transform: rotate(7deg);
+    /* IE 9 */
+    -webkit-transform: rotate(7deg);
+    /* Safari */
+    transform: rotate(7deg);
+}
+
+div.rotate_left {
+    float: left;
+    -ms-transform: rotate(-8deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-8deg);
+    /* Safari */
+    transform: rotate(-8deg);
+}
+
+body {
+    margin: 30px;
+    background-color: white;
+    line-height: 10px;
+}
+
+p {
+    display: inline;
+}
+
+button {
+    margin-left: 15px;
+    font-size: xx-small;
+}
+
+.nav-item a:hover {
+    color: rgb(15, 53, 134);
+    text-decoration: none;
+}
+
+a {
+    display: block;
+    color: black;
+    text-align: 2px;
+    list-style-type: none;
+}
+
+select {
+    margin-left: 90px;
+}

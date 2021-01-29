@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [0128/083430.276:ERROR:file_io.cc(135)] WriteFile: There is not enough space on the disk. (0x70)
 [0128/083430.276:ERROR:crash_report_exception_handler.cc(113)] WriteEverything failed
 [0128/083430.276:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\ni.ho22\AppData\Local\Google\Chrome\User Data\Crashpad\reports\bab5a199-9e56-4e03-904f-3d656e0a699c.dmp: The process cannot access the file because it is being used by another process. (0x20)
@@ -27,3 +28,10 @@
 [0128/092641.184:ERROR:file_io.cc(135)] WriteFile: There is not enough space on the disk. (0x70)
 [0128/092641.185:ERROR:crash_report_exception_handler.cc(113)] WriteEverything failed
 [0128/092641.185:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\ni.ho22\AppData\Local\Google\Chrome\User Data\Crashpad\reports\64f0b3d4-2f1a-47ef-b66a-c8ac5374cd89.dmp: The process cannot access the file because it is being used by another process. (0x20)
+=======
+[0119/115337.225:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0120/163007.267:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0120/190626.583:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0122/080922.610:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0123/082702.708:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+>>>>>>> sang
