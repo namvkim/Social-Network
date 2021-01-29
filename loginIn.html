@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginIn.css">
+</head>
+
+<body class="text-center ">
+
+    <div class="container-fluid mb-3 ">
+        <h2>Đăng Nhập</h2>
+        <form class=" form-login">
+            <p class="h4 mb-3 font-weight-normal">Vui lòng đăng nhập!</p>
+            <div class="form-group">
+                <input type="email" id="inputEmail" class="form-control " placeholder="Nhập Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="inputPassword" class="form-control " placeholder="Nhập mật khẩu" required>
+            </div>
+            <div class="checkbox mb-3 mt-3">
+                <label>
+                    <input type="checkbox" value="remember-me" id="check"> Kiểm tra lại xem nào
+                </label>
+            </div>
+            <button class="btn btn-lg btn-info btn-block mb-3" type="submit" onclick="login()">Đăng nhập</button>
+            <a class="mb-9 text-info "> Quên mật khẩu?</a>
+            <div class="border-top mt-3 "><br>
+                <p>Chưa có tài khoản?<a style="color:white"> <button class=" btn btn-sm btn-info" type="submit"
+                            onclick='location.href="//127.0.0.1:5500/signUp.html"'>Đăng kí</button>
+            </div>
+    </div>
+    </div>
+
+     
+
+    </div>
+    <script src="loginIn.js"></script>
+</body>
+
+</html>
