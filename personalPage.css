@@ -22,32 +22,32 @@
 .file-input:focus {
   z-index: 3; /*lớp thứ bn*/
 }
-.float-left .fa-camera{
+.file-input1 {
 position: relative;
 top:-20px; 
-left: 30px; 
+left: 120px; 
 background-color: rgba(161, 165, 165, 0.575); 
-height: 30px; 
+height: 28px; 
 width: 30px; 
 padding:3px 7px; 
-border-radius: 7px;
+border-radius: 20px;
 opacity: 0.7;
 }
-.float-left .fa-camera:hover{
+.file-input1:hover{
 opacity: 1.0;
 }
-.float-right .file-input{
+.file-input2{
 position: relative;
 top:-40px; 
 right: 40px; 
 background-color: rgba(161, 165, 165, 0.575); 
 height: 28px; 
 width: 180px; 
-padding:2px 7px; 
+padding:4px 7px; 
 border-radius: 7px;
 opacity: 0.7;
 }
- .float-right .file-input:hover{
+.file-input2:hover{
 opacity: 1.0;
 }
           
