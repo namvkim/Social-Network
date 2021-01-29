@@ -119,34 +119,34 @@
 
   
 
-    // function add1() {
-    //     setTimeout(()=> document.getElementById("hienthi1").innerHTML += `
-    //     <div class="m-4">
-    //         <a href="#">
-    //             <div class="mb-3 a">
-    //                 <div style=" width: 100px;">
-    //                     <img class="rounded-circle"
-    //                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbKoihkRWHsOFdnwoxoWhkuhb4rC2ViOiy6g&amp;usqp=CAU"
-    //                         style="width:65%">
-    //                 </div>
-    //                 <div class=" text-bottom">
-    //                     <span class="">
-    //                         <p style="margin-bottom: 0px;"><b>Nguyên </b></p>
-    //                     </span>
+    function add1() {
+         document.getElementById("hienthi1").innerHTML += `
+        <div class="m-4">
+            <a href="#">
+                <div class="mb-3 a">
+                    <div style=" width: 100px;">
+                        <img class="rounded-circle"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbKoihkRWHsOFdnwoxoWhkuhb4rC2ViOiy6g&amp;usqp=CAU"
+                            style="width:65%">
+                    </div>
+                    <div class=" text-bottom">
+                        <span class="">
+                            <p style="margin-bottom: 0px;"><b>Nguyên </b></p>
+                        </span>
 
 
-    //                     <a type="button" id="demo2" onclick="myFFunction2()"
-    //                         class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
-    //                 </div>
-    //             </div>
-    //         </a>
-    //     </div>
-    //     `,2000)
+                        <a type="button" id="demo2" onclick="myFFunction2()"
+                            class="btn btn-primary btn-sm d-inline-block"> Thêm bạn bè</a>
+                    </div>
+                </div>
+            </a>
+        </div>
+        `
         
     
-    // }
+    }
 
-    // add1();
+    add1();
 
 
    
