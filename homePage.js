@@ -2,12 +2,36 @@ $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
 });
 
+// thanh search
+$(document).ready(function() {
+    $("#search").focus(function() {
+        $(".search-box").addClass("border-searching");
+        $(".search-icon").addClass("si-rotate");
+    });
+    $("#search").blur(function() {
+        $(".search-box").removeClass("border-searching");
+        $(".search-icon").removeClass("si-rotate");
+    });
+    $("#search").keyup(function() {
+        if ($(this).val().length > 0) {
+            $(".go-icon").addClass("go-in");
+        } else {
+            $(".go-icon").removeClass("go-in");
+        }
+    });
+    $(".go-icon").click(function() {
+        $(".search-form").submit();
+    });
+});
+// end
+
 function change() {
     document.getElementById("inf").style.overflow = "visible";
     document.getElementById("inf").style.webkitLineClamp = "unset";
     document.getElementById("inf").style.maxHeight = "none";
 }
 
+// api
 const url_api = "https://600a50de778d1a0017793a0a.mockapi.io/ai";
 
 function callAPI(endpoint, method, body) {
@@ -184,3 +208,5 @@ function deleteTour(i) {
         window.location.reload();
     });
 }
+
+// end
