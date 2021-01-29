@@ -24,25 +24,28 @@ function get_user() {
         for (var i in user) {
             if (user[i].email == email) { id_user = parseInt(i) + 1; break; }
         };
-        console.log(user);
         add2();
-        console.log(id_user);
-        console.log(user[id_user - 1].name);
-        console.log(user[id_user - 1].birthday);
-
     });
 }
 get_user();
 
 function add2() {
     var gen = '';
+    var time = "";
+    var infor = "";
     if (user[id_user - 1].gender == false) {
         gen = "nam";
     } else gen = "nu";
-    console.log(user[id_user - 1].name);
-    var infor = "";
+
+    var curDate = new Date(user[id_user - 1].birthday);
+    var day = curDate.getDate();
+    var month = curDate.getMonth();
+    var year = curDate.getFullYear();
+    time += day + "/" + month + "/" + year;
+
+
     infor += '<p>' + user[id_user - 1].name + '</p>';
-    infor += '<p>' + user[id_user - 1].birthday + '</p>';
+    infor += '<p>' + time + '</p>';
     infor += '<p>' + gen + '</p>';
     document.getElementById("setinfor").innerHTML += infor;
 }

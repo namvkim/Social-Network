@@ -15,10 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
-
     <link rel="stylesheet" href="setting.css" />
 </head>
 
@@ -95,15 +92,24 @@
                 <div class="tab-content">
                     <div class="tab-pane fade " id="infor">
                         <h2>Cài đặt thông tin</h2>
+                        <hr>
+                        <h4>Thông tin giới thiệu về bản thân</h4>
+                        <form role="form">
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success mb-sm-3">Thêm</button>
+                        </form>
+                        <hr>
                         <div class="row">
                             <div class="col-sm-4" style="display: grid;">
                                 <p>Tên</p>
                                 <p>Sinh nhật</p>
                                 <p>Giới tính</p>
                             </div>
-                            <div id="setinfor" class="col-sm-6" style="display: grid;">
+                            <div id="setinfor" class="col-sm-6" style="display: grid;"></div>
 
-                            </div>
+
                             <div id="fix" class="col-sm-2">
                                 <button type="button" class="btn btn-primary mt-sm-1" style="width: 70px;height: 30px; font-size: x-small;">
                                     Sửa</button>
@@ -693,11 +699,11 @@
                         </div>
                         <hr>
 
-
                         <button type="submit" class="btn btn-info mt-sm-5" style="width: 70px;height: 30px; font-size: x-small;">
                             Lưu
                         </button>
                     </div>
+
                     <div class="tab-pane fade" id="story">
                         <h2>Cài đặt tin lưu trữ</h2><br>
                         <div class="row">
@@ -714,48 +720,163 @@
                             </div>
                         </div>
 
-                        <div class="row mt-sm-5">
-                            <div class="col-sm-8">
-                                <h5>Danh sách tin lưu trữ</h5>
-                            </div>
-                            <div class="col-sm-4">
-                                <button type="button" class="btn btn-primary mt-sm-2 ml-sm-5" style="width: 70px;height: 30px; font-size: x-small;">
-                                    Xem</button>
-                            </div>
-
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-8">
+                        <hr class="mt-sm-5">
+                        <div class="row mt-sm-3">
+                            <div class="col-sm-8" style="display: grid;">
                                 Ai có thể xem tin của bạn đăng sau này
+                                <button type="button" class="btn btn-primary mt-sm-2" style="width: 70px;height: 30px; font-size: x-small;">
+                                    Xem tin
+                                </button>
                             </div>
                             <div class="col-sm-4 ml-auto">
                                 <select class="select " id="pub">
                                     <option selected>Bạn bè</option>
                                     <option value="1">Mọi người</option>
-                                   
-                                  </select>
+                                </select>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-info mt-sm-5" style="width: 70px;height: 30px; font-size: x-small;">
+                            Lưu
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade " id="block">
+                        <h2>
+                            Quản lí chặn
+                        </h2>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h5>Danh sách hạn chế</h5>
+                            </div>
+                            <div class="col-sm-8" style="line-height: 20px; display: flex;">
+                                <div class="col-sm-10">Khi bạn thêm một người bạn vào Danh sách hạn chế, họ sẽ không nhìn thấy các bài viết trên Facebook mà bạn chỉ chia sẻ với Bạn bè. Họ có thể vẫn nhìn thấy nội dung bạn chia sẻ Công khai hoặc trên dòng thời gian của một người
+                                    bạn chung cũng như các bài viết họ được gắn thẻ. Facebook không thông báo cho bạn bè của bạn khi bạn thêm họ vào Danh sách hạn chế.
+                                </div>
+                                <div class="col-sm-2"><button type="button" class="btn btn-primary" style="width: 70px;height: 30px; font-size: x-small;">Xem</button>
+                                </div>
                             </div>
                         </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-4">Chặn người dùng</div>
+                            <div class="col-sm-8">
+                                <div class="row">
+                                    <div class="col-sm-8">Chặn một người</div>
+                                    <div class="col-sm-4">
+                                        <form action="/action_page.php">
 
+                                            <input type="text" class="form-control ml-auto" placeholder="Bạn muốn chặn..." id="fname" name="fname"></form>
+                                    </div>
+                                </div>
 
-                        <button type="submit" class="btn btn-info mt-sm-5" style="width: 70px;height: 30px; font-size: x-small;">
-                            Lưu
-                        </button>
-
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="tab-pane fade " id="tag">
+                        <h2>Trang cá nhân và gắn thẻ</h2>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-4"><b>Xem và chia sẻ</b></div>
+                            <div class="col-sm-8 ">
+
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <a class="nav-link" href="#">Ai có thể đăng trên trang cá nhân của bạn</a>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <select class="select" id="pub">
+                                                    <option selected>Bạn bè</option>
+                                                    <option value="1">Mọi người</option>
+                                                  </select>
+                                    </div>
+                                </div>
+                                <hr color="#F8F8F8">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <a class="nav-link" href="#" style="line-height: 20px;">Ai có thể xem những gì người khác đăng trên trang của bạn</a>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <select class="select" id="pub">
+                                                    <option selected>Bạn bè</option>
+                                                    <option value="">Mọi người</option>         
+                                                  </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <a class="nav-link" href="#" style="line-height: 20px;">Cho người khác chia sẻ bài viết của bạn lên trang cá nhân của họ?</a>
+                                    </div>
+                                    <div class="col-sm-2 ml-auto">
+                                        <form action="/action_page.php">
+                                            <div class="custom-control custom-switch ml-sm-5">
+                                                <input type="checkbox" class="custom-control-input" id="switch3" name="examp">
+                                                <label class="custom-control-label" for="switch3"></label>
+                                            </div>
+                                            <br>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-4"><b>Gắn thẻ</b></div>
+                            <div class="col-sm-8 ">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <a class="nav-link" href="#" style="line-height: 20px;">Ai có thể xem bài viết bạn được gắn thẻ trên trang cá nhân</a>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <select class="select" id="pub">
+                                                    <option selected>Bạn bè</option>
+                                                    <option value="1">Mọi người</option>
+                                                  </select>
+                                    </div>
+                                </div>
+                                <hr color="#F8F8F8">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <a class="nav-link" href="#" style="line-height: 20px;">Bạn có thể thêm đối tượng xem bài viết bạn được gắn thẻ</a>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <form action="/action_page.php">
+                                            <div class="custom-control custom-switch  ml-sm-5">
+                                                <input type="checkbox" class="custom-control-input" id="switch4" name="examp1">
+                                                <label class="custom-control-label" for="switch4"></label>
+                                            </div>
+                                            <br>
+                                        </form>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <a class="nav-link" href="#" style="line-height: 20px;">Cho người khác chia sẻ bài viết của bạn lên trang cá nhân của họ?</a>
+                                    </div>
+                                    <div class="col-sm-2 ml-auto">
+                                        <form action="/action_page.php">
+                                            <div class="custom-control custom-switch  ml-sm-5">
+                                                <input type="checkbox" class="custom-control-input" id="switch5" name="examp2">
+                                                <label class="custom-control-label" for="switch5"></label>
+                                            </div>
+                                            <br>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <h4>Để lại một bình luận:</h4>
-                <form role="form">
-                    <div class="form-group">
-                        <textarea class="form-control" rows="3" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-success">Đăng</button>
-                </form>
-                <br><br>
-
-
             </div>
+
+
+
 
 
         </div>
