@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>admin</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
@@ -12,193 +14,130 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="admin.css">
-    <title>admin</title>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="menu fixed-top">
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                <!-- Brand -->
-                <a class="navbar-brand col-sm-3" href="#">Logo</a>
-                <form class="input-group" action="/action_page.php">
-                    <input type="text" class="form-control ml-auto" placeholder="Search..." style="max-width: 500px;">
-                    <div class="input-group-append mr-auto">
-                        <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-                </form>
-                <!-- Links -->
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mr-sm-5 rounded-circle">
-                        <a class="nav-link" href="#"><i class="fas fa-home fa-2x"></i></a>
-                    </li>
-                    <li class="nav-item mr-sm-5 rounded-circle">
-                        <a class="nav-link" href="#"><i class="far fa-user fa-2x"></i></a>
-                    </li>
-                    <!-- Dropdown -->
-                    <li class="nav-item dropdown mr-sm-5 rounded-circle">
-                        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
-                            <i class="far fa-comment-dots fa-2x"></i>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Link</a>
-                            <center>
-                                <hr width="95%" color="#A9A9A9" />
-                            </center>
-                            <a class="dropdown-item" href="#">Link</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown mr-sm-1 rounded-circle">
-                        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
-                            <i class="fas fa-user-friends fa-2x"></i>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Link</a>
-                            <center>
-                                <hr width="95%" color="#A9A9A9" />
-                            </center>
-                            <a class="dropdown-item" href="#">Link</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown mr-sm-1 rounded-circle">
-                        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
-                            <i class="far fa-bell fa-2x"></i>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Link</a>
-                            <center>
-                                <hr width="95%" color="#A9A9A9" />
-                            </center>
-                            <a class="dropdown-item" href="#">Link</a>
-
-                        </div>
-                    </li>
-                    <li class="nav-item mr-sm-1 rounded-circle">
-                        <a class="nav-link" href="#"><i class="fas fa-cog fa-2x"></i></a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="d-flex nav-tabs" id="wrapper" style="border: none;">
-                <div class="bg-light border-right col-sm-2" id="sidebar-wrapper" style="border: 1px solid rgb(155, 147, 147);">
+            <a href="homePage.html" data-toggle="tooltip" data-placement="right" title="Have a nice day!">
+                <img src="logo.png" width="45px" alt="">
+            </a>
+            <div class="title">
+                <p>ádfudsfhkkjhsfkhjsdf</p>
+            </div>
+            <button class="button">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="collapse show">
+            <div class="d-flex nav-tabs fixed-top col-sm-2" id="wrapper">
+                <div class="bg-light border-right" id="sidebar-wrapper">
                     <div class="list-group list-group-flush">
-                        <a href="#home" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab">Dashboarda</a>
+                        <a href="#home" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab">Người dùng</a>
                         <a href="#product" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab">Shortcuts</a>
                         <a href="#contact" class="list-group-item list-group-item-action bg-light nav-link" data-toggle="tab">Overview</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="tab-content col-sm-10 mt-sm-5 pt-sm-5">
-                <div class="tab-pane fade show active" id="home">
-                    <div style="border: 1px solid black;" class="p-sm-3">
-                        <div id="layoutSidenav_content">
-                            <div class="product">
-                                <div class="title">
-                                    <h1>QUẢN LÝ SẢN PHẨM</h1>
-                                </div>
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                    <i class=" fas fa-plus mr-2"></i>Create
-                                </button>
-                                <table class="table">
-                                    <thead class="thead-light text-center">
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Img</th>
-                                            <th>Price</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="text-center" id="product-admin">
-                                        <script src="bt1.js"></script>
-                                    </tbody>
-                                </table>
+        <div class="tab-content col-sm-10 ml-auto">
+            <div class="tab-pane fade show active" id="home">
+                <div style="border: 1px solid black;" class="p-sm-3">
+                    <div id="layoutSidenav_content">
+                        <div class="product">
+                            <div class="title">
+                                <h1>QUẢN LÝ NGƯỜI DÙNG</h1>
                             </div>
-                        </div>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLable1" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Thêm sản phẩm</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span  aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="" class="form-row">
-                                            <div class="col-12 mt-3">
-                                                <input class="form-control" type="text" id="name" placeholder="Name">
-                                            </div>
-                                            <div class="col-12 mt-3">
-                                                <input class="form-control" type="text" id="img" placeholder="Img">
-                                            </div>
-                                            <div class="col-12 mt-3">
-                                                <input class="form-control" type="number" id="price" placeholder="Price">
-                                            </div>
-                                            <a class="btn btn-outline-danger mt-3" href="" onclick="addProduct()">Thêm</a>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="updateProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLable1" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Update</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span  aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="" class="form-row">
-                                            <div class="col-12 mt-3">
-                                                <input class="form-control" type="text" id="named" placeholder="Name">
-                                            </div>
-                                            <div class="col-12 mt-3">
-                                                <input class="form-control" type="text" id="imgd" placeholder="Img">
-                                            </div>
-                                            <div class="col-12 mt-3">
-                                                <input class="form-control" type="number" id="priced" placeholder="Price">
-                                            </div>
-                                        </form>
-                                        <div id="submitUpdate"></div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                <i class=" fas fa-plus mr-2"></i>Create
+                            </button>
+                            <table class="table">
+                                <thead class="thead-light text-center">
+                                    <tr>
+                                        <th>Mã</th>
+                                        <th>Tên</th>
+                                        <th>Email</th>
+                                        <th>Mật khẩu</th>
+                                        <th>Giới tính</th>
+                                        <th>Ngày sinh</th>
+                                        <th>Cập nhật</th>
+                                    </tr>
 
+                                </thead>
+                                <tbody class="text-center" id="show_user">
+
+                                </tbody>
+                            </table>
+
+                        </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="product">
-                    nam
-                </div>
-                <div class="tab-pane fade" id="contact">
-                    hsjf
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLable1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Thêm sản phẩm</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span  aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" class="form-row">
+                                        <div class="col-12 mt-3">
+                                            <input class="form-control" type="text" id="name" placeholder="Name">
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <input class="form-control" type="text" id="img" placeholder="Img">
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <input class="form-control" type="number" id="price" placeholder="Price">
+                                        </div>
+                                        <a class="btn btn-outline-danger mt-3" href="" onclick="addProduct()">Thêm</a>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="updateProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLable1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Update</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span  aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" class="form-row">
+                                        <div class="col-12 mt-3">
+                                            <input class="form-control" type="text" id="named" placeholder="Name">
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <input class="form-control" type="text" id="imgd" placeholder="Img">
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <input class="form-control" type="number" id="priced" placeholder="Price">
+                                        </div>
+                                    </form>
+                                    <div id="submitUpdate"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <!-- <div class="pos-f-t">											
-                <nav class="navbar navbar-dark bg-dark">											
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">											
-                <span class="navbar-toggler-icon"></span>											
-                </button>											
-                </nav>											
-                <div class="collapse" id="navbarToggleExternalContent">											
-                <div class="bg-dark p-4">											
-                <h4 class="text-white">Collapsed content</h4>											
-                <span class="text-muted">Toggleable via the navbar brand.</span>											
-                </div>											
-                </div>											
-                </div>											
-                                     -->
+            <div class="tab-pane fade" id="product">
+                nam
+            </div>
+            <div class="tab-pane fade" id="contact">
+                hsjf
+            </div>
         </div>
     </div>
     <script src="admin.js"></script>
