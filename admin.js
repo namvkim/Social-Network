@@ -27,6 +27,21 @@ get_user();
 
 
 // show user
+
+var tt1 = function() {
+    document.getElementById("title").innerHTML = "QUẢN LÝ NGƯỜI DÙNG";
+}
+
+tt1();
+
+var tt2 = function() {
+    document.getElementById("title").innerHTML = "THỐNG KÊ SỐ LIỆU";
+}
+
+var tt3 = function() {
+    document.getElementById("title").innerHTML = "QUẢN LÝ ";
+}
+
 var show_user = function() {
     document.getElementById("show_user").innerHTML = "";
     for (var i in user) {
@@ -50,34 +65,43 @@ var delete_user = function(i) {
     show_user();
 }
 
-var addProduct = function() {
-    var Product = {
-        id: "SP" + parseInt(product.length + 1),
+var add_user = function() {
+    console.log(user);
+    var add_user = {
+        id: String(user.length + 1),
         name: document.getElementById("name").value,
-        img: document.getElementById("img").value,
-        price: document.getElementById("price").value
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+        avatar: "",
+        background: "",
+        birthday: document.getElementById("birthday").value,
+        gender: document.getElementById("gender").value,
     }
-    product.push(Product);
-    localStorage.setItem('listProduct', JSON.stringify(product));
-    window.location.reload();
+    user.push(add_user);
+    show_user();
 }
 
 
-var updateProduct = function(i) {
-    var k = product[i];
-    document.getElementById("named").value = k.name;
-    document.getElementById("imgd").value = k.img;
-    document.getElementById("priced").value = k.price;
-    document.getElementById("submitUpdate").innerHTML = '<button class="btn btn-outline-danger mt-3" onclick="submitUpdate(' + i + ')">Đồng ý</button>';
+var update_user = function(i) {
+    document.getElementById("name_up").value = user[i].name;
+    document.getElementById("email_up").value = user[i].email;
+    document.getElementById("password_up").value = user[i].password;
+    document.getElementById("birthday_up").value = user[i].birthday;
+    document.getElementById("gender_up").value = user[i].gender;
+    document.getElementById("sub_up").innerHTML = `<button type="button" class="btn btn_add col-sm-12" data-dismiss="modal" onclick="submit_update(${i})">Cập nhật</button>`;
 }
 
-var submitUpdate = function(i) {
-    var k = product[i];
-    k.name = document.getElementById("named").value;
-    k.img = document.getElementById("imgd").value;
-    k.price = document.getElementById("priced").value;
-    localStorage.setItem('listProduct', JSON.stringify(product));
-    window.location.reload();
+var submit_update = function(i) {
+    var up_user = {
+        id: String(i + 1),
+        name: document.getElementById("name_up").value,
+        email: document.getElementById("email_up").value,
+        password: document.getElementById("password_up").value,
+        birthday: document.getElementById("birthday_up").value,
+        gender: document.getElementById("gender_up").value,
+    }
+    user.splice(i, 1, up_user);
+    show_user();
 }
 
 function Save() {
