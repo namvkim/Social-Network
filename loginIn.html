@@ -2,21 +2,33 @@
 <html lang="vi">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
-        crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js"
+        integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
+        crossorigin="anonymous"></script>
+
+
+
     <title>Login</title>
-    <link rel="stylesheet" href="loginIn.css">
+    <link rel="stylesheet" href="loginIn.css"/>
 </head>
 
 <body class="text-center ">
@@ -26,27 +38,23 @@
         <form class=" form-login">
             <p class="h4 mb-3 font-weight-normal">Vui lòng đăng nhập!</p>
             <div class="form-group">
-                <input type="email" id="inputEmail" class="form-control " placeholder="Nhập Email" required>
+                <input type="email" id="inputEmail" class="form-control " placeholder="Nhập Email" required></input>
             </div>
             <div class="form-group">
-                <input type="password" id="inputPassword" class="form-control " placeholder="Nhập mật khẩu" required>
+                <input type="password" id="inputPassword" class="form-control " placeholder="Nhập mật khẩu"></input>
             </div>
             <div class="checkbox mb-3 mt-3">
                 <label>
                     <input type="checkbox" value="remember-me" id="check"> Kiểm tra lại xem nào
                 </label>
             </div>
-            <button class="btn btn-lg btn-info btn-block mb-3" type="submit" onclick="login()">Đăng nhập</button>
+            <button class="btn btn-lg btn-info btn-block mb-3" type="button" onclick="login()">Đăng nhập</button>
             <a class="mb-9 text-info "> Quên mật khẩu?</a>
             <div class="border-top mt-3 "><br>
                 <p>Chưa có tài khoản?<a style="color:white"> <button class=" btn btn-sm btn-info" type="submit"
-                            onclick='location.href="//127.0.0.1:5500/signUp.html"'>Đăng kí</button>
+                            onclick='location.href="../signUp.html"'>Đăng kí</button>
             </div>
-    </div>
-    </div>
-
-     
-
+        </form>
     </div>
     <script src="loginIn.js"></script>
 </body>
