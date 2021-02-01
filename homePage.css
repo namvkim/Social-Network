@@ -7,13 +7,7 @@
 
 .menu {
     display: flex;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     height: 6vh;
->>>>>>> nam
-=======
->>>>>>> nam
 }
 
 .menu1 {
@@ -29,14 +23,10 @@
     color: cornsilk;
 }
 
-<<<<<<< HEAD
-.link {}
-=======
 .content {
     background-color: silver;
     min-height: 100vh;
 }
->>>>>>> nam
 
 .link:hover {
     color: cornsilk;
@@ -55,15 +45,12 @@ input:hover {
     background-color: darkgray;
 }
 
-<<<<<<< HEAD
-=======
 #status {
     border: 1px solid black;
     border-radius: 6px;
     display: none;
 }
 
->>>>>>> nam
 .stt {
     background-color: rgb(240, 242, 245);
 }
@@ -73,7 +60,6 @@ input:hover {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
 
 /* .stt_2 {
     font-size: 15px;
@@ -84,7 +70,6 @@ input:hover {
     cursor: pointer;
 }
 
-=======
 .stt_2:hover {
     background-color: rgb(212, 218, 228);
     cursor: pointer;
@@ -308,7 +293,6 @@ input:hover {
 
 /* end */
 
->>>>>>> nam
 @media screen and (max-width: 560px) {
     .slidebar {
         display: none;
