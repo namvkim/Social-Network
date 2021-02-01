@@ -1,33 +1,36 @@
-html,body{
+html,
+body {
     background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
-    }
+}
 
-.container-fluid{
-   display: flex;
+.container-fluid {
+    display: flex;
 }
 
 .content {
     border: 4px solid rgb(50, 99, 86);
-    padding: 40px 40px ;
+    padding: 40px 40px;
     margin: 40px auto;
-    background-color: rgba(0,0,0,0.5) !important;
-    color:rgb(230, 189, 102);
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: rgb(230, 189, 102);
     width: 500px;
     border-radius: 20px;
 }
- 
-.fa-arrow-left{
+
+.fa-arrow-left {
     font-size: larger;
-    color:rgb(230, 189, 102);
+    color: rgb(230, 189, 102);
     border-radius: 3px;
 }
+
 .form-signin .checkbox {
     font-weight: 400;
 }
- .form-signin .form-control {
+
+.form-signin .form-control {
     max-height: 45px;
     position: relative;
     height: auto;
@@ -35,22 +38,122 @@ html,body{
     width: 100%;
     font-size: 13px;
 }
- .form-signin .form-control:focus {
-    z-index: 2; /*lớp thứ bn*/
+
+.form-signin .form-control:focus {
+    z-index: 2;
+    /*lớp thứ bn*/
 }
+
 .form-signin input[type="email"] {
     margin-bottom: -1px;
 }
+
 .form-signin input[type="password"] {
     margin-bottom: 10px;
-} 
-.form-control:hover{
+}
+
+.form-control:hover {
     background-color: rgb(235, 233, 233);
     color: chocolate;
-} 
-.form-footer{
+}
+
+.form-footer {
     border-top: black;
-}   
+}
 
+.table {
+    border: 6px solid rgb(50, 99, 86);
+    margin: 200px 100px;
+    padding: 20px 20px;
+    background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg");
+    color: rgb(253, 252, 252);
+    width: 500px;
+    height: 550px;
+}
 
+.div1 {
+    border-bottom: 1px solid white;
+    color: rgb(235, 197, 93);
+}
 
+.container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.text {
+    width: 225px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.text1 {
+    width: 500px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.text2 {
+    width: 142px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.text:hover {
+    background: rgb(226, 200, 176);
+    color: white'
+
+}
+
+.text1:hover {
+    background: rgb(226, 200, 176);
+    color: white'
+
+}
+
+.text2:hover {
+    background: rgb(226, 200, 176);
+    color: white'
+
+}
+
+.icon {
+    padding: 4px;
+    font-size: 30px;
+    background: white;
+    color: rgb(64, 119, 190);
+    min-width: 35px;
+    height: 30px;
+    text-align: center;
+}
+
+.icon:hover {
+    background: dimgrey;
+    color: white;
+}
+
+button:hover {
+    background: 6px solid rgb(50, 99, 86);
+}
+
+.signUp {
+    border-radius: 5px;
+    left: 50px;
+    width: 100px;
+    height: 30px;
+}
+
+.signUp:hover {
+    background-color: rgb(235, 197, 93);
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
