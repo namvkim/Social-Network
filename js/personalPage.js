@@ -18,6 +18,7 @@ var id_user;
 function get_user() {
     callAPI("user", "GET", null).then(res => {
         user = res.data;
+        console.log(user);
         for (var i in user) {
             if (user[i].email == email) { id_user = parseInt(i) + 1; break; }
         };
@@ -25,28 +26,26 @@ function get_user() {
             pesonal = res.data;
             console.log(pesonal);
             add2();
-
+            add_stt();
         });
     });
 }
 get_user();
 
 function add2() {
-    for (var i in user) {
-        var n = user[i].id - 1;
-        document.getElementById("pic").innerHTML = `    
+    document.getElementById("pic").innerHTML = `    
   
 <div class="sm-3">
-<img src="${user[n].background}" class="img-fluid"
+<img src="${user[id_user-1].background}" class="img-fluid"
     id="background">
 <div class="float-left px-4 align-items-center d-flex" style="position: absolute; top:160px">
     <div class="avatar">
         <img class="user-avatar img-thumbnail  mr-3 mt-sm-3"
-            src="${user[i].avatar}"
+            src="${user[id_user-1].avatar}"
             alt="User Avatar" id="avatar">
     </div>
     <div class=" text-white ">
-        <h1>${user[n].name}</h1>
+        <h1>${user[id_user-1].name}</h1>
     </div>
 </div>
 <div class="float-left ">
@@ -69,36 +68,7 @@ function add2() {
 </div>
         
 `;
-    }
 }
-
-
-var loadFile = function(event) {
-    var output = document.getElementById('background');
-    output.src = URL.createObjectURL(event.target.files[0]);
-};
-
-function readURL(input) {
-
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function(e) {
-            document.getElementById('avatar').setAttribute('src', e.target.result);
-        }
-
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-
-document.getElementById('imgAvatar').onchange = function() { //set up a common class
-    readURL(this);
-};
-
-
-
-
-
 
 
 
@@ -120,9 +90,38 @@ function readURL(input) {
     }
 }
 
-document.getElementById('imgAvatar').onchange == function() { //set up a common class
-    readURL(this);
+// document.getElementById('imgAvatar').onchange = function() { //set up a common class
+//     readURL(this);
+// };
+
+
+
+
+
+
+
+
+var loadFile = function(event) {
+    var output = document.getElementById('background');
+    output.src = URL.createObjectURL(event.target.files[0]);
 };
+
+function readURL(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            document.getElementById('avatar').setAttribute('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+// document.getElementById('imgAvatar').onchange == function() { //set up a common class
+//     readURL(this);
+// };
 
 
 // function add() {
@@ -150,16 +149,12 @@ function deleteTour(i) {
 
 function add_stt() {
     for (var i in pesonal) {
-        document.getElementById("ava").innerHTML = `<img src="${user[id_user].avatar}" width="40px" height="40px" style="border-radius: 20px;" alt="">`;
-        document.getElementById("status").style.display = "block";
-        var x = user[pesonal[i].userId - 1];
-        var y = user[pesonal[i].id_comment - 1];
-        document.getElementById("enve").innerHTML += `
+        document.getElementById("menu").innerHTML += `
         <div style="border: 1px solid black; border-radius: 6px;" class="p-sm-3 bg-white col-sm-12 mt-md-3 mt-1">
         <div class="d-flex align-items-center">
-            <img src="${x.avatar}" width="40px" height="40px" style="border-radius: 20px;" alt="">
+            <img src="${user[id_user-1].avatar}" width="40px" height="40px" style="border-radius: 20px;" alt="">
             <div class="ml-2">
-                <a style="text-decoration: none; color: black; font-weight: bold;" href="#">${x.name}</a>
+                <a style="text-decoration: none; color: black; font-weight: bold;" href="#">${user[id_user-1].name}</a>
                 <div>19 năm trước</div>
             </div>
         </div>
@@ -265,9 +260,9 @@ function add_stt() {
                 </div>
             </div>
             <div class="d-flex m-md-2">
-                <img src="${y.avatar}" width="40px" height="40px" style="border-radius: 20px;" alt="">
+                <img src="${user[pesonal[i].id_comment-1].avatar}" width="40px" height="40px" style="border-radius: 20px;" alt="">
                 <div class="ml-2" style="background-color: rgb(240, 242, 245); padding: 5px; border-radius: 5px;">
-                    <a style="text-decoration: none; color: black; font-weight: bold;" href="#">${y.name}</a>
+                    <a style="text-decoration: none; color: black; font-weight: bold;" href="#">${user[pesonal[i].id_comment-1].name}</a>
                     <div style="word-break: break-word;">${pesonal[i].comment}</div>
                 </div>
             </div>
@@ -277,7 +272,6 @@ function add_stt() {
     };
 }
 
-get_user();
 
 function deleteTour(i) {
     callAPI(`cart/${i}`, "DELETE", null).then(response => {

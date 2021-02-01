@@ -14,7 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/homePage.css">
     <link rel="stylesheet" href="../css/addFriend.css">
-
+    <link rel="stylesheet" href="../css/post.css">
     <!-- <link rel="stylesheet" href="../css/notification.css"> -->
     <title>home page</title>
 </head>
@@ -25,7 +25,7 @@
             <div class="menu1 col-md-8">
                 <div>
                     <a class="mr-2" href="homePage.html" data-toggle="tooltip" data-placement="right" title="Have a nice day!">
-                        <img src="logo.png" width="45px" alt=""></a>
+                        <img src="../img/logo.png" width="45px" alt=""></a>
                 </div>
                 <div class="ml-sm-auto" style="width: 80%;">
                     <form class="input-group" action="/action_page.php">
@@ -42,6 +42,10 @@
                 </div>
                 <div class="link" data-toggle="tooltip" data-placement="bottom" title="Personal page">
                     <a class="a" href="../html/personalPage.html"><i class="far fa-user fa-2x"></i></a>
+                </div>
+
+                <div class="link" data-toggle="tooltip" data-placement="bottom" title="Personal page">
+                    <a class="a" href="../html/Video.html"><i class="fab fa-youtube fa-2x"></i></a>
                 </div>
 
                 <div class="dropdown link" data-toggle="tooltip" data-placement="bottom">
@@ -243,7 +247,7 @@
                     <a class="a" href="#" data-toggle="dropdown">
                         <i class="far fa-bell fa-2x"></i>
                     </a>
-                    <div class="dropdown-menu" style="background:transparent url('imgNotificate/back.jpg') no-repeat center center /cover">
+                    <div class="dropdown-menu" style="background:transparent url('imgNotificate/back.jpg') no-repeat center center /cover;">
                         <h5 class="dropdown-header">
                             <p>Mới nhất</p>
                         </h5>
@@ -317,7 +321,7 @@
                 </tr>
             </table>
         </div>
-        <div class="content mt-5">
+        <div class="content mt-md-5">
             <div class="row col-sm-6 mx-auto" id="add">
                 <div id="status" class="p-sm-3 bg-white col-sm-12 mt-md-3 mt-1">
                     <div class="d-flex align-items-center">
@@ -347,12 +351,8 @@
                         <span  aria-hidden="true">&times;</span>
                     </button>
                     </div>
-
-
                     <div class="modal-body py-md-2">
                         <form action="" class="form-row">
-
-
                             <div class="modal-body">
 
                                 <div class="d-inline-block" style=" width: 110px; ">

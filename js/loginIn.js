@@ -43,7 +43,6 @@ function login() {
             window.location.href = "../html/personalPage.html";
             brack();
         } else {
-            alert("Mật khẩu hoặc email chưa đúng");
             window.location.reload();
         }
 
