@@ -1,16 +1,16 @@
 const url_api = "https://600a50de778d1a0017793a0a.mockapi.io/ai";
- 
- 
-   function callAPI(endpoint, method, body) {
-       return axios({
-           method: method,
-           url: `${url_api}/${endpoint}`,
-           data: body,
-       }).catch((err) => {
-           console.log(err);
-       });
-   }
-    
+
+
+function callAPI(endpoint, method, body) {
+    return axios({
+        method: method,
+        url: `${url_api}/${endpoint}`,
+        data: body,
+    }).catch((err) => {
+        console.log(err);
+    });
+}
+
 var users;
 
 //     var email = "Turner_Skiles10@hotmail.com";
@@ -21,6 +21,7 @@ var users;
 var id_user;
 var password;
 var email;
+
 function get_user() {
     callAPI("user", "GET", null).then(res => {
         console.log("usser data", res.data)
@@ -37,11 +38,11 @@ function login() {
     console.log("login.....")
 
     users.forEach(user => {
-        if(user.email === email && user.password === password ){
+        if (user.email === email && user.password === password) {
             alert("Đăng nhập thành công");
-            window.location.href ="../personalPage.html";
-            brack();    
-        }else {
+            window.location.href = "../html/personalPage.html";
+            brack();
+        } else {
             alert("Mật khẩu hoặc email chưa đúng");
             window.location.reload();
         }
@@ -49,13 +50,3 @@ function login() {
     });
 
 }
-
-
-    
-    
-    
-    
-    
-    
-    
-     

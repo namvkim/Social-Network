@@ -1,4 +1,38 @@
-const url_api = "https://600a50de778d1a0017793a0a.mockapi.io/ai/";
+$(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+// thanh search
+$(document).ready(function() {
+    $("#search").focus(function() {
+        $(".search-box").addClass("border-searching");
+        $(".search-icon").addClass("si-rotate");
+    });
+    $("#search").blur(function() {
+        $(".search-box").removeClass("border-searching");
+        $(".search-icon").removeClass("si-rotate");
+    });
+    $("#search").keyup(function() {
+        if ($(this).val().length > 0) {
+            $(".go-icon").addClass("go-in");
+        } else {
+            $(".go-icon").removeClass("go-in");
+        }
+    });
+    $(".go-icon").click(function() {
+        $(".search-form").submit();
+    });
+});
+// end
+
+function change() {
+    document.getElementById("inf").style.overflow = "visible";
+    document.getElementById("inf").style.webkitLineClamp = "unset";
+    document.getElementById("inf").style.maxHeight = "none";
+}
+
+// api
+const url_api = "https://600a50de778d1a0017793a0a.mockapi.io/ai";
 
 function callAPI(endpoint, method, body) {
     return axios({
@@ -11,7 +45,7 @@ function callAPI(endpoint, method, body) {
 }
 
 var user;
-var pesonal;
+var pesonal = [];
 var email = "Lexie.Keeling@yahoo.com";
 var id_user;
 
@@ -19,137 +53,23 @@ function get_user() {
     callAPI("user", "GET", null).then(res => {
         user = res.data;
         for (var i in user) {
-            if (user[i].email == email) { id_user = parseInt(i) + 1; break; }
+            if (user[i].email == email) { id_user = parseInt(i); break; };
         };
-        callAPI(`user/${id_user}/pesonal`, "GET", null).then(res => {
-            pesonal = res.data;
-            console.log(pesonal);
-            add2();
-            
-        });
-    });
-}
-get_user();
-
-function add2() {
-    for (var i in user) {
-        var n = user[i].id - 1;
-        document.getElementById("pic").innerHTML = `    
-  
-<div class="sm-3">
-<img src="${user[n].background}" class="img-fluid"
-    id="background">
-<div class="float-left px-4 align-items-center d-flex" style="position: absolute; top:160px">
-    <div class="avatar">
-        <img class="user-avatar img-thumbnail  mr-3 mt-sm-3"
-            src="${user[i].avatar}"
-            alt="User Avatar" id="avatar">
-    </div>
-    <div class=" text-white ">
-        <h1>${user[n].name}</h1>
-    </div>
-</div>
-<div class="float-left ">
-    <label class="file-input1" ">
-        <i class="fa fa-camera"></i>
-        <input type="file" class="fileUpload" data-count="0" style="display: none;" id="imgAvatar">
-    </label>
-    </a>
-</div>
-<div class="float-right">
-    <div>
-        <label class="file-input2" ">
-            <i class="fa fa-camera"></i>
-            <large class="text-white"> Chỉnh sửa hình ảnh</large>
-            <input type="file" accept="image/*" data-count="0" style="display: none;"
-                onchange="loadFile(event)">
-        </label>
-    </div>
-</div>
-</div>
-        
-
-
-
-`;
-    }
-}
-
-
-var loadFile = function (event) {
-    var output = document.getElementById('background');
-    output.src = URL.createObjectURL(event.target.files[0]);
-};
-
-function readURL(input) {
-
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            document.getElementById('avatar').setAttribute('src', e.target.result);
-        }
-
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-
-document.getElementById('imgAvatar').onchange = function () { //set up a common class
-    readURL(this);
-};
-
-
-
-
-
-
-
-
-var loadFile = function (event) {
-    var output = document.getElementById('background');
-    output.src = URL.createObjectURL(event.target.files[0]);
-};
-
-function readURL(input) {
-
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            document.getElementById('avatar').setAttribute('src', e.target.result);
-        }
-
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-
-document.getElementById('imgAvatar').onchange == function () { //set up a common class
-    readURL(this);
-};
-
-
-// function add() {
-//     for (var i in pesonal) {
-//         document.getElementById("ava").innerHTML += `<img src="${pesonal[i].img}" alt="">`;
-//     }
-// }
-
-
-
-
-function deleteTour(i) {
-    callAPI(`cart/${i}`, "DELETE", null).then(response => {
-        window.location.reload();
+        console.log(user);
+        for (var i in user) {
+            var x = parseInt(i) + 1;
+            callAPI(`user/${x}/pesonal`, "GET", null).then(res => {
+                var pes = res.data;
+                pesonal = pesonal.concat(pes);
+            });
+        };
+        setTimeout(add_stt, 1000);
     });
 }
 
+function get_pesonal() {
 
-
-
-
-
-
-
+}
 
 function add_stt() {
     for (var i in pesonal) {
@@ -157,7 +77,7 @@ function add_stt() {
         document.getElementById("status").style.display = "block";
         var x = user[pesonal[i].userId - 1];
         var y = user[pesonal[i].id_comment - 1];
-        document.getElementById("enve").innerHTML += `
+        document.getElementById("add").innerHTML += `
         <div style="border: 1px solid black; border-radius: 6px;" class="p-sm-3 bg-white col-sm-12 mt-md-3 mt-1">
         <div class="d-flex align-items-center">
             <img src="${x.avatar}" width="40px" height="40px" style="border-radius: 20px;" alt="">
@@ -287,3 +207,5 @@ function deleteTour(i) {
         window.location.reload();
     });
 }
+
+// end

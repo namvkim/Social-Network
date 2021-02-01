@@ -68,7 +68,7 @@ function add3() {
                         <p>Chúc mừng sinh nhật</p>
                     </div>
                     <div class="col-sm-4">
-                        <img class="ml-sm-5" src="imgNotificate/birthday.png " alt=" " style="height: 40px; width: 40px; ">
+                        <img class="ml-sm-5" src="../img/birthday.png " alt=" " style="height: 40px; width: 40px; ">
                     </div>
                 </div>
             </a>

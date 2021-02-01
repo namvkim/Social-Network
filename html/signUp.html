@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
-        crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
@@ -17,9 +15,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Signup</title>
-  
+
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <link rel="stylesheet" href="signUp.css">
+    <link rel="stylesheet" href="../css/signUp.css">
 </head>
 
 <body>
@@ -33,14 +31,12 @@
                 <div class="row ">
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
-                            <input type="text" name="first_name" id="first_name" class="form-control "
-                                placeholder="First Name" required>
+                            <input type="text" name="first_name" id="first_name" class="form-control " placeholder="First Name" required>
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
-                            <input type="text" name="last_name" id="last_name" class="form-control "
-                                placeholder="Last Name" required>
+                            <input type="text" name="last_name" id="last_name" class="form-control " placeholder="Last Name" required>
                         </div>
                     </div>
                 </div>
@@ -77,8 +73,7 @@
                     <label for="vehicle1"> Tôi chấp nhận Điều khoản Sử dụng & Chính sách Bảo mật</label><br>
                 </div>
                 <div class="form-footer "><br>
-                    <button class="btn btn-lg btn-info btn-block " type="button" data-toggle="modal"
-                        data-target="#myModal" onclick="sendd()" id="myBtn">Đăng ký</button>
+                    <button class="btn btn-lg btn-info btn-block " type="button" data-toggle="modal" data-target="#myModal" onclick="sendd()" id="myBtn">Đăng ký</button>
                 </div>
             </form>
         </div>
@@ -93,16 +88,16 @@
                     <h4 class="modal-title">Nhập mã xác nhận</h4>
                 </div>
                 <div class="modal-body">
-                    <p><input class="form-control" type="number" placeholder="Vui lòng điền mã xác nhận trên email của bạn" name="xn" id="vali"
-                            required></p>
+                    <p><input class="form-control" type="number" placeholder="Vui lòng điền mã xác nhận trên email của bạn" name="xn" id="vali" required></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-info" data-dismiss="modal"onclick="Next()">Tiếp tục</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal" onclick="Next()">Tiếp tục</button>
                 </div>
             </div>
 
         </div>
     </div>
 </body>
-<script src="signUp.js"></script>
+<script src="../js/signUp.js"></script>
+
 </html>

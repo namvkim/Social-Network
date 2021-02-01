@@ -1,0 +1,60 @@
+  html,
+  body {
+      background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      font-family: 'Numans', sans-serif;
+  }
+  
+  body {
+      display: flex;
+      padding-top: 100px;
+      padding-bottom: 40px;
+  }
+  
+  .container-fluid {
+      border: 4px solid rgb(50, 99, 86);
+      padding: 30px 20px;
+      background-color: rgba(0, 0, 0, 0.5) !important;
+      color: rgb(230, 189, 102);
+      width: 390px;
+      height: 500px;
+      border-radius: 20px;
+  }
+  
+  .form-login {
+      width: 100%;
+      max-width: 330px;
+      padding: 15px;
+      margin: 0 auto;
+  }
+  
+  .form-login .checkbox {
+      font-weight: 400;
+  }
+  
+  .form-login .form-control {
+      position: relative;
+      height: auto;
+      padding: 10px;
+      font-size: 14px;
+  }
+  
+  .form-login .form-control:focus {
+      z-index: 2;
+      /*lớp thứ bn*/
+  }
+  
+  .form-login input[type="email"] {
+      margin-bottom: -1px;
+  }
+  
+  .form-login input[type="password"] {
+      margin-bottom: 10px;
+  }
+  
+  .form-control:hover {
+      background-color: rgb(235, 233, 233);
+      color: chocolate;
+  }
