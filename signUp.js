@@ -45,14 +45,7 @@
 var a = Math.floor(Math.random() * (999999 - 100000)) + 100000;
 console.log(a);
 function sendd() {
-    if (pas != cpas) {
-        alert("Bạn xác nhận mật khẩu không đúng. Vui lòng điền lại!");
-        window.location.reload();
-    }
-    if (firstName == "" || lastName == "" || date == "") {
-        alert("Thông tin bạn điền thiếu. Vui lòng điền lại!");
-        window.location.reload();
-    }
+
   
     var firstName = document.getElementById("first_name").value;
     var lastName = document.getElementById("last_name").value;
@@ -71,6 +64,14 @@ function sendd() {
     }).then(
         message => console.log('data ', message)
     );
+    if (pas != cpas) {
+        alert("Bạn xác nhận mật khẩu không đúng. Vui lòng điền lại!");
+        window.location.reload();
+    }
+    if (firstName == "" || lastName == "" || date == "") {
+        alert("Thông tin bạn điền thiếu. Vui lòng điền lại!");
+        window.location.reload();
+    }
 }
 function Next() {
     var vali = parseInt(document.getElementById('vali').value);
