@@ -1,116 +1,123 @@
-var product = [{
-    id: "SP1",
-    name: "Áo dài thuê họa tiết 11",
-    img: "https://mate.vn/images/cp_blog_post/10/ao-dai-theu.jpg",
-    price: 120000
-},
-{
-    id: "SP2",
-    name: "Áo dài truyền thống",
-    img: "https://g.lnwfile.com/6wt377.jpg",
-    price: 200000
-},
-{
-    id: "SP3",
-    name: "Áo dài",
-    img: "https://mate.vn/images/cp_blog_post/10/ao-dai-theu.jpg",
-    price: 150000
-},
-{
-    id: "SP4",
-    name: "Áo dài hiện đại",
-    img: "https://g.lnwfile.com/6wt377.jpg",
-    price: 190000
-},
-{
-    id: "SP5",
-    name: "Váy baggy",
-    img: "https://mate.vn/images/cp_blog_post/10/ao-dai-theu.jpg",
-    price: 500000
-},
-{
-    id: "SP6",
-    name: "Váy chấm  bi trắng",
-    img: "https://g.lnwfile.com/6wt377.jpg",
-    price: 250000
-},
+// Api
 
-{
-    id: "SP7",
-    name: "Váy xanh",
-    img: "https://mate.vn/images/cp_blog_post/10/ao-dai-theu.jpg",
-    price: 250000
-},
-{
-    id: "SP8",
-    name: "Váy cam",
-    img: "https://g.lnwfile.com/6wt377.jpg",
-    price: 250000
-}
-];
-var productAdmin = function() {
-var listproduct1 = "";
-for (var i in product) {
-    var data = JSON.parse(JSON.stringify(product[i]))
-    var listproduct1 = '<tr>';
-    listproduct1 += '<td>' + data.id + '</td>';
-    listproduct1 += '<td>' + data.name + '</td>';
-    listproduct1 += '<td><img src="' + data.img + '" alt="" style="width: 50px;"></td>';
-    listproduct1 += '<td>' + data.price + '</td>';
-    listproduct1 += '<td><button onclick="updateProduct(' + i + ')" class="btn btn-outline-danger"  data-toggle="modal" data-target="#updateProduct"><i class="fas fa-cogs"></i></button>';
-    listproduct1 += '<button onclick="deleteProduct(' + i + ')" class = "btn ml-1 btn-outline-warning"><i class="fas  fa-trash"></i></button></td>';
-    listproduct1 += '</tr>';
-    document.getElementById("product-admin").innerHTML += listproduct1;
-}
+const url_api = "https://600a50de778d1a0017793a0a.mockapi.io/ai";
+
+function callAPI(endpoint, method, body) {
+    return axios({
+        method: method,
+        url: `${url_api}/${endpoint}`,
+        data: body,
+    }).catch((err) => {
+        console.log(err);
+    });
 }
 
-var addProduct = function() {
-var Product = {
-    id: "SP" + parseInt(product.length + 1),
-    name: document.getElementById("name").value,
-    img: document.getElementById("img").value,
-    price: document.getElementById("price").value
-}
-product.push(Product);
-localStorage.setItem('listProduct', JSON.stringify(product));
-window.location.reload();
+var user;
+
+function get_user() {
+    callAPI("user", "GET", null).then(res => {
+        user = res.data;
+        console.log(user);
+        show_user();
+    });
 }
 
-var deleteProduct = function(i) {
-product.splice(i, 1);
-localStorage.setItem('listProduct', JSON.stringify(product));
-window.location.reload();
+get_user();
+// end api
+
+
+// show user
+
+var tt1 = function() {
+    document.getElementById("title").innerHTML = "QUẢN LÝ NGƯỜI DÙNG";
 }
 
-var updateProduct = function(i) {
-var k = product[i];
-document.getElementById("named").value = k.name;
-document.getElementById("imgd").value = k.img;
-document.getElementById("priced").value = k.price;
-document.getElementById("submitUpdate").innerHTML = '<button class="btn btn-outline-danger mt-3" onclick="submitUpdate(' + i + ')">Đồng ý</button>';
+tt1();
+
+var tt2 = function() {
+    document.getElementById("title").innerHTML = "THỐNG KÊ SỐ LIỆU";
 }
 
-var submitUpdate = function(i) {
-var k = product[i];
-k.name = document.getElementById("named").value;
-k.img = document.getElementById("imgd").value;
-k.price = document.getElementById("priced").value;
-localStorage.setItem('listProduct', JSON.stringify(product));
-window.location.reload();
+var tt3 = function() {
+    document.getElementById("title").innerHTML = "QUẢN LÝ ";
+}
+
+var show_user = function() {
+    document.getElementById("show_user").innerHTML = "";
+    for (var i in user) {
+        document.getElementById("show_user").innerHTML += `
+        <tr>
+        <td>${user[i].id}</td>
+        <td>${user[i].name}</td>
+        <td>${user[i].email}</td>
+        <td>${user[i].password}</td>
+        <td>${user[i].gender}</td>
+        <td>${user[i].birthday}</td>
+        <td><button onclick="update_user(${i})" class="btn btn-outline-danger"  data-toggle="modal" data-target="#update_user"><i class="fas fa-cogs"></i></button>
+        <button onclick="delete_user(${i})" class = "btn ml-1 btn-outline-warning"><i class="fas  fa-trash"></i></button></td>
+        </tr>
+        `;
+    }
+}
+
+var delete_user = function(i) {
+    user.splice(i, 1);
+    show_user();
+}
+
+var add_user = function() {
+    console.log(user);
+    var add_user = {
+        id: String(user.length + 1),
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+        avatar: "",
+        background: "",
+        birthday: document.getElementById("birthday").value,
+        gender: document.getElementById("gender").value,
+    }
+    user.push(add_user);
+    show_user();
+}
+
+
+var update_user = function(i) {
+    document.getElementById("name_up").value = user[i].name;
+    document.getElementById("email_up").value = user[i].email;
+    document.getElementById("password_up").value = user[i].password;
+    document.getElementById("birthday_up").value = user[i].birthday;
+    document.getElementById("gender_up").value = user[i].gender;
+    document.getElementById("sub_up").innerHTML = `<button type="button" class="btn btn_add col-sm-12" data-dismiss="modal" onclick="submit_update(${i})">Cập nhật</button>`;
+}
+
+var submit_update = function(i) {
+    var up_user = {
+        id: String(i + 1),
+        name: document.getElementById("name_up").value,
+        email: document.getElementById("email_up").value,
+        password: document.getElementById("password_up").value,
+        birthday: document.getElementById("birthday_up").value,
+        gender: document.getElementById("gender_up").value,
+    }
+    user.splice(i, 1, up_user);
+    show_user();
 }
 
 function Save() {
-localStorage.setItem('listProduct', JSON.stringify(product))
+    localStorage.setItem('listProduct', JSON.stringify(product))
 }
 
 function load() {
-product = JSON.parse(localStorage.getItem('listProduct'));
-productAdmin();
+    product = JSON.parse(localStorage.getItem('listProduct'));
+    productAdmin();
 }
 
-if (localStorage.getItem("listProduct") != null) {
-load();
-} else {
-    localStorage.setItem('listProduct',JSON.stringify(product));
-    load();
-}
+// if (localStorage.getItem("listProduct") != null) {
+//     load();
+// } else {
+//     localStorage.setItem('listProduct', JSON.stringify(product));
+//     load();
+// }
+
+// end user

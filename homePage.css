@@ -8,13 +8,17 @@
 .menu {
     display: flex;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     height: 6vh;
+>>>>>>> nam
+=======
 >>>>>>> nam
 }
 
 .menu1 {
     display: flex;
+    align-items: center;
 }
 
 .menu2 {
