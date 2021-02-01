@@ -79,7 +79,7 @@ function Next() {
 
     if (vali == a) {
         alert("Bạn đã đăng ký thành công");
-         window.location.href = 'http://127.0.0.1:5500/personalPage.html';
+         window.location.href = '../personalPage.html';
     }
 }
 

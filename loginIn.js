@@ -39,7 +39,7 @@ function login() {
     users.forEach(user => {
         if(user.email === email && user.password === password ){
             alert("Đăng nhập thành công");
-            window.location.href =" /personalPage.html";
+            window.location.href ="../personalPage.html";
             brack();    
         }else {
             alert("Mật khẩu hoặc email chưa đúng");
